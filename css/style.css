@@ -8,6 +8,7 @@
 
 body {
     background-color: #fc0b0b;
+    background: linear-gradient(red, blue)
 }
 
 main {
