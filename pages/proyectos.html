@@ -12,6 +12,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@100;300;500&family=Raleway:ital,wght@0,200;0,400;0,900;1,800;1,900&display=swap"
         rel="stylesheet">
+
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -23,25 +30,60 @@
                     target="_blank">Tel: 336 64888888</a>
                 <a href="./contacto.html#formulario" target="_blank"><img class="nav__img" src="../images/correo.png"
                         alt="Sobre de contacto."></a>
-                <a href="https://www.linkedin.com/" target="_blank"><img class="nav__img nav__img--lkd" src="../images/linkedin.png"
-                        alt="Logo Linkedin."></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img class="nav__img nav__img--lkd"
+                        src="../images/linkedin.png" alt="Logo Linkedin."></a>
             </div>
 
             <div class="nav__segundaBarra">
-                <div>
-                    <a href="../index.html"><img class="logo" src="../images/logocompleto.png"
-                            alt="Imagen del logo de PEEIRR."></a>
-                </div>
-
-                <div>
-                    <ul class="nav__list">
-                        <li><a class="nav__menu" href="../index.html">Home</a></li>
-                        <li><a class="nav__menu" href="./servicios.html">Servicios</a></li>
-                        <li><a class="nav__menu" href="./nosotros.html">Nosotros</a></li>
-                        <li><a class="nav__menu" href="./proyectos.html">Proyectos</a></li>
-                        <li><a class="nav__menu" href="./contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
+               <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logocompleto.png"
+                                alt="Imagen del logo de PEEIRR."></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav mx-auto align-items-center">
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link dropdown-toggle" href="./servicios.html"
+                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Servicios
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                           <li><a class="dropdown-item" href="./servicios.html">Nuestros Servicios</a></li>
+                                        <li><a class="dropdown-item" href="./servicios.html#nuestros-servicios">Lo que ofrecemos</a></li>
+                                        <li><a class="dropdown-item" href="./servicios.html#faqs">FAQs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown  px-3">
+                                    <a class="nav-link dropdown-toggle" href="./nosotros.html"
+                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Nosotros
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                           <li><a class="dropdown-item" href="./nosotros.html">Nosotros</a></li>
+                                        <li><a class="dropdown-item" href="./nosotros.html#sobre-peeirr">Sobre la PEeIRR</a></li>
+                                        <li><a class="dropdown-item" href="./nosotros.html#equipo-peeirr">Nuestro Equipo</a></li>
+                                        <li><a class="dropdown-item" href="./sumate.html">Sumate</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link" href="./contacto.html">Contactos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </nav>
         <div class="header__img-h1">
@@ -173,61 +215,53 @@
             </article>
 
 
+
             <!-- otros protectos -->
             <article class="section__otros-proyectos">
-            <h3>Otros de Nuestros Proyectos</h3>
-            <div class="section__proyetos-grid">
-                <div class="section__proyectos-item section__proyectos-item--1">
-                    <img class="section__proyectos-img" src="../images/rsz_obra1.jpg"
-                        alt="Imagen de la Obra1">
-                    <h4 class="section__proyectos-title">Obra Nº1</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--2">
-                    <img class="section__proyectos-img" src="../images/rsz_obra2.jpg"
-                        alt="Imagen de la Obra2">
-                    <h4 class="section__proyectos-title">Obra Nº2</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--3">
-                    <img class="section__proyectos-img" src="../images/rsz_tablero.jpg"
-                        alt="Imagen de la Obra3">
-                    <h4 class="section__proyectos-title">Obra Nº3</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--4">
-                    <img class="section__proyectos-img" src="../images/rsz_obra4.jpg"
-                        alt="Imagen de la Obra4">
-                    <h4 class="section__proyectos-title">Obra Nº4</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--5">
-                    <img class="section__proyectos-img" src="../images/rsz_obra5.jpg"
-                        alt="Imagen de la Obra5">
-                    <h4 class="section__proyectos-title">Obra Nº5</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--6">
-                    <img class="section__proyectos-img" src="../images/rsz_obra6.jpg"
-                        alt="Imagen de la Obra6">
-                    <h4 class="section__proyectos-title">Obra Nº6</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--7">
-                    <img class="section__proyectos-img" src="../images/rsz_obra7.jpg"
-                        alt="Imagen de la Obra7">
-                    <h4 class="section__proyectos-title">Obra Nº7</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--8">
-                    <img class="section__proyectos-img" src="../images/rsz_obra8.jpg"
-                        alt="Imagen de la Obra8">
-                    <h4 class="section__proyectos-title">Obra Nº8</h4>
-                </div>
-                <div class="section__proyectos-item section__proyectos-item--9">
-                    <img class="section__proyectos-img" src="../images/rsz_obra9.jpg"
-                        alt="Imagen de la Obra8">
-                    <h4 class="section__proyectos-title">Obra Nº9</h4>
-                </div>
+                <h3>Más Proyectos Terminados</h3>
+                <div class="section__proyetos-grid">
+                    <div class="section__proyectos-item section__proyectos-item--1">
+                        <img class="section__proyectos-img" src="../images/rsz_obra1.jpg" alt="Imagen de la Obra1">
+                        <h4 class="section__proyectos-title">Obra Nº1</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--2">
+                        <img class="section__proyectos-img" src="../images/rsz_obra2.jpg" alt="Imagen de la Obra2">
+                        <h4 class="section__proyectos-title">Obra Nº2</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--3">
+                        <img class="section__proyectos-img" src="../images/rsz_tablero.jpg" alt="Imagen de la Obra3">
+                        <h4 class="section__proyectos-title">Obra Nº3</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--4">
+                        <img class="section__proyectos-img" src="../images/rsz_obra4.jpg" alt="Imagen de la Obra4">
+                        <h4 class="section__proyectos-title">Obra Nº4</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--5">
+                        <img class="section__proyectos-img" src="../images/rsz_obra5.jpg" alt="Imagen de la Obra5">
+                        <h4 class="section__proyectos-title">Obra Nº5</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--6">
+                        <img class="section__proyectos-img" src="../images/rsz_obra6.jpg" alt="Imagen de la Obra6">
+                        <h4 class="section__proyectos-title">Obra Nº6</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--7">
+                        <img class="section__proyectos-img" src="../images/rsz_obra7.jpg" alt="Imagen de la Obra7">
+                        <h4 class="section__proyectos-title">Obra Nº7</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--8">
+                        <img class="section__proyectos-img" src="../images/rsz_obra8.jpg" alt="Imagen de la Obra8">
+                        <h4 class="section__proyectos-title">Obra Nº8</h4>
+                    </div>
+                    <div class="section__proyectos-item section__proyectos-item--9">
+                        <img class="section__proyectos-img" src="../images/rsz_obra9.jpg" alt="Imagen de la Obra8">
+                        <h4 class="section__proyectos-title">Obra Nº9</h4>
+                    </div>
 
-            </div>
-        </article>
+                </div>
+            </article>
 
-    </section>
-        
+        </section>
+
 
     </main>
 
@@ -268,12 +302,12 @@
                     </li>
                 </ul>
             </section>
-        
+
             <section class="footer__section">
                 <h5 class="footer__subtitle">Horarios de atención</h5>
                 <p class="footer__paragraph"> <b>Lunes - Viernes:</b><br>8:00 a 16:00 hs<br>
                     <b>Sábados - Domingos:</b><br>Cerrado</p>
-            </section>          
+            </section>
 
             <section class="footer__section">
                 <h5 class="footer__subtitle">Navegación</h5>
@@ -285,7 +319,7 @@
                     <li><a class="footer__link footer__link--navegacion" href="./contacto.html">Contacto</a></li>
                 </ul>
             </section>
-             
+
         </div>
 
         <!-- footer final -->
@@ -294,6 +328,13 @@
             <h6>Política de Privacidad</h6>
         </section>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+
 </body>
 
 </html>

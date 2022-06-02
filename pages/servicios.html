@@ -13,6 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@100;300;500&family=Raleway:ital,wght@0,200;0,400;0,900;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -25,33 +28,70 @@
                     target="_blank">Tel: 336 64888888</a>
                 <a href="./contacto.html#formulario" target="_blank"><img class="nav__img" src="../images/correo.png"
                         alt="Sobre de contacto."></a>
-                <a href="https://www.linkedin.com/" target="_blank"><img class="nav__img nav__img--lkd" src="../images/linkedin.png"
-                        alt="Logo Linkedin."></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img class="nav__img nav__img--lkd"
+                        src="../images/linkedin.png" alt="Logo Linkedin."></a>
             </div>
 
             <div class="nav__segundaBarra">
-                <div>
-                    <a href="../index.html"><img class="logo" src="../images/logocompleto.png"
-                            alt="Imagen del logo de PEEIRR."></a>
-                </div>
-
-                <div>
-                    <ul class="nav__list">
-                        <li><a class="nav__menu" href="../index.html">Home</a></li>
-                        <li><a class="nav__menu" href="./servicios.html">Servicios</a></li>
-                        <li><a class="nav__menu" href="./nosotros.html">Nosotros</a></li>
-                        <li><a class="nav__menu" href="./proyectos.html">Proyectos</a></li>
-                        <li><a class="nav__menu" href="./contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
+               <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logocompleto.png"
+                                alt="Imagen del logo de PEEIRR."></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav mx-auto align-items-center">
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link dropdown-toggle" href="./servicios.html"
+                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Servicios
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                         <li><a class="dropdown-item" href="./servicios.html">Nuestros Servicios</a></li>
+                                        <li><a class="dropdown-item" href="./servicios.html#nuestros-servicios">Lo que ofrecemos</a></li>
+                                        <li><a class="dropdown-item" href="./servicios.html#faqs">FAQs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown  px-3">
+                                    <a class="nav-link dropdown-toggle" href="./nosotros.html"
+                                        id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Nosotros
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                           <li><a class="dropdown-item" href="./nosotros.html">Nosotros</a></li>
+                                        <li><a class="dropdown-item" href="nosotros.html#sobre-peeirr">Sobre la PEeIRR</a></li>
+                                        <li><a class="dropdown-item" href="nosotros.html#equipo-peeirr">Nuestro Equipo</a></li>
+                                        <li><a class="dropdown-item" href="./sumate.html">Sumate</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                                </li>
+                                <li class="nav-item  px-3">
+                                    <a class="nav-link" href="./contacto.html">Contactos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </nav>
+
         <div class="header__img-h1">
             <h1>Nuestros Servicios</h1>
         </div>
     </header>
 
     <main>
+
         <section>
             <h2>Ingenieria y diseño desde 2012</h2>
             <p class="section__paragraph">Ofrecemos un servicio basado en la “Gestión Integral del Proyecto”: Nos
@@ -67,7 +107,7 @@
         </section>
 
         <section>
-            <div class="section__servicios-div section__servicios-div--serv1">
+            <div class="section__servicios-div section__servicios-div--serv1" id="nuestros-servicios">
 
                 <div class="section__servicios-div-item">
                     <h3>Ingeniería Básica y Anteproyectos</h3>
@@ -224,11 +264,74 @@
 
         </section>
 
+        <!-- acordeon bootstrap -->
+
+        <section class="section__faqs" id="faqs">
+            <h2>Preguntas frecuentes sobre Nuestros Servicios</h2>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            ¿Ofrecen servicios energéticos a empresas e industrias?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
+                            eveniet voluptatibus sapiente repellendus est nisi nesciunt! Rerum a doloribus quaerat?Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Provident, modi. Lorem ipsum dolor sit,
+                            amet consectetur adipisicing elit. Explicabo aspernatur dicta vitae fuga libero molestiae
+                            distinctio eum! Odio recusandae a incidunt dicta suscipit! Recusandae dolorum mollitia
+                            excepturi reprehenderit minima odit!</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            ¿Cuentan con un grupo de proveedores cerrados?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">PEeIRR cuenta con un numero acotado de proveedores, sin embargo, de
+                            acuerdo a las caracteristicas del cliente, brinda caracteristicas de los elementos
+                            necesarios, para ser adquiridos por otros proveedores. PEeIRRpuede trabajar de cerca con
+                            usted para encontrarle la mejor oferta posible. Necesitaremos cierta información de usted
+                            para ayudar a hacer un análisis. También es posible que necesitemos su consentimiento por
+                            escrito para que podamos obtener información de las empresas de servicios públicos o
+                            minoristas para ayudarlo a encontrar la mejor oferta posible.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                ¿Cómo puedo contactarme con ustedes para desarollar la ingeniería eléctrica del
+                                proyecto?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                                placeat in eius sint eligendi ullam deserunt veritatis reiciendis excepturi atque fuga,
+                                amet maxime eum unde dolorem. Quis quisquam id evenietlorem20 Lorem ipsum, dolor sit
+                                amet consectetur adipisicing elit. Consectetur maiores quae incidunt maxime, iste magnam
+                                totam repudiandae, dolorem ut dolorum fugit officiis, unde omnis veniam odio cumque.
+                                Voluptates, aliquid magni..</div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
 
     </main>
 
     <footer>
-       <div class="footer__container">
+        <div class="footer__container">
             <section class="footer__section">
                 <div>
                     <a href="../index.html"><img class="logo--footer" src="../images/logocompleto.png"
@@ -245,8 +348,8 @@
                 </div>
             </section>
 
-            
-             <section class="footer__section">
+
+            <section class="footer__section">
                 <h5 class="footer__subtitle">Contacto</h5>
                 <ul class="footer__list">
                     <li><a class="footer__link"
@@ -273,7 +376,7 @@
             </section>
 
             <section class="footer__section">
-                 <h5 class="footer__subtitle">Navegación</h5>
+                <h5 class="footer__subtitle">Navegación</h5>
                 <ul class="footer__list">
                     <li><a class="footer__link footer__link--navegacion " href="../index.html">Home</a></li>
                     <li><a class="footer__link footer__link--navegacion" href="./servicios.html">Servicios</a></li>
@@ -292,6 +395,17 @@
             <h6>Política de Privacidad</h6>
         </section>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>
