@@ -28,11 +28,11 @@ h1 {
 
 h2 {
     padding: 2.5%;
-    font-family: Raleway;
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 600;
-    text-align: left;
-    font-size: 2rem;
-    text-shadow: 1px 1px 3px #999;
+    font-family: Raleway;
+    text-shadow: 1px 1px 1px #cad0db;
     color: #112D4E;
 }
 
@@ -81,67 +81,12 @@ p {
     padding-bottom: 3%;
 }
 
-/* From uiverse.io by @Ali-Tahmazi99 */
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    display: none;
-    visibility: hidden;
-}
-
-.bar {
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;   
-}
-
-.bar span {
-    position: absolute;
-    width: 40px;
-    height: 6.22px;
-    background: #F9F7F7;
-    border-radius: 100px;
-    display: inline-block;
-    transition: 0.3s ease;
-    left: 0;
-}
-
-.bar span.top {
-    top: 0;
-}
-
-.bar span.middle {
-    top: 17px;
-}
-
-.bar span.bottom {
-    bottom: 0;
-}
-
-input[type]:checked~span.top {
-    transform: rotate(45deg);
-    transform-origin: top left;
-    width: 48px;
-    left: 5px;
-}
-
-input[type]:checked~span.bottom {
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    width: 48px;
-    bottom: -1px;
-    box-shadow: 0 0 10px #ADA996;
-}
-
-input[type]:checked~span.middle {
-    transform: translateX(-20px);
-    opacity: 0;
-}
 
 
 /* --------------------INDEX.HTML---------------------- */
 
 /* header */
+
 .header-index {
     background: #ADA996;
     /* fallback for old browsers */
@@ -156,7 +101,13 @@ input[type]:checked~span.middle {
     background-attachment: fixed;
 }
 
+
 /* primera barra */
+
+.nav {
+    width: 100vw;
+}
+
 .nav__primeraBarra {
     display: flex;
     flex-wrap: wrap;
@@ -195,28 +146,34 @@ input[type]:checked~span.middle {
 .nav__img {
     width: 2.5rem;
     margin-right: 1.1rem;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.2 ease-in-out;
 }
 
 .nav__img:hover {
     background-color: #153b66;
 }
 
+
+
 /* segunda barra */
+.menu-hamburguesa-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50%;
+    min-width: 250px;
+}
+
+
 .nav__segundaBarra {
     padding-top: 2.6rem;
     width: 100%;
     box-shadow: 2px 2px 8px #9c988131;
     background-color: hsla(48, 6%, 68%, 0.231);
-}
 
-.logo {
-    width: 60%;
-    min-width: 250px;
-}
 
-.navbar-brand {
-    width: 40%;
 }
 
 .nav-link {
@@ -224,6 +181,7 @@ input[type]:checked~span.middle {
     font-size: 1.3rem;
     font-weight: 600;
     font-family: Poppins;
+
 }
 
 .nav-link:hover {
@@ -231,7 +189,9 @@ input[type]:checked~span.middle {
     color: #112D4E;
 }
 
+
 /* hero */
+
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -255,6 +215,7 @@ input[type]:checked~span.middle {
     font-weight: 900;
     font-size: 5rem;
     color: rgb(29, 29, 29);
+
 }
 
 .hero__subtitle {
@@ -287,16 +248,23 @@ input[type]:checked~span.middle {
     transform: scale(1.05);
 }
 
+
 /* Nuestros servicios */
 
 .nuestros-servicios {
     margin: 4% auto;
 }
 
+.section__servicios-paragraph {
+    padding-bottom: 3%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
 .section__servicios-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 50vh);
+    grid-template-rows: repeat(2, 40vh);
     grid-template-areas:
         "cardServicios1 cardServicios5 cardServicios3"
         "cardServicios6 cardServicios2 cardServicios4";
@@ -355,7 +323,7 @@ input[type]:checked~span.middle {
 
 .section__servicios-subtitles {
     color: #3F72AF;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     font-weight: 600;
     padding: 3%;
@@ -366,6 +334,7 @@ input[type]:checked~span.middle {
 .section__servicios-link {
     text-align: center;
 }
+
 
 /* From uiverse.io */
 button {
@@ -461,8 +430,7 @@ button:hover .button-text {
 
 .sobre-nosotros {
     background-color: #112D4E;
-    margin: 10% 0 5%;
-    padding-bottom: 5%;
+    margin: 10% 0;
 }
 
 .section__nosotros {
@@ -498,13 +466,17 @@ button:hover .button-text {
     color: #F9F7F7;
 }
 
-/* Algunos de nuestros clientes //carrousel*/
+
+/* Algunos de nuestros clientes */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #282936;
+    background-color: rgb(29, 29, 29);
     border-radius: 50px;
 }
+
+
+
 
 /* footer */
 
@@ -600,7 +572,9 @@ footer {
     flex-direction: column;
 }
 
+
 /* footer final */
+
 .footer__final {
     display: flex;
     flex-wrap: wrap;
@@ -650,11 +624,6 @@ footer {
     min-width: 400px;
 }
 
-.section__servicios-div-item h3 {
-    font-size: 1.3rem;
-    padding: 3% 0;
-}
-
 .section__servicios-div--serv5 {
     background-color: #112D4E;
     color: #F9F7F7;
@@ -669,12 +638,18 @@ footer {
     color: #112D4E;
 }
 
-/* acordeon bootstrap //FAQS */
 
-.accordion-button,
-.accordion {
+.section__faqs {
+    margin-bottom: 5%;
+}
+
+.accordion-button {
     font-family: Raleway;
     font-size: 1.3rem;
+}
+
+.accordion {
+    font-size: 1.2rem;
 }
 
 /*-----------------------------------PROYECTOS.HTML ------------------------------*/
@@ -730,10 +705,11 @@ footer {
 
 .proyecto3__img {
     width: 100%;
-    height: auto;
+    height: 50vh;
     object-fit: cover;
-    margin: 2% 0;
+    margin: 3%;
 }
+
 
 /*  otros protectos */
 
@@ -741,6 +717,8 @@ footer {
     margin: 5% 0;
     width: 100%;
 }
+
+
 
 /* -----------------------------------SUMATE.HTML---------------------------- */
 
@@ -784,6 +762,7 @@ footer {
 }
 
 
+
 /* ----------------------------------NOSOTROS.HTML-------------------------------- */
 .header-nosotros {
     background: #ADA996;
@@ -798,7 +777,9 @@ footer {
     background-position: center;
 }
 
+
 /* seccion empresa */
+
 .section__empresa {
     display: flex;
     flex-wrap: wrap;
@@ -829,7 +810,9 @@ footer {
     text-align: center;
 }
 
+
 /* seccion peeirr */
+
 .section__peeirr {
     display: flex;
     flex-wrap: wrap;
@@ -859,14 +842,14 @@ footer {
 
 /* seccion equipo */
 .section__equipo {
-    margin: 0 auto;
+    margin: 0 auto 10%;
 }
 
 .section__equipo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 1%;
+    grid-template-rows: minmax(50vh, auto);
+    gap: 2%;
     width: 95%;
     margin: 0 auto;
 }
@@ -874,16 +857,17 @@ footer {
 .section__equipo-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    min-width: 200px;
     text-align: center;
     border-radius: 15px;
     box-shadow: 1px 1px 8px #dfdfdd
 }
 
 .section__equipo-img {
-    width: 90%;
+    width: 100%;
     height: 60%;
     object-fit: cover;
     object-position: top;
@@ -904,10 +888,15 @@ footer {
     line-height: 1.4;
 }
 
+
 /* seccion sumate */
+
 .section__sumate {
     margin: 5% 0;
+    border: 2px solid #DBE2EF;
     padding: 2%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 8px #dfdfdd
 }
 
 .section__sumate-flex {
@@ -940,7 +929,9 @@ footer {
     transform: scale(1.1);
 }
 
+
 /* seccion proyectos */
+
 .section__proyectos {
     width: 90%;
     height: 100%;
@@ -999,6 +990,7 @@ footer {
 }
 
 
+
 /* --------------------------------CONTACTO.HTML---------------------------------- */
 .header-contact {
     background: #ADA996;
@@ -1018,9 +1010,16 @@ footer {
     justify-content: space-between;
 }
 
+
 /* seccion formulario */
+
 .section__formulario {
     width: 60%;
+
+}
+
+.section__formulario h2 {
+    text-align: left;
 }
 
 .form__paragraph {
@@ -1057,6 +1056,7 @@ form {
     resize: none;
     margin-top: 3.5%;
     height: 80%;
+
 }
 
 .input__button {
@@ -1083,8 +1083,8 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 3%);
-    row-gap: 50px;
-    column-gap: 5%;
+    gap: 8%;
+    column-gap: 3%;
     grid-template-areas: "grid-nombre grid-apellido"
         "grid-email grid-telefono"
         "grid-asunto grid-asunto"
@@ -1115,13 +1115,16 @@ form {
     grid-area: grid-mensaje;
 }
 
+
 /* seccion sumate */
+
 .section__sumate {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+
 }
 
 .section__sumate-title {
@@ -1130,9 +1133,8 @@ form {
 }
 
 .section__sumate-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    text-align: center;
 }
 
 .section__sumate-title,
@@ -1159,7 +1161,9 @@ form {
     margin: 1%;
 }
 
+
 /* seccion encontranos */
+
 .section__encontranos {
     margin-bottom: 5%;
 }
@@ -1193,75 +1197,24 @@ form {
 .section__encontranos-iframe {
     width: 100%;
     margin: 3%;
+    border-radius: 15px;
     box-shadow: 1px 1px 8px #dfdfdd
 }
+
+
+
+
 
 
 
 /* ----------------------------DISEÑO RESPONSIVE---------------------------------- */
 
 
+
 @media only screen and (max-width: 1300px) {
 
-
-    /* --------------------------------INDEX.HTML---------------------------------- */
-    /* hero */
-    .hero__title {
-        font-size: 1.4rem;
-    }
-
-    .hero__title span {
-        font-size: 4rem;
-    }
-
-    .hero__subtitle {
-        font-size: 1.4rem;
-    }
-
-    .hero__button {
-        font-size: 1.1rem;
-    }
-
-    /* Nuestros servicios */
-    .section__servicios-subtitles {
-        color: #3F72AF;
-        font-size: 1rem;
-    }
-
-    /* --------------------------------NOSOTROS.HTML---------------------------------- */
-
-    /* seccion equipo */
-    .section__equipo {
-        margin-bottom: 5%;
-    }
-
-    .section__equipo-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
-        gap: 1.2%;
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    .section__equipo-img {
-        width: 80%;
-        height: 60%;
-        margin-top: 0;
-    }
-
-    /* seccion sumate */
-    .section__button {
-        font-size: 1.1rem;
-    }
-
-    .section__sumate-flex p {
-        padding: 0 3%;
-        font-size: 1.1rem;
-    }
-
     /* --------------------------------CONTACTO.HTML---------------------------------- */
+
 
     .main__div-flex {
         flex-wrap: wrap;
@@ -1275,12 +1228,11 @@ form {
     }
 
     .input {
-        width: 100%;
-        padding: 5px 10px;
-
+        padding: 10px 12px;
     }
 
     /* seccion sumate */
+
 
     .section__sumate--contacto {
         width: 80%;
@@ -1381,7 +1333,7 @@ form {
     }
 
     .section__servicios-paragraph {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .section__servicios-container {
@@ -1418,17 +1370,17 @@ form {
 
     .footer__link {
         padding: 1.3%;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .footer__subtitle {
         padding: 1% 1%;
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: left;
     }
 
     .footer__paragraph {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .footer__icons {
@@ -1464,50 +1416,31 @@ form {
     }
 
     /* seccion equipo */
-
     .section__equipo {
-        margin-bottom: 5%;
-    }
-
-    .section__equipo-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
-        gap: 1.2%;
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    .section__equipo-img {
-        width: 80%;
-        height: 60%;
-        margin-top: 0;
+        margin: 0 auto 5%;
     }
 
     .section__equipo-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 1%;
-        width: 80%;
+        grid-template-rows: minmax(40vw, auto);
+        gap: 2%;
+        width: 90%;
     }
 
     .section__equipo-img {
+        width: 70%;
         margin-left: auto;
         margin-right: auto;
+        height: 70%;
         margin-top: 0;
-        width: 80%;
-        height: 60%;
     }
-
-    /* seccion sumate */
-
 
     /* seccion proyectos */
 
     .section__proyectos {
         margin: 0 auto 8%;
+
     }
 
     .section__proyetos-grid {
@@ -1546,6 +1479,7 @@ form {
         font-size: 1.1rem;
     }
 
+
     /* --------------------------------- PROYECTOS.HTML ------------------------------*/
 
     .proyecto3__div {
@@ -1572,12 +1506,17 @@ form {
     /* seccion formulario */
 
     .section__formulario {
-        width: 80%;
-
+        width: 100%;
+        min-width: 200;
         margin: 5% auto;
     }
 
+    .input {
+        padding: 8px 10px;
+    }
+
     /* seccion sumate */
+
 
     .section__sumate--contacto {
         width: 60%;
@@ -1600,24 +1539,8 @@ form {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
     /* --------------------INDEX.HTML---------------------- */
-    /* general */
-    h1 {
-        padding-top: 2%;
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        padding: 1.5%;
-        padding-top: 3.5%;
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        padding: 2% 0;
-        font-size: 1.2rem;
-    }
-
     /* segunda barra */
+
 
     /* Nuestros servicios */
 
@@ -1626,7 +1549,7 @@ form {
     }
 
     .section__servicios-paragraph {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .section__servicios-container {
@@ -1646,11 +1569,7 @@ form {
     }
 
     .section__servicios-subtitles {
-        font-size: 0.8rem;
-    }
-
-    .grid-servicios img {
-        width: 45%;
+        font-size: 1.1rem;
     }
 
     /* Sobre Nosotros */
@@ -1688,6 +1607,7 @@ form {
 
     /*-----------------------------------NOSOTROS.HTML ------------------------------*/
 
+
     /* seccion peeirr */
 
     .section__peeirr-div {
@@ -1695,54 +1615,18 @@ form {
     }
 
     /* seccion equipo */
-
-    .section__equipo-img {
-        width: 80%;
-        height: 60%;
-        margin-top: 0;
-    }
-
-    .section__equipo-div {
-        width: 80%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .section__equipo-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 1%;
-    }
-
-    .section__equipo-img {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0;
-        width: 80%;
-        height: 60%;
-    }
-
-    /* seccion sumate */
-    .section__button {
-        font-size: 1.1rem;
-    }
-
-    .section__sumate-flex p {
-        padding: 0 3%;
-        font-size: 1.1rem;
-    }
-
     .section__equipo {
-        margin: 10% 0;
+        margin-bottom: 5%;
     }
 
     .section__equipo-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-rows: minmax(200px, auto);
+        gap: 2%;
         gap: 0.5%;
-        width: 80%;
+        width: 90%;
+        height: 100%;
         margin: 0 auto;
     }
 
@@ -1755,7 +1639,7 @@ form {
     /* seccion sumate */
 
     .section__sumate {
-        margin-top: 5%;
+        margin-top: 50%;
         width: 100vw;
     }
 
@@ -1878,15 +1762,6 @@ form {
         margin: 2% 0%;
     }
 
-    /* --------------------------------- SUMATE.HTML ------------------------------*/
-
-    .sumate-principal__title {
-        font-size: 1.1rem;
-    }
-
-    .sumate-principal__subtitle {
-        font-size: 1.2rem;
-    }
 
     /* --------------------------------CONTACTO.HTML---------------------------------- */
 
@@ -1898,7 +1773,7 @@ form {
     /* seccion formulario */
 
     .section__formulario {
-        width: 90%;
+        width: 100%;
         min-width: none;
         margin: 5% auto;
     }
@@ -1912,7 +1787,6 @@ form {
         flex-direction: column;
         width: 100%;
         height: auto;
-        row-gap: 5px;
     }
 
     /* seccion sumate */
@@ -2025,7 +1899,7 @@ form {
 
     h3 {
         padding: 2% 0;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     h4 {
@@ -2069,22 +1943,14 @@ form {
         display: none;
     }
 
-     /* segunda barra */
 
-     .logo {
-         width: 30px;
-         min-width: none;
-         padding: 2%;
-     }
+    /* segunda barra */
 
-     .navbar {
-         padding: 0;
-     }
 
     /* hero */
 
     .hero {
-        height: 50vh;
+        height: 60vh;
     }
 
     .hero__title {
@@ -2126,7 +1992,7 @@ form {
     }
 
     .grid-servicios img {
-        width: 20%;
+        width: 30%;
     }
 
     /* Sobre Nosotros */
@@ -2194,6 +2060,7 @@ form {
         font-size: 1rem;
     }
 
+
     /* --------------------------------- SERVICIOS.HTML ------------------------------*/
 
     .section__servicios-img {
@@ -2215,43 +2082,26 @@ form {
 
     /* --------------------------------- NOSOTROS.HTML ------------------------------*/
 
-    /* seccion empresa */
-    .section__empresa-div {
-        width: 90%;
-        min-width: 150px;
-    }
-
     /* seccion peeirr */
 
     .section__peeirr-div {
-        padding: 5%;
+        padding: 10%;
     }
 
-    .section__peeirr-item {
-        padding-bottom: 1%;
-        font-size: 1.1rem;
-    }
-
-    /* seccion sumate */
-    .section__button {
-        font-size: 1.1rem;
-    }
-
-    .section__sumate-flex p {
-        padding: 0 3%;
-        font-size: 1.1rem;
-    }
+    /* seccion equipo */
 
     .section__equipo {
-        margin: 15% 0;
+        margin-bottom: 5%;
     }
 
     .section__equipo-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-rows: minmax(200px, auto);
+        gap: 2%;
         gap: 0.5%;
-        width: 80%;
+        width: 90%;
+        height: 100%;
         margin: 0 auto;
     }
 
@@ -2261,10 +2111,18 @@ form {
         margin-top: 0;
     }
 
+    .section__equipo-title {
+        padding: 1.2%;
+    }
+
+    .section__equipo-paragraph {
+        padding: 0 1.2%;
+    }
+
     /* seccion sumate */
 
     .section__sumate {
-        margin-top: 5%;
+        margin-top: 50%;
         width: 100vw;
     }
 
@@ -2341,7 +2199,8 @@ form {
     }
 
     .proyecto3__img {
-        display: none;
+        width: 80;
+        margin: 0;
     }
 
     .otrosProyectos__container {
@@ -2353,7 +2212,7 @@ form {
     }
 
     .otrosProyectos__img {
-        margin: 1%;
+        margin: 0.25;
     }
 
 
@@ -2396,8 +2255,10 @@ form {
         flex-direction: column;
         width: 100%;
         height: auto;
-        row-gap: 5px;
     }
+
+
+
 
     /* seccion sumate */
 
@@ -2476,7 +2337,7 @@ form {
     }
 
     .section__encontranos-item {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         padding: 10px;
     }
 
@@ -2488,54 +2349,17 @@ form {
 
     .section__encontranos-iframe {
         width: 100%;
-        margin: 0%;
-        border-radius: 0;
+        margin: 3%;
     }
 }
 
 
+
 @media only screen and (max-width: 350px) {
-
-    /* general */
-
-    h1 {
-        padding-top: 8%;
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        padding: 1.5%;
-        font-size: 1.1rem;
-    }
 
     /* --------------------INDEX.HTML---------------------- */
 
-
-
-
     /* segunda barra */
-
-    .logo {
-        width: 30px;
-        min-width: none;
-        padding-top: 60px               
-    }
-
-    .navbar {
-        padding: 0;
-    }
-
-    .navbar-toggler {
-        position: absolute;
-        top: 10px;
-        right: 0;
-    }
-
-    /* hero */
-
-    .hero {
-        height: 60vh;
-    }
 
     /* Sobre Nosotros */
 
@@ -2543,9 +2367,8 @@ form {
         min-width: 100px;
     }
 
-    .section__nosotros-paragraph,
-    .section__nosotros-subtitle {
-        margin: 0 50px;
+    .section__nosotros-paragraph {
+        margin: 0 25px;
     }
 
     /* seccion peeirr */
@@ -2554,39 +2377,4 @@ form {
         min-width: 200px;
         width: 90%;
     }
-
-    footer h6 {
-        text-align: center;
-    }
-
-    /* --------------------NOSOTROS.HTML---------------------- */
-
-    /* seccion sumate */
-    .section__sumate-flex p {
-        text-align: center
-    }
-
-    /* --------------------CONTACTO.HTML---------------------- */
-
-    /* seccion sumate */
-    .section__sumate-subtitle {
-        font-size: 1.1rem;
-        text-align: center;
-    }
-
-    /* seccion encontranos */
-    .section__encontranos-title {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .section__encontranos-item {
-        font-size: 1.1rem;
-        padding: 15px;
-    }
-
-    .section__encontranos-iframe {
-        margin: 0%;
-    }
-
 }

@@ -12,10 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@100;300;500&family=Raleway:ital,wght@0,200;0,400;0,900;1,800;1,900&display=swap"
         rel="stylesheet">
-     
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -36,46 +37,52 @@
 
 
             <!-- segunda barra -->
-             <div class="nav__segundaBarra ">
-               <nav class="navbar navbar-expand-lg bg-light ">
+            <div class="nav__segundaBarra">
+                <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <div class="menu-hamburguesa-flex">
                         <a class="navbar-brand" href="./index.html"><img class="logo" src="./images/logocompleto.png"
                                 alt="Imagen del logo de PEEIRR."></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span><label for="check" class="bar">
+                                    <input id="check" type="checkbox">
+                                    <span class="top"></span>
+                                    <span class="middle"></span>
+                                    <span class="bottom"></span>
+                                </label></span>
                         </button>
-                        </div>
-                        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav mx-auto align-items-center">
-                                <li class="nav-item  px-3">
+                                <li class="nav-item px-3">
                                     <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                                 </li>
                                 <li class="nav-item  px-3">
-                                    <a class="nav-link dropdown-toggle" href="./pages/servicios.html"
+                                    <a class="nav-link dropdown-toggle" href="./servicios.html"
                                         id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         Servicios
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                           <li><a class="dropdown-item" href="./pages/servicios.html">Nuestros Servicios</a></li>
-                                        <li><a class="dropdown-item" href="./pages/servicios.html#nuestros-servicios">Lo que ofrecemos</a></li>
+                                    <ul class="dropdown-menu dropdown-menu-servicios" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="./pages/servicios.html">Nuestros
+                                                Servicios</a></li>
                                         <li><a class="dropdown-item" href="./pages/servicios.html#faqs">FAQs</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown  px-3">
-                                    <a class="nav-link dropdown-toggle" href="../pages/nosotros.html"
+                                    <a class="nav-link dropdown-toggle" href="./pages/nosotros.html"
                                         id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         Nosotros
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                           <li><a class="dropdown-item" href="./pages/nosotros.html">Nosotros</a></li>
-                                        <li><a class="dropdown-item" href="./pages/nosotros.html#sobre-peeirr">Sobre la PEeIRR</a></li>
-                                        <li><a class="dropdown-item" href="./pages/nosotros.html#equipo-peeirr">Nuestro Equipo</a></li>
-                                        <li><a class="dropdown-item" href="./pages/sumate.html">Sumate</a></li>
+                                        <li><a class="dropdown-item" href="./pages/nosotros.html">Nosotros</a></li>
+                                        <li><a class="dropdown-item" href="./pages/nosotros.html#sobre-peeirr">Sobre la
+                                                PEeIRR</a></li>
+                                        <li><a class="dropdown-item" href="./pages/nosotros.html#equipo-peeirr">Nuestro
+                                                Equipo</a></li>
+                                        <li><a class="dropdown-item" href="./pages/sumate.html">Sumate a la Empresa</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item  px-3">
@@ -90,6 +97,7 @@
                 </nav>
             </div>
         </nav>
+
 
         <!-- hero -->
         <div class="hero">
@@ -107,9 +115,15 @@
         <section class="nuestros-servicios">
 
             <h3>Nuestros Servicios</h3>
-            <p class="section__servicios-paragraph">Cubrimos las necesidades de ingeniería, verificación y mantenimiento
-                para las instalaciones en sectores de construcción, desde pequeños negocios hasta grandes proyectos
-                industriales y comerciales.
+            <p class="section__paragraph">Ofrecemos un servicio basado en la “Gestión Integral del Proyecto”. Nos
+                involucramos en cada etapa para
+                asegurar la excelencia, desde la concepción de la idea, el análisis económico del negocio, la
+                elaboración
+                del anteproyecto y el proyecto ejecutivo. <br> Contamos con una amplia variedad de servicios adaptados a
+                sus
+                necesidades. Asesoramos y ponemos a disposición nuestros conocimientos y experiencia en el sector, para
+                ofrecer soluciones personalizadas e integrales en el ámbito de la Ingeniería Eléctrica para obras de
+                potencia en media y alta tensión.
             </p>
 
             <div class="section__servicios-container">
@@ -171,7 +185,6 @@
                     </a>
                 </div>
 
-
                 <div class="grid-servicios grid-servicios6">
                     <img src="./images/servicios6.png"
                         alt="Icono que representa Ingeniería eléctrica Básica y Anteproyectos">
@@ -182,12 +195,7 @@
                         </button>
                     </a>
                 </div>
-
-
-
             </div>
-
-
         </section>
 
         <!-- Sobre Nosotros -->
@@ -196,15 +204,18 @@
             <div class="section__nosotros">
                 <div class="section__nosotros-div">
                     <h4 class="section__nosotros-subtitle">Somos una empresa familiar de ingeniería eléctrica.</h4>
-                    <p class="section__nosotros-paragraph">Realizamos revelamientos de instalaciones eléctricas,
-                        informes de aptitud, proyectos de
-                        adecuación, mediciones de puesta a tierra, comprobación de disparo de interruptores
-                        diferenciales, medición de resistencia de aislación en
-                        media y baja tensión y otros servicios relacionados con el sector eléctrico.<br>Contamos con
-                        equipamiento debidamente calibrado en laboratorios pertenecientes a la red INTI-SAC.<br>Poseemos
-                        experiencia en la realización de informes para habilitaciones municipales, seguros y
-                        aseguradoras de
-                        riesgos del trabajo.<br>Ante cualquier inquietud no dude en contactarnos.
+                    <p class="section__nosotros-paragraph">La Empresa se encuentra en un proceso de transferencia de
+                        conocimientos y
+                        responsabilidades desde los Socios Gerentes a sus hijos, con el objetivo de garantizar, no solo
+                        su continuidad en el tiempo, sino también, la calidad técnica que la caracteriza.<br> Con el
+                        transcurso de los años, PEeIRR ha dejado de ser un Estudio de Ingeniería dependiente
+                        de sus Socios Gerentes, pasando a convertirse en un Estudio descentralizado, estructurado
+                        internamente en 4 Equipos de Trabajo autónomos liderado por un responsable. Sin embargo, según
+                        la envergadura de los proyectos y de las necesidades de nuestros clientes,
+                        estos equipos estan capacitados para trabajar en forma mancomunada. Esta configuración de
+                        trabajo permite una gran
+                        adaptabilidad a la hora de ejecutar proyectos de diferentes magnitudes y con diferentes
+                        necesidades temporales.
                     </p>
                 </div>
 
@@ -218,35 +229,43 @@
         <!-- Algunos de nuestros clientes //carrousel  -->
         <section>
             <h3>Empresas que confían en nuestros servicios</h3>
-           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./images/empresasG1.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/empresasG2.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/empresasG3.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden"></span>
-  </button>
-</div>
+            <p class="text-center">PEeIRR S.R.L. ha desarrollado Proyectos Eléctricos para diferentes
+                ramas de la industria, tales como Siderurgia, Aceiteras, Centrales Térmicas, Fábricas de Neumáticos,
+                Cuidado de la Salud y Prevención de Enfermedades. Entre nuestros clientes se encuentran:</p>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/empresasG1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/empresasG2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/empresasG3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
 
         </section>
-        
+
     </main>
 
     <!-- footer -->
@@ -316,13 +335,9 @@
         </section>
     </footer>
 
- 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-
-    
 
 </body>
 
