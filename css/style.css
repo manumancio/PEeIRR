@@ -92,7 +92,7 @@ input[type="checkbox"] {
     position: relative;
     cursor: pointer;
     width: 50px;
-    height: 40px;   
+    height: 40px;
 }
 
 .bar span {
@@ -2069,17 +2069,17 @@ form {
         display: none;
     }
 
-     /* segunda barra */
+    /* segunda barra */
 
-     .logo {
-         width: 30px;
-         min-width: none;
-         padding: 2%;
-     }
+    .logo {
+        width: 30px;
+        min-width: none;
+        padding: 2%;
+    }
 
-     .navbar {
-         padding: 0;
-     }
+    .navbar {
+        padding: 0;
+    }
 
     /* hero */
 
@@ -2518,7 +2518,7 @@ form {
     .logo {
         width: 30px;
         min-width: none;
-        padding-top: 60px               
+        padding-top: 60px
     }
 
     .navbar {
