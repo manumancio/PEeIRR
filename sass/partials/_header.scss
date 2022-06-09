@@ -1,0 +1,222 @@
+/* --------------------INDEX.HTML---------------------- */
+
+/* header */
+.header-index {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/header1.webp);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* primera barra */
+.nav__primeraBarra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 2.6rem;
+    width: 100vw;
+    padding-right: 10%;
+    line-height: 4%;
+    align-items: center;
+    background-color: $darkblue;
+    position: fixed;
+    z-index: 100;
+
+    .nav__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 1.75%;
+        padding: 0.4% 1.8%;
+        text-align: center;
+        background-color: $lightblue;
+        color: $darkblue;
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-family: Raleway;
+        font-weight: 400;
+        transition: all 0.2 ease-in-out;
+
+        &:hover {
+            background-color: #d5e1f7;
+        }
+    }
+
+    .nav__img {
+        width: 2.5rem;
+        margin-right: 1.1rem;
+        transition: all 0.3 ease-in-out;
+
+        &:hover {
+            background-color: #153b66;
+        }
+    }
+}
+
+/* segunda barra */
+.nav__segundaBarra {
+    width: 100%;
+    padding-top: 2.6rem;
+    box-shadow: 2px 2px 8px #9c988131;
+    background-color: hsla(48, 6%, 68%, 0.231);
+
+    .logo {
+        width: 60%;
+        min-width: 250px;
+    }
+
+    .navbar-brand {
+        width: 40%;
+    }
+}
+
+.nav-link {
+    color: $darkblue;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: Poppins;
+
+    &:hover {
+        border-bottom: 2px solid $darkblue;
+        color: $darkblue;
+    }
+}
+
+/* hero */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    &__title {
+        padding: 10px;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.6;
+        text-shadow: 2px 2px 2px #616161;
+
+        span {
+            font-weight: 900;
+            font-size: 5rem;
+            color: rgb(29, 29, 29);
+        }
+    }
+
+    &__subtitle {
+        padding: 10px;
+        font-family: Raleway;
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-align: center;
+        color: #000;
+        background-color: hsla(0, 14%, 97%, 0.557);
+    }
+
+    &__button {
+        display: inline-block;
+        margin-top: 5%;
+        padding: 0.5% 1.3%;
+        text-align: center;
+        border: $darkblue 3px solid;
+        background-color: $darkblue;
+        text-decoration: none;
+        font-family: Poppins;
+        font-weight: 300;
+        font-size: 1.4rem;
+        color: $white;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 4px #999;
+
+        &__button:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+/* ------------------------ SERVICIOS.HTML ------------------------------*/
+
+.header-servicios {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/rsz_planos.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*---------------------------PROYECTOS.HTML -----------------------------*/
+
+.header-proyectos {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/rsz_planos2.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/* ------------------------------SUMATE.HTML---------------------------- */
+
+.header-sumate {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/rsz_sumate.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------------------------NOSOTROS.HTML----------------------------- */
+
+.header-nosotros {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/rsz_equipo2.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----------------------------CONTACTO.HTML---------------------------- */
+
+.header-contacto {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: $gradientOld;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: $gradientNew,
+        url(../images/rsz_contacto.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}

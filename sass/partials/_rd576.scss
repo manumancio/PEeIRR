@@ -1,0 +1,500 @@
+@media only screen and (max-width: 576px) {
+
+    /* -----------------------general---------------------------- */
+
+    main {
+        width: 100vw;
+    }
+
+    h1 {
+        padding-top: 2%;
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        padding: 1.5%;
+        padding-top: 3.5%;
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        padding: 2% 0;
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        padding: 1%;
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        padding: 1%;
+        font-size: 1.2rem;
+    }
+
+    h6 {
+        padding: 1%;
+        font-size: 1.1rem;
+    }
+
+    p {
+        padding: 0.5%;
+        font-size: 1.1rem;
+    }
+
+    .header__img-h1 {
+        height: 20vh;
+    }
+
+    /* ---------------------------INDEX.HTML-------------------------- */
+
+    /* primera barra */
+
+    .nav__primeraBarra {
+        padding-right: 2%;
+        justify-content: center;
+    }
+
+    .nav__img {
+        width: 1.8rem;
+
+
+    }
+
+    .nav__img--lkd {
+        display: none;
+    }
+
+
+    /* segunda barra */
+
+    .logo {
+        width: 30px;
+        min-width: none;
+        padding: 2%;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    /* hero */
+
+    .hero {
+        height: 50vh;
+
+        &__title {
+            font-size: 1.2rem;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.1rem;
+        }
+
+        &__button {
+            font-size: 1rem;
+        }
+    }
+
+
+
+    /* Nuestros servicios */
+
+    .nuestros-servicios {
+        margin: 8% auto;
+        height: auto;
+
+        .section__servicios-container {
+            display: flex;
+            flex-direction: column;
+
+            .grid-servicios {
+                width: 90%;
+                height: 40vh;
+                margin: 3% auto;
+
+                .grid-servicios img {
+                    width: 20%;
+                }
+            }
+
+        }
+
+    }
+
+    .section__paragraph {
+        font-size: 1.2rem;
+    }
+
+
+    /* Sobre Nosotros */
+
+    .section__nosotros-div {
+        padding: 0 20px;
+
+        .section__nosotros-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .section__nosotros-img {
+            width: 100%;
+            height: 40vh;
+        }
+    }
+
+    /* footer */
+
+    .footer__section {
+        width: 100vw;
+        text-align: center;
+        margin-bottom: 5%;
+
+        .footer__subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .footer__paragraph {
+            padding: 5px 15px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+
+        .footer__list {
+            padding: 1%;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+    .footer__img {
+        margin-left: 10%;
+        width: 1.5rem;
+    }
+
+    .footer__link {
+        padding: 1%;
+        font-size: 1.0rem;
+    }
+
+    .footer__icons {
+        width: 5%;
+        margin-right: 4%;
+    }
+
+    .logo--footer {
+        width: 55%;
+        margin: 2%;
+    }
+
+
+
+    /* footer final */
+
+    .footer__final h6 {
+        font-size: 1rem;
+    }
+
+    /* --------------------- SERVICIOS.HTML --------------------------*/
+
+
+
+    .section__servicios-div {
+        padding: 0 5%;
+        width: 100%;
+
+        .section__servicios-div-item {
+            width: 100%;
+            min-width: 200px;
+            padding: 0;
+
+            .section__servicios-img {
+                height: 30vh;
+                width: 100%;
+                margin: 3% 0;
+            }
+        }
+    }
+
+
+    /* ------------------------ NOSOTROS.HTML -----------------------*/
+
+
+
+    /* seccion peeirr */
+
+    .section-peeirr-div {
+        padding: 5%;
+        width: 90%;
+        min-width: 150px;
+
+        //  VER! ESTOS ULTMOS DOS ESTABAN EN EL TTLU EMPRESA
+    }
+
+    .section-peeirr-div__item {
+        padding-bottom: 1%;
+        font-size: 1.1rem;
+    }
+
+
+    /* seccion equipo */
+    .section-equipo {
+        margin: 15% 0;
+
+        .section-equipo__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(12, 1fr);
+            gap: 0.5%;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .section-equipo__img {
+        width: 80%;
+        height: 60%;
+        margin-top: 0;
+    }
+
+
+    /* seccion sumate */
+
+    .section-sumate {
+        margin-top: 5%;
+        width: 100vw;
+
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .section-sumate__flex p {
+        font-size: 1.1rem;
+        padding: 0 4%;
+    }
+
+    .section-sumate__flex p {
+        padding: 0 3%;
+        font-size: 1.1rem;
+    }
+
+
+    .section__button {
+        padding: 8px 22px;
+        font-size: 1.1rem;
+    }
+
+
+
+
+    /* seccion proyectos */
+
+    .section-proyectos {
+        width: 100%;
+        margin: 0;
+
+        .section-proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 30vh);
+            grid-gap: 1%;
+            margin-bottom: 5%;
+
+            .section-proyectos__item--1 {
+                grid-column-start: span 2;
+            }
+
+            .section-proyectos__item--4 {
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+            .section-proyectos__item--9 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+        }
+    }
+
+    .section-proyectos__title {
+        font-size: 1.1rem;
+    }
+
+     .section-proyectos__img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         box-shadow: 2px 2px 2px #ADA996;
+     }
+
+
+
+    /* ----------------------- PROYECTOS.HTML -----------------------*/
+
+
+    .proyecto__container {
+        margin: 0;
+        padding: 3%;
+
+        .proyecto1__div--img {
+            flex-wrap: wrap;
+        }
+
+        .proyecto3__div {
+            width: 100%;
+            min-width: 200px;
+
+            .proyecto3__img {
+                display: none;
+            }
+        }
+
+
+    }
+
+
+
+    /* -------------------------- SUMATE.HTML ---------------------------*/
+
+    .sumate-principal__title {
+        font-size: 1.1rem;
+    }
+
+    .sumate-principal__subtitle {
+        font-size: 1.2rem;
+    }
+
+
+    /* --------------------------CONTACTO.HTML------------------------- */
+
+    .header-contacto {
+        background-position: top 50%;
+    }
+
+    .main-div-flex {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* seccion formulario */
+
+    .section-formulario {
+        width: 90%;
+        min-width: none;
+        margin: 5% auto;
+    }
+
+
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        row-gap: 5px;
+    }
+
+    .input {
+        padding: 8px 10px;
+    }
+
+    /* seccion sumate */
+
+    .main-div-flex {
+        width: 100%;
+    }
+
+    .section-sumate-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 200px;
+        margin: 0 auto;
+
+
+        &__title {
+            color: $blue;
+            font-size: 1.5rem;
+            margin: 0;
+            padding: 2% 0;
+        }
+
+        &__subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 2% 0;
+        }
+
+        &__img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            margin-top: 30px;
+            object-fit: top;
+        }
+    }
+
+    .section__button--contacto {
+        padding: 1% 2%;
+        margin: 1%;
+    }
+
+
+
+    /* seccion encontranos */
+
+    .section-encontranos {
+        margin-bottom: 5%;
+
+
+        .section-encontranos__container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-encontranos-div {
+            width: 100%;
+            min-width: none;
+            font-family: Raleway;
+
+            &__title {
+                font-size: 1.1rem;
+            }
+
+            &__item {
+                font-size: 1.1rem;
+            }
+
+            &__iframe {
+                width: 100%;
+                margin: 0%;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .section-encontranos-div__item {
+        font-size: 1.1rem;
+        padding: 10px;
+
+        span {
+            color: $darkblue;
+            font-weight: 500;
+            font-family: Poppins;
+        }
+    }
+
+
+}

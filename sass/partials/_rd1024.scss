@@ -1,0 +1,278 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* ------------------------general---------------------------- */
+
+    main {
+        width: 90vw;
+    }
+
+    h1 {
+        padding-top: 2%;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        padding: 1.5%;
+        padding-top: 3.5%;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        padding: 2% 0;
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        padding: 1%;
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        padding: 1%;
+        font-size: 1.2rem;
+    }
+
+    h6 {
+        padding: 1%;
+        font-size: 1.1rem;
+    }
+
+    p {
+        padding: 0.5%;
+        font-size: 1.1rem;
+    }
+
+    .header__img-h1 {
+        height: 20vh;
+    }
+
+    /* ------------------------INDEX.HTML---------------------------- */
+
+    /* primera barra */
+
+    .nav__primeraBarra {
+        padding-right: 3%;
+        height: 2.4rem;
+    }
+
+    .nav__img {
+        width: 2rem;
+    }
+
+    /* segunda barra */
+
+    .nav__segundaBarra {
+        padding-top: 2.4rem;
+    }
+
+    /* hero */
+
+    .hero {
+        height: 75vh;
+
+        &__title {
+            font-size: 2rem;
+
+           span {
+                font-size: 4rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Nuestros servicios */
+
+    .nuestros-servicios {
+        margin: 8% auto;
+    }
+
+    .section__paragraph {
+        font-size: 1.2rem;
+    }
+
+    .section__servicios-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 40vh);
+        grid-template-areas:
+            "cardServicios1 cardServicios5"
+            "cardServicios3 cardServicios6"
+            "cardServicios2 cardServicios4";
+        justify-content: stretch;
+        row-gap: 2%;
+    }
+
+    .section__servicios-subtitles {
+        font-size: 1.1rem;
+    }
+
+    /* Sobre Nosotros */
+    .section__nosotros-div {
+        width: 45%;
+        min-width: 650px;
+    }
+
+    /* footer */
+    .footer__img {
+        margin: 1%;
+        width: 2.5rem;
+    }
+
+    .footer__link {
+        padding: 1.3%;
+        font-size: 1rem;
+    }
+
+    .footer__subtitle {
+        padding: 1% 1%;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .footer__paragraph {
+        font-size: 1rem;
+    }
+
+    .footer__icons {
+        width: 11%;
+        margin-right: 4%;
+    }
+
+    /* ---------------------- SERVICIOS.HTML --------------------------*/
+
+    .section__servicios-div-item {
+        width: 100%;
+
+        .section__servicios-img {
+            margin: 0;
+        }
+
+        .section__servicios-div p {
+            padding: 0 2%;
+        }
+    }
+
+    .section__servicios-div--serv2 {
+        width: 100%;
+        margin: 0
+    }
+
+    /* --------------------- NOSOTROS.HTML --------------------------*/
+
+    /* seccion peeirr */
+    .section-peeirr-div {
+        margin: 3%;
+    }
+
+    /* seccion equipo */
+
+    .section-equipo {
+        margin-bottom: 5%;
+
+        .section-equipo__container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 1%;
+            width: 80%;
+        }
+    }
+
+    .section-equipo__img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        width: 80%;
+        height: 60%;
+    }
+
+    /* seccion sumate */
+
+    /* seccion proyectos */
+
+    .section-proyectos {
+        margin: 0 auto 8%;
+
+        .section-proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 30vh);
+            grid-gap: 1%;
+            width: 95%;
+            margin: 0 auto;
+
+            .section-proyectos__item--1 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            .section-proyectos__item--5 {
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+
+            .section-proyectos__item--6 {
+                grid-column-start: span 2;
+            }
+
+            .section-proyectos__item--7 {
+                grid-column-start: span 2;
+            }
+
+            .section-proyectos__item--9 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+        }
+    }
+
+    .section-proyectos__title {
+        font-size: 1.1rem;
+    }
+
+    /* --------------------- PROYECTOS.HTML -------------------------*/
+
+    .proyecto3__div {
+        width: 95%
+    }
+
+    /* ---------------------- SUMATE.HTML --------------------------*/
+
+    .sumate-principal__title {
+        font-size: 1.1rem;
+    }
+
+    .sumate-principal__subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* ---------------------CONTACTO.HTML-------------------------- */
+
+    .main-div-flex {
+        width: 95%;
+    }
+
+    /* seccion formulario */
+
+    .section-formulario {
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    /* seccion sumate */
+
+    .section-sumate-contacto {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* seccion encontranos */
+
+    .section-encontranos-div {
+        width: 100%;
+    }
+}

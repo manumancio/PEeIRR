@@ -1,0 +1,100 @@
+@media only screen and (max-width: 350px) {
+
+    /* general */
+
+    h1 {
+        padding-top: 8%;
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        padding: 1.5%;
+        font-size: 1.1rem;
+    }
+
+    /* ---------------------------INDEX.HTML------------------------- */
+
+    /* segunda barra */
+
+    .logo {
+        width: 30px;
+        min-width: none;
+        padding-top: 60px
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+    /* hero */
+
+    .hero {
+        height: 60vh;
+    }
+
+    /* Sobre Nosotros */
+
+    .section__nosotros-paragraph,
+    .section__nosotros-subtitle {
+        margin: 0 50px;
+    }
+
+    /* seccion peeirr */
+
+    .section-peeirr-div {
+        min-width: 100px;
+        width: 90%;
+    }
+
+    /* footer */
+
+    .footer h6 {
+        text-align: center;
+        color: $darkblue
+    }
+
+    /* ----------------------------NOSOTROS.HTML------------------------- */
+
+    /* seccion sumate */
+    
+    .section-sumate__flex p {
+        text-align: center
+    }
+
+    /* --------------------------CONTACTO.HTML--------------------------- */
+
+    /* seccion sumate */
+    .section-sumate-contacto__subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 0 20px;
+    }
+
+    /* seccion encontranos */
+
+    .section-encontranos {
+        margin-bottom: 5%;
+    }
+
+    .section-encontranos-div {
+        width: 100%;
+        min-width: none;
+
+        &__item {
+            font-size: 0.5rem;
+            padding: 0px;
+            margin: 0px
+        }
+
+        &__iframe {
+            margin: 0%;
+        }
+    }
+
+}
