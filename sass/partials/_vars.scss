@@ -69,6 +69,14 @@ $gradientNew: linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0
     color: $color
 }
 
+
+@mixin images($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+
 // maps-get
 
 $fontWeight: (

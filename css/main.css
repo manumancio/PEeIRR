@@ -53,7 +53,7 @@ h6 {
   padding: 1%;
   font-size: 1.1rem;
   font-family: Raleway;
-  color: black;
+  color: #F9F7F7;
   font-weight: 200; }
 
 p {
@@ -65,7 +65,8 @@ p {
 
 .header__img-h1 {
   width: 100vw;
-  height: 25vh; }
+  height: 25vh;
+  object-fit: cover; }
 
 .section__paragraph {
   padding-bottom: 3%;
@@ -356,17 +357,19 @@ input[type]:checked ~ span.middle {
 
 /* From uiverse.io // boton de LEER MAS */
 button {
-  position: relative;
   display: inline-block;
+  padding: 0;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  position: relative;
   cursor: pointer;
   outline: none;
   border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit; }
+  vertical-align: middle; }
   button.learn-more {
     width: 10rem;
     height: auto; }
@@ -488,10 +491,11 @@ button {
     margin: 2%; }
 
 .section__servicios-div--serv5 {
-  background-color: #112D4E;
-  color: #F9F7F7; }
-  .section__servicios-div--serv5 h5 {
-    color: #DBE2EF; }
+  background-color: #112D4E; }
+  .section__servicios-div--serv5 h4 {
+    color: #F9F7F7; }
+  .section__servicios-div--serv5 p {
+    color: #F9F7F7; }
 
 .section__servicios-div--serv2 {
   background-color: #DBE2EF;
@@ -806,7 +810,6 @@ button {
     padding: 2% 0; }
   .section-sumate-contacto__img {
     width: 100%;
-    object-fit: cover;
     display: block;
     margin-top: 30px;
     object-fit: top; }
@@ -955,6 +958,7 @@ button {
   .section-equipo__img {
     width: 80%;
     height: 60%;
+    object-fit: cover;
     margin-top: 0; }
   /* seccion sumate */
   .section-sumate-flex p {
@@ -1083,11 +1087,12 @@ button {
       margin: 0 auto;
       width: 80%; }
   .section-equipo__img {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
-    width: 80%;
-    height: 60%; }
+    margin-top: 0; }
   /* seccion sumate */
   /* seccion proyectos */
   .section-proyectos {
@@ -1193,7 +1198,15 @@ button {
     margin: 3%; }
   /* seccion equipo */
   .section-equipo {
-    margin: 10% 0; }
+    margin: 10% 0;
+    /* seccion sumate */
+    /* seccion proyectos */
+    /*-------------------------PROYECTOS.HTML ------------------------*/
+    /* ----------------------- SUMATE.HTML ----------------------------*/
+    /* ------------------------CONTACTO.HTML------------------------ */
+    /* seccion formulario */
+    /* seccion sumate */
+    /* seccion encontranos */ }
     .section-equipo .section-equipo__container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1207,155 +1220,148 @@ button {
           margin-right: auto;
           margin-top: 0;
           width: 80%;
-          height: 60%; }
-  /* seccion sumate */
-  .section-sumate {
-    margin-top: 5%;
-    width: 100vw; }
-    .section-sumate .section-sumate h4 {
+          height: 60%;
+          object-fit: cover; }
+    .section-equipo .section-sumate {
+      margin-top: 5%;
+      width: 100vw; }
+      .section-equipo .section-sumate .section-sumate h4 {
+        font-size: 1.2rem; }
+      .section-equipo .section-sumate .section-sumate__flex p {
+        font-size: 1.1rem;
+        padding: 0 4%; }
+    .section-equipo .section__button {
+      padding: 8px 22px;
+      font-size: 1.1rem; }
+    .section-equipo .section-proyectos {
+      width: 100%; }
+      .section-equipo .section-proyectos .section-proyectos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 30vh);
+        gap: 1%; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item {
+          position: relative; }
+          .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 2px 2px 2px #ADA996; }
+          .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__title {
+            width: 100%;
+            padding: 2%;
+            position: absolute;
+            bottom: 0;
+            color: #F9F7F7;
+            background: linear-gradient(rgba(255, 255, 255, 0), black);
+            font-size: 1.3rem; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--1 {
+          grid-column-start: 1;
+          grid-column-end: 3; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--4 {
+          grid-column-start: 1;
+          grid-column-end: 2; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--5 {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--6 {
+          grid-column-start: span 2; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--7 {
+          grid-column: 1/2; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--8 {
+          grid-column: 2/4;
+          grid-row: 3/4; }
+        .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--9 {
+          grid-column-start: 4;
+          grid-column-end: 5;
+          grid-row-start: 3;
+          grid-row-end: 4; }
+    .section-equipo .proyecto__container {
+      margin: 5% 0;
+      width: 100%; }
+      .section-equipo .proyecto__container .proyecto3__div {
+        width: 200px;
+        margin: 0;
+        object-fit: cover; }
+      .section-equipo .proyecto__container .proyecto1__img {
+        width: 40vw;
+        height: 30vh;
+        object-fit: cover;
+        margin: 0.5%; }
+    .section-equipo .proyecto__container--proy3 p {
+      width: 100%; }
+      .section-equipo .proyecto__container--proy3 p .proyecto3__div {
+        width: 90%;
+        min-width: 400px; }
+        .section-equipo .proyecto__container--proy3 p .proyecto3__div .proyecto3__img {
+          margin: 2% 0%; }
+    .section-equipo .sumate-principal__title {
+      font-size: 1.1rem; }
+    .section-equipo .sumate-principal__subtitle {
       font-size: 1.2rem; }
-    .section-sumate .section-sumate__flex p {
-      font-size: 1.1rem;
-      padding: 0 4%; }
-  .section__button {
-    padding: 8px 22px;
-    font-size: 1.1rem; }
-  /* seccion proyectos */
-  .section-proyectos {
-    width: 100%; }
-    .section-proyectos .section-proyectos-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 30vh);
-      gap: 1%; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item {
-        position: relative; }
-        .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          box-shadow: 2px 2px 2px #ADA996; }
-        .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__title {
-          width: 100%;
-          padding: 2%;
-          position: absolute;
-          bottom: 0;
-          color: #F9F7F7;
-          background: linear-gradient(rgba(255, 255, 255, 0), black);
-          font-size: 1.3rem; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 3; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--4 {
-        grid-column-start: 1;
-        grid-column-end: 2; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--5 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--6 {
-        grid-column-start: span 2; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--7 {
-        grid-column: 1/2; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--8 {
-        grid-column: 2/4;
-        grid-row: 3/4; }
-      .section-proyectos .section-proyectos-grid .section-proyectos__item--9 {
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 4; }
-  /*-------------------------PROYECTOS.HTML ------------------------*/
-  .proyecto__container {
-    margin: 5% 0;
-    width: 100%; }
-    .proyecto__container .proyecto3__div {
-      width: 200px;
-      margin: 0;
-      object-fit: cover; }
-    .proyecto__container .proyecto1__img {
-      width: 40vw;
-      height: 30vh;
-      object-fit: cover;
-      margin: 0.5%; }
-  .proyecto__container--proy3 p {
-    width: 100%; }
-    .proyecto__container--proy3 p .proyecto3__div {
+    .section-equipo .main-div-flex {
       width: 90%;
-      min-width: 400px; }
-      .proyecto__container--proy3 p .proyecto3__div .proyecto3__img {
-        margin: 2% 0%; }
-  /* ----------------------- SUMATE.HTML ----------------------------*/
-  .sumate-principal__title {
-    font-size: 1.1rem; }
-  .sumate-principal__subtitle {
-    font-size: 1.2rem; }
-  /* ------------------------CONTACTO.HTML------------------------ */
-  .main-div-flex {
-    width: 90%;
-    margin: 0 auto; }
-  /* seccion formulario */
-  .section-formulario {
-    width: 90%;
-    min-width: none;
-    margin: 5% auto; }
-  .input {
-    padding: 8px 10px; }
-  .form-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    row-gap: 5px; }
-  /* seccion sumate */
-  .section-sumate-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    min-width: none;
-    margin: 5% auto; }
-    .section-sumate-contacto__title {
-      color: #3F72AF;
-      font-size: 1.5rem; }
-    .section-sumate-contacto__subtitle {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin: 0;
-      padding: 2% 0; }
-    .section-sumate-contacto__img {
-      display: block;
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      margin-top: 30px; }
-  .section__button--contacto {
-    padding: 1% 2%;
-    margin: 1%; }
-  /* seccion encontranos */
-  .section-encontranos {
-    margin-bottom: 5%; }
-    .section-encontranos .section-encontranos__container {
+      margin: 0 auto; }
+    .section-equipo .section-formulario {
+      width: 90%;
+      min-width: none;
+      margin: 5% auto; }
+    .section-equipo .input {
+      padding: 8px 10px; }
+    .section-equipo .form-grid {
       display: flex;
-      flex-wrap: wrap; }
-      .section-encontranos .section-encontranos__container .section-encontranos-div {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      row-gap: 5px; }
+    .section-equipo .section-sumate-contacto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      min-width: none;
+      margin: 5% auto; }
+      .section-equipo .section-sumate-contacto__title {
+        color: #3F72AF;
+        font-size: 1.5rem; }
+      .section-equipo .section-sumate-contacto__subtitle {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin: 0;
+        padding: 2% 0; }
+      .section-equipo .section-sumate-contacto__img {
+        display: block;
         width: 100%;
-        min-width: 350px;
-        font-family: Raleway; }
-        .section-encontranos .section-encontranos__container .section-encontranos-div__title {
-          font-size: 1.4rem; }
-        .section-encontranos .section-encontranos__container .section-encontranos-div__iframe {
+        height: 400px;
+        object-fit: cover;
+        margin-top: 30px; }
+    .section-equipo .section__button--contacto {
+      padding: 1% 2%;
+      margin: 1%; }
+    .section-equipo .section-encontranos {
+      margin-bottom: 5%; }
+      .section-equipo .section-encontranos .section-encontranos__container {
+        display: flex;
+        flex-wrap: wrap; }
+        .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div {
           width: 100%;
-          margin: 3%; }
-  .section-encontranos-div__item {
-    font-size: 1.3rem;
-    padding: 10px; }
-    .section-encontranos-div__item span {
-      color: #112D4E;
-      font-weight: 500;
-      font-family: Poppins; } }
+          min-width: 350px;
+          font-family: Raleway; }
+          .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div__title {
+            font-size: 1.4rem; }
+          .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div__iframe {
+            width: 100%;
+            margin: 3%; }
+    .section-equipo .section-encontranos-div__item {
+      font-size: 1.3rem;
+      padding: 10px; }
+      .section-equipo .section-encontranos-div__item span {
+        color: #112D4E;
+        font-weight: 500;
+        font-family: Poppins; } }
 
 @media only screen and (max-width: 576px) {
   /* -----------------------general---------------------------- */
@@ -1499,6 +1505,7 @@ button {
   .section-equipo__img {
     width: 80%;
     height: 60%;
+    object-fit: cover;
     margin-top: 0; }
   /* seccion sumate */
   .section-sumate {

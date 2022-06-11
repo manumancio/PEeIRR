@@ -103,5 +103,5 @@
 .footer__final {
     @include flex(flex, wrap, row, space-around);
     background-color: #112D4E;
-    color: #F9F7F7;
+    color: $white;
 }

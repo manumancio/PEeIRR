@@ -110,254 +110,245 @@
                     margin-left: auto;
                     margin-right: auto;
                     margin-top: 0;
-                    width: 80%;
-                    height: 60%;
+                    @include images(80%, 60%);
                 }
             }
         }
-    }
 
 
 
-    /* seccion sumate */
+        /* seccion sumate */
 
-    .section-sumate {
-        margin-top: 5%;
-        width: 100vw;
+        .section-sumate {
+            margin-top: 5%;
+            width: 100vw;
 
-        .section-sumate h4 {
+            .section-sumate h4 {
+                font-size: 1.2rem;
+            }
+
+            .section-sumate__flex p {
+                font-size: 1.1rem;
+                padding: 0 4%;
+            }
+        }
+
+        .section__button {
+            padding: 8px 22px;
+            font-size: 1.1rem;
+        }
+
+        /* seccion proyectos */
+
+        .section-proyectos {
+            width: 100%;
+
+            .section-proyectos-grid {
+                @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
+
+                .section-proyectos__item {
+                    position: relative;
+
+                    .section-proyectos__img {
+                        @include images(100%, 100%);
+                        box-shadow: $boxShadowImg;
+                    }
+
+                    .section-proyectos__title {
+                        width: 100%;
+                        padding: 2%;
+                        position: absolute;
+                        bottom: 0;
+                        color: $white;
+                        background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .section-proyectos__item--1 {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+
+                .section-proyectos__item--4 {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+
+                .section-proyectos__item--5 {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+
+                .section-proyectos__item--6 {
+                    grid-column-start: span 2;
+                }
+
+                .section-proyectos__item--7 {
+                    grid-column: 1/2;
+                }
+
+                .section-proyectos__item--8 {
+                    grid-column: 2/4;
+                    grid-row: 3/4;
+                }
+
+                .section-proyectos__item--9 {
+                    grid-column-start: 4;
+                    grid-column-end: 5;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
+            }
+        }
+
+
+        /*-------------------------PROYECTOS.HTML ------------------------*/
+
+        .proyecto__container {
+            margin: 5% 0;
+            width: 100%;
+
+            .proyecto3__div {
+                width: 200px;
+                margin: 0;
+                object-fit: cover;
+            }
+
+            .proyecto1__img {
+                @include images(40vw, 30vh);
+                margin: 0.5%;
+            }
+        }
+
+        .proyecto__container--proy3 p {
+            width: 100%;
+
+            .proyecto3__div {
+                width: 90%;
+                min-width: 400px;
+
+                .proyecto3__img {
+                    margin: 2% 0%;
+                }
+            }
+        }
+
+
+        /* ----------------------- SUMATE.HTML ----------------------------*/
+
+        .sumate-principal__title {
+            font-size: 1.1rem;
+        }
+
+        .sumate-principal__subtitle {
             font-size: 1.2rem;
         }
 
-        .section-sumate__flex p {
-            font-size: 1.1rem;
-            padding: 0 4%;
-        }
-    }
+        /* ------------------------CONTACTO.HTML------------------------ */
 
-    .section__button {
-        padding: 8px 22px;
-        font-size: 1.1rem;
-    }
-
-    /* seccion proyectos */
-
-    .section-proyectos {
-        width: 100%;
-
-        .section-proyectos-grid {
-            @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
-
-            .section-proyectos__item {
-                position: relative;
-
-                .section-proyectos__img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    box-shadow: $boxShadowImg;
-                }
-
-                .section-proyectos__title {
-                    width: 100%;
-                    padding: 2%;
-                    position: absolute;
-                    bottom: 0;
-                    color: $white;
-                    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-                    font-size: 1.3rem;
-                }
-            }
-
-            .section-proyectos__item--1 {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            .section-proyectos__item--4 {
-                grid-column-start: 1;
-                grid-column-end: 2;
-            }
-
-            .section-proyectos__item--5 {
-                grid-column-start: 2;
-                grid-column-end: 3;
-                grid-row-start: 2;
-                grid-row-end: 3;
-            }
-
-            .section-proyectos__item--6 {
-                grid-column-start: span 2;
-            }
-
-            .section-proyectos__item--7 {
-                grid-column: 1/2;
-            }
-
-            .section-proyectos__item--8 {
-                grid-column: 2/4;
-                grid-row: 3/4;
-            }
-
-            .section-proyectos__item--9 {
-                grid-column-start: 4;
-                grid-column-end: 5;
-                grid-row-start: 3;
-                grid-row-end: 4;
-            }
-        }
-    }
-
-
-    /*-------------------------PROYECTOS.HTML ------------------------*/
-
-    .proyecto__container {
-        margin: 5% 0;
-        width: 100%;
-
-        .proyecto3__div {
-            width: 200px;
-            margin: 0;
-            object-fit: cover;
-        }
-
-        .proyecto1__img {
-            width: 40vw;
-            height: 30vh;
-            object-fit: cover;
-            margin: 0.5%;
-        }
-    }
-
-    .proyecto__container--proy3 p {
-        width: 100%;
-
-        .proyecto3__div {
+        .main-div-flex {
             width: 90%;
-            min-width: 400px;
-
-            .proyecto3__img {
-                margin: 2% 0%;
-            }
-        }
-    }
-
-
-    /* ----------------------- SUMATE.HTML ----------------------------*/
-
-    .sumate-principal__title {
-        font-size: 1.1rem;
-    }
-
-    .sumate-principal__subtitle {
-        font-size: 1.2rem;
-    }
-
-    /* ------------------------CONTACTO.HTML------------------------ */
-
-    .main-div-flex {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* seccion formulario */
-
-    .section-formulario {
-        width: 90%;
-        min-width: none;
-        margin: 5% auto;
-    }
-
-    .input {
-        padding: 8px 10px;
-    }
-
-    .form-grid {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        row-gap: 5px;
-    }
-
-    /* seccion sumate */
-
-    .section-sumate-contacto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-
-        min-width: none;
-        margin: 5% auto;
-
-
-        &__title {
-            color: $blue;
-            font-size: 1.5rem;
+            margin: 0 auto;
         }
 
-        &__subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            margin: 0;
-            padding: 2% 0;
+        /* seccion formulario */
+
+        .section-formulario {
+            width: 90%;
+            min-width: none;
+            margin: 5% auto;
         }
 
-        &__img {
-            display: block;
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            margin-top: 30px;
+        .input {
+            padding: 8px 10px;
         }
 
-
-    }
-
-
-    .section__button--contacto {
-        padding: 1% 2%;
-        margin: 1%;
-    }
-
-    /* seccion encontranos */
-
-    .section-encontranos {
-        margin-bottom: 5%;
-
-        .section-encontranos__container {
+        .form-grid {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            row-gap: 5px;
+        }
 
-            .section-encontranos-div {
-                width: 100%;
-                min-width: 350px;
-                font-family: Raleway;
+        /* seccion sumate */
 
-                &__title {
-                    font-size: 1.4rem;
-                }
+        .section-sumate-contacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
 
-                &__iframe {
+            min-width: none;
+            margin: 5% auto;
+
+
+            &__title {
+                color: $blue;
+                font-size: 1.5rem;
+            }
+
+            &__subtitle {
+                font-size: 1.3rem;
+                font-weight: 400;
+                margin: 0;
+                padding: 2% 0;
+            }
+
+            &__img {
+                display: block;
+                @include images(100%, 400px);
+                margin-top: 30px;
+            }
+        }
+
+
+        .section__button--contacto {
+            padding: 1% 2%;
+            margin: 1%;
+        }
+
+        /* seccion encontranos */
+
+        .section-encontranos {
+            margin-bottom: 5%;
+
+            .section-encontranos__container {
+                display: flex;
+                flex-wrap: wrap;
+
+                .section-encontranos-div {
                     width: 100%;
-                    margin: 3%;
+                    min-width: 350px;
+                    font-family: Raleway;
+
+                    &__title {
+                        font-size: 1.4rem;
+                    }
+
+                    &__iframe {
+                        width: 100%;
+                        margin: 3%;
+                    }
                 }
             }
         }
-    }
 
 
-    .section-encontranos-div__item {
-        font-size: 1.3rem;
-        padding: 10px;
+        .section-encontranos-div__item {
+            font-size: 1.3rem;
+            padding: 10px;
 
-        span {
-            color: $darkBlue;
-            font-weight: 500;
-            font-family: Poppins;
+            span {
+                color: $darkBlue;
+                font-weight: 500;
+                font-family: Poppins;
+            }
         }
-    }
 
+    }
 }

@@ -42,7 +42,7 @@
         }
 
         .grid-servicios1 {
-            @include gridArea(cardServicios1);            
+            @include gridArea(cardServicios1);
         }
 
         .grid-servicios2 {
@@ -50,36 +50,31 @@
         }
 
         .grid-servicios3 {
-           @include gridArea(cardServicios3);
+            @include gridArea(cardServicios3);
         }
 
         .grid-servicios4 {
-           @include gridArea(cardServicios4);
+            @include gridArea(cardServicios4);
         }
 
         .grid-servicios5 {
-           @include gridArea(cardServicios5);
+            @include gridArea(cardServicios5);
         }
 
         .grid-servicios6 {
-          @include gridArea(cardServicios6);
+            @include gridArea(cardServicios6);
         }
     }
 }
 
 /* From uiverse.io // boton de LEER MAS */
 button {
+    @include button(inline-block, 0, transparent, none, inherit, inherit, inherit, inherit);
     position: relative;
-    display: inline-block;
     cursor: pointer;
     outline: none;
     border: 0;
     vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
 
     &.learn-more {
         width: 10rem;
@@ -233,15 +228,17 @@ button {
         object-fit: cover;
         margin: 2%;
     }
-
 }
 
 .section__servicios-div--serv5 {
     background-color: $darkBlue;
-    color: $white;
 
-    h5 {
-        color: $lightBlue;
+    h4 {
+        color: $white;
+    }
+
+    p {
+        color: $white;
     }
 }
 
@@ -266,7 +263,7 @@ button {
     padding: 3%;
     border-radius: 15px;
     box-shadow: $boxShadow;
-   
+
 
     .proyecto1__div--img {
         display: flex;
@@ -282,7 +279,7 @@ button {
     h3 {
         padding: 0 3%;
         text-align: left;
-        
+
     }
 }
 
@@ -401,9 +398,7 @@ button {
             box-shadow: $boxShadow;
 
             .section-equipo__img {
-                width: 90%;
-                height: 60%;
-                object-fit: cover;
+                @include images(90%, 60%);
                 object-position: top;
                 margin-top: 0;
                 padding-top: 0;
@@ -464,9 +459,7 @@ button {
             position: relative;
 
             .section-proyectos__img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                @include images(100%, 100%);
                 box-shadow: $boxShadow;
             }
 
@@ -532,7 +525,7 @@ button {
             .form-grid {
                 @include grid(grid, 1fr 1fr, repeat(3, 3%), 8% 2%);
                 width: 100%;
-                height: 530px;                        
+                height: 530px;
                 grid-template-areas: "grid-nombre grid-apellido"
                     "grid-email grid-telefono"
                     "grid-asunto grid-asunto"
@@ -617,8 +610,7 @@ button {
     }
 
     &__img {
-        width: 100%;
-        object-fit: cover;
+        width: 100%;       
         display: block;
         margin-top: 30px;
         object-fit: top;

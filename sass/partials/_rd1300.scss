@@ -43,8 +43,7 @@
     }
 
     .section-equipo__img {
-        width: 80%;
-        height: 60%;
+        @include images(80%, 60%);      
         margin-top: 0;
     }
 

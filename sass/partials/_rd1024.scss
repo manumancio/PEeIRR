@@ -177,11 +177,10 @@
     }
 
     .section-equipo__img {
+        @include images(80%, 60%);
         margin-left: auto;
         margin-right: auto;
-        margin-top: 0;
-        width: 80%;
-        height: 60%;
+        margin-top: 0;       
     }
 
     /* seccion sumate */
