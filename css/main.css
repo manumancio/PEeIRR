@@ -433,7 +433,7 @@ button {
   background-color: #112D4E;
   margin: 10% 0 5%;
   padding-bottom: 5%; }
-  .sobre-nosotros__title {
+  .sobre-nosotros .sobre-nosotros__title {
     color: #F9F7F7; }
   .sobre-nosotros .section__nosotros {
     display: flex;
@@ -926,7 +926,8 @@ button {
   flex-direction: row;
   justify-content: space-around;
   background-color: #112D4E;
-  color: #F9F7F7; }
+  color: #F9F7F7;
+  align-items: center; }
 
 @media only screen and (max-width: 1300px) {
   /* ---------------------INDEX.HTML----------------------------- */

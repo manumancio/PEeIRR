@@ -104,4 +104,5 @@
     @include flex(flex, wrap, row, space-around);
     background-color: #112D4E;
     color: $white;
+    align-items: center;
 }
