@@ -151,8 +151,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/header1.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/header1.webp);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/index.webp);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/index.webp);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
@@ -325,8 +325,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/rsz_planos.jpg);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/rsz_planos.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/servicios.webp);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/servicios.webp);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
@@ -338,8 +338,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/rsz_planos2.jpg);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/rsz_planos2.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/proyectos.jpg);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/proyectos.jpg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,8 +351,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/rsz_sumate.jpg);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/rsz_sumate.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/sumate.jpg);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/sumate.jpg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
@@ -364,8 +364,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/rsz_equipo2.jpg);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/rsz_equipo2.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/nosotros.jpg);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/nosotros.jpg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
@@ -377,8 +377,8 @@ input[type]:checked ~ span.middle {
   background: #ADA996;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/rsz_contacto.jpg);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/rsz_contacto.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/contacto.jpg);
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/contacto.jpg);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;

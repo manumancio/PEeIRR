@@ -6,19 +6,14 @@
     margin: 4% auto;
 
     .section__servicios-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 50vh);
+        @include grid(grid, repeat(3, 1fr), repeat(2, 50vh), 0 5%);
         grid-template-areas:
             "cardServicios1 cardServicios5 cardServicios3"
             "cardServicios6 cardServicios2 cardServicios4";
         justify-content: stretch;
-        row-gap: 5%;
 
         .grid-servicios {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+            @include flex(flex, nowrap, column, space-evenly);
             height: 100%;
             width: 60%;
             min-width: 250px;
@@ -36,11 +31,9 @@
             .section__servicios-subtitles {
                 padding: 3%;
                 text-align: center;
-                color: $blue;
-                font-size: 1.05rem;
+                @include font(1.05rem, Raleway, $blue);
                 line-height: 1.5;
                 font-weight: 600;
-                font-family: Raleway;
             }
 
             .section__servicios-link {
@@ -49,33 +42,27 @@
         }
 
         .grid-servicios1 {
-            grid-area: cardServicios1;
-            justify-self: center;
+            @include gridArea(cardServicios1);            
         }
 
         .grid-servicios2 {
-            grid-area: cardServicios2;
-            justify-self: center;
+            @include gridArea(cardServicios2);
         }
 
         .grid-servicios3 {
-            grid-area: cardServicios3;
-            justify-self: center;
+           @include gridArea(cardServicios3);
         }
 
         .grid-servicios4 {
-            grid-area: cardServicios4;
-            justify-self: center;
+           @include gridArea(cardServicios4);
         }
 
         .grid-servicios5 {
-            grid-area: cardServicios5;
-            justify-self: center;
+           @include gridArea(cardServicios5);
         }
 
         .grid-servicios6 {
-            grid-area: cardServicios6;
-            justify-self: center;
+          @include gridArea(cardServicios6);
         }
     }
 }
@@ -160,27 +147,29 @@ button {
         width: 100%;
 
         .icon.arrow {
-            background: #fff;
+            background: $white;
             transform: translate(1rem, 0);
         }
     }
 
     &:hover .button-text {
-        color: #fff;
+        color: $white;
     }
 }
 
 /* Sobre Nosotros */
 
 .sobre-nosotros {
-    background-color: $darkblue;
+    background-color: $darkBlue;
     margin: 10% 0 5%;
     padding-bottom: 5%;
 
+    &__title {
+        color: $white;
+    }
+
     .section__nosotros {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        @include flex(flex, wrap, row, space-around);
 
         &-div {
             width: 45%;
@@ -200,9 +189,7 @@ button {
 
         &-subtitle {
             padding: 1%;
-            font-size: 1.8rem;
-            font-family: Poppins;
-            color: $white;
+            @include font(1.8rem, Poppins, $white);
         }
 
         &-paragraph {
@@ -222,9 +209,7 @@ button {
 /* ---------------------------SERVICIOS.HTML----------------------------- */
 
 .section__servicios-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex(flex, wrap, row, space-around);
     width: 100%;
     margin-bottom: 5%;
     padding: 3% 0;
@@ -252,17 +237,17 @@ button {
 }
 
 .section__servicios-div--serv5 {
-    background-color: $darkblue;
+    background-color: $darkBlue;
     color: $white;
 
     h5 {
-        color: $lightblue
+        color: $lightBlue;
     }
 }
 
 .section__servicios-div--serv2 {
-    background-color: $lightblue;
-    color: $darkblue;
+    background-color: $lightBlue;
+    color: $darkBlue;
 }
 
 /* acordeon bootstrap //FAQS */
@@ -276,13 +261,12 @@ button {
 /* ---------------------------PROYECTOS.HTML----------------------------- */
 
 .proyecto__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex(flex, wrap, row, space-around);
     margin: 3%;
     padding: 3%;
     border-radius: 15px;
-    box-shadow: $boxShadow;    
+    box-shadow: $boxShadow;
+   
 
     .proyecto1__div--img {
         display: flex;
@@ -298,13 +282,13 @@ button {
     h3 {
         padding: 0 3%;
         text-align: left;
+        
     }
 }
 
 .proyecto__container--proy3 {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $lightblue;
+    @include flex(flex, wrap, row, flex-start);
+    background-color: $lightBlue;
 
     .proyecto3__div {
         width: 45%;
@@ -322,15 +306,12 @@ button {
 /* ---------------------------SUMATE.HTML----------------------------- */
 
 .sumate-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include flex(flex, nowrap, column, space-around);
     align-items: center;
 
     &__title {
         padding: 1%;
-        color: #000;
-        font-size: 1.5rem;
+        @include font(1.5rem, Raleway, #000);
         font-weight: 300;
     }
 
@@ -351,10 +332,7 @@ button {
 
 /* seccion empresa */
 .section-empresa {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include flex(flex, wrap, row, space-evenly);
     margin-top: 2%;
     margin-bottom: 5%;
 
@@ -382,10 +360,8 @@ button {
 
 /* seccion peeirr */
 .section-peeirr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $lightblue;
+    @include flex(flex, wrap, row, space-around);
+    background-color: $lightBlue;
     margin-bottom: 5%;
     padding: 2%;
 
@@ -395,15 +371,13 @@ button {
 
         &__subtitle {
             margin: 0;
-            color: $darkblue;
+            color: $darkBlue;
         }
 
         &__item {
             padding-bottom: 1.5%;
-            font-size: 1.3rem;
-            font-family: Raleway;
+            @include font(1.3rem, Raleway, $darkBlue);
             line-height: 1.9;
-            text-decoration-color: $darkblue;
         }
     }
 }
@@ -413,16 +387,12 @@ button {
     margin: 0 auto;
 
     &__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
-        gap: 1%;
+        @include grid(grid, repeat(3, 1fr), repeat(4, auto), 1%);
         width: 95%;
         margin: 0 auto;
 
         .section-equipo__div {
-            display: flex;
-            flex-direction: column;
+            @include flex(flex, nowrap, column, flex-start);
             align-items: center;
             width: 100%;
             height: auto;
@@ -441,14 +411,12 @@ button {
 
             .section-equipo__title {
                 padding: 1.5%;
-                font-family: Poppins;
-                font-size: 1.1rem;
+                @include font(1.1rem, Poppins, $darkBlue);
             }
 
             .section-equipo__paragraph {
                 padding: 0 1.5%;
-                font-family: Raleway;
-                font-size: 1rem;
+                @include font(1rem, Raleway, #000);
                 line-height: 1.4;
             }
         }
@@ -461,10 +429,8 @@ button {
     padding: 2%;
 
     &-flex {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex(flex, wrap, row, center);
         width: 100%;
-        justify-content: center;
 
         p {
             padding: 0 4%;
@@ -474,15 +440,8 @@ button {
 }
 
 .section__button {
-    display: inline-block;
-    padding: 10px 25px;
+    @include button (inline-block, 10px 25px, $darkBlue, none, Poppins, 300, 1.3rem, $white);
     margin: 0 4%;
-    background-color: $darkblue;
-    text-decoration: none;
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 1.3rem;
-    color: $white;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 4px #999;
 
@@ -499,10 +458,7 @@ button {
     margin: 0 auto 8%;
 
     .section-proyectos-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 30vh);
-        grid-gap: 1%;
+        @include grid(grid, repeat(5, 1fr), repeat(3, 30vh), 1%);
 
         .section-proyectos__item {
             position: relative;
@@ -516,12 +472,11 @@ button {
 
             .section-proyectos__title {
                 position: absolute;
-                bottom: 0;
-                color: $white;
-                background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
                 width: 100%;
                 padding: 2%;
-                font-size: 1.3rem;
+                bottom: 0;
+                background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                @include font(1.3rem, Raleway, $white);
             }
         }
 
@@ -553,8 +508,7 @@ button {
 /* --------------------------CONTACTOS.HTML----------------------------- */
 
 .main-div-flex {
-    display: flex;
-    justify-content: space-between;
+    @include flex(flex, nowrap, row, space-between);
 }
 
 /* seccion formulario */
@@ -576,13 +530,9 @@ button {
             }
 
             .form-grid {
+                @include grid(grid, 1fr 1fr, repeat(3, 3%), 8% 2%);
                 width: 100%;
-                height: 530px;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: repeat(3, 3%);
-                row-gap: 50px;
-                column-gap: 5%;
+                height: 530px;                        
                 grid-template-areas: "grid-nombre grid-apellido"
                     "grid-email grid-telefono"
                     "grid-asunto grid-asunto"
@@ -626,26 +576,17 @@ button {
     width: 100%;
     padding: 5px 10px;
     margin: 0;
-    background-color: $lightblue;
-    font-size: 1.3rem;
-    font-family: Raleway;
+    background-color: $lightBlue;
+    @include font(1.3rem, Raleway, #000);
     border: none;
 
     &:active {
-        border: 1px solid $darkblue
+        border: 1px solid $darkBlue;
     }
 }
 
 .input__button {
-    display: block;
-    padding: 1.5% 2.5%;
-    background-color: $blue;
-    text-decoration: none;
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: $white;
-    border: none;
+    @include button (block, 1.5% 2.5%, $blue, none, Poppins, 300, 1.2rem, $white);
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 4px #999;
 
@@ -656,18 +597,16 @@ button {
 
 /* seccion sumate */
 .section-sumate-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex(flex, nowrap, column, center);
     align-items: center;
     width: 30%;
 
     &__title {
-        color: $blue;
-        font-size: 1.5rem;
         margin: 0;
         padding: 2% 0;
+        @include font(1.5rem, Raleway, $blue);
     }
+
 
     &__subtitle {
         font-size: 1.2rem;
@@ -697,8 +636,8 @@ button {
     margin-bottom: 5%;
 
     &__container {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex(flex, wrap, row, flex-start);
+
     }
 
     &-div {
@@ -715,7 +654,7 @@ button {
             padding: 10px;
 
             span {
-                color: $darkblue;
+                color: $darkBlue;
                 font-weight: 500;
                 font-family: Poppins;
             }

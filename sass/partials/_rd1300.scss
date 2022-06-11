@@ -34,10 +34,8 @@
         margin-bottom: 5%;
 
         .section-equipo__container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, auto);
-            gap: 1.2%;
+            @include grid(grid, repeat(3, 1fr), repeat(4, auto),
+                1.2%);
             width: 90%;
             height: 100%;
             margin: 0 auto;

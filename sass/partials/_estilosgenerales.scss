@@ -19,54 +19,44 @@ main {
 h1 {
     padding-top: 4%;
     text-align: center;
-    font-size: 3rem;
+    @include font(3rem, Poppins, $darkBlue);
     font-weight: 600;
-    font-family: Poppins;
     text-shadow: 1px 1px 1px #cad0db;
-    color: $darkblue;
 }
 
 h2 {
     padding: 2.5%;
-    font-family: Raleway;
+    @include font(2rem, Raleway, $darkBlue);
     font-weight: 600;
     text-align: left;
-    font-size: 2rem;
     text-shadow: 1px 1px 3px #999;
-    color: $darkblue;
 }
 
 h3 {
     padding: 2.5% 0;
     text-align: center;
-    font-size: 2rem;
-    font-family: Poppins;
-    color: $blue;
+    @include font(2rem, Poppins, $blue);
 }
 
 h4 {
+    @include font(1.75rem, Poppins, black);
     padding: 1%;
-    font-size: 1.75rem;
-    font-family: Poppins;
 }
 
 h5 {
     padding: 1%;
-    font-size: 1.1rem;
-    font-family: Poppins;
+    @include font(1.1rem, Poppins, black);
 }
 
 h6 {
     padding: 1%;
-    font-size: 1.1rem;
-    font-family: Raleway;
+    @include font(1.1rem, Raleway, black);
     font-weight: 200;
 }
 
 p {
     padding: 0.5%;
-    font-size: 1.25rem;
-    font-family: Raleway;
+    @include font(1.25rem, Raleway, black);
     line-height: 1.7;
 }
 

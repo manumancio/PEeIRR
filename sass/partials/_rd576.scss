@@ -57,8 +57,6 @@
 
     .nav__img {
         width: 1.8rem;
-
-
     }
 
     .nav__img--lkd {
@@ -121,15 +119,12 @@
                     width: 20%;
                 }
             }
-
         }
-
     }
 
     .section__paragraph {
         font-size: 1.2rem;
     }
-
 
     /* Sobre Nosotros */
 
@@ -171,10 +166,6 @@
         }
     }
 
-
-
-
-
     .footer__img {
         margin-left: 10%;
         width: 1.5rem;
@@ -195,8 +186,6 @@
         margin: 2%;
     }
 
-
-
     /* footer final */
 
     .footer__final h6 {
@@ -204,8 +193,6 @@
     }
 
     /* --------------------- SERVICIOS.HTML --------------------------*/
-
-
 
     .section__servicios-div {
         padding: 0 5%;
@@ -224,19 +211,14 @@
         }
     }
 
-
     /* ------------------------ NOSOTROS.HTML -----------------------*/
-
-
 
     /* seccion peeirr */
 
     .section-peeirr-div {
         padding: 5%;
         width: 90%;
-        min-width: 150px;
-
-        //  VER! ESTOS ULTMOS DOS ESTABAN EN EL TTLU EMPRESA
+        min-width: 150px;        
     }
 
     .section-peeirr-div__item {
@@ -244,16 +226,12 @@
         font-size: 1.1rem;
     }
 
-
     /* seccion equipo */
     .section-equipo {
         margin: 15% 0;
 
         .section-equipo__container {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(12, 1fr);
-            gap: 0.5%;
+            @include grid(grid, 1fr, repeat(12, 1fr), 0.5%);
             width: 80%;
             margin: 0 auto;
         }
@@ -264,7 +242,6 @@
         height: 60%;
         margin-top: 0;
     }
-
 
     /* seccion sumate */
 
@@ -293,9 +270,6 @@
         font-size: 1.1rem;
     }
 
-
-
-
     /* seccion proyectos */
 
     .section-proyectos {
@@ -303,10 +277,7 @@
         margin: 0;
 
         .section-proyectos-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(6, 30vh);
-            grid-gap: 1%;
+            @include grid(grid, repeat(2, 1fr), repeat(6, 30vh), 1%);
             margin-bottom: 5%;
 
             .section-proyectos__item--1 {
@@ -329,17 +300,14 @@
         font-size: 1.1rem;
     }
 
-     .section-proyectos__img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         box-shadow: 2px 2px 2px #ADA996;
-     }
-
-
+    .section-proyectos__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: $boxShadowImg;
+    }
 
     /* ----------------------- PROYECTOS.HTML -----------------------*/
-
 
     .proyecto__container {
         margin: 0;
@@ -357,11 +325,7 @@
                 display: none;
             }
         }
-
-
     }
-
-
 
     /* -------------------------- SUMATE.HTML ---------------------------*/
 
@@ -372,7 +336,6 @@
     .sumate-principal__subtitle {
         font-size: 1.2rem;
     }
-
 
     /* --------------------------CONTACTO.HTML------------------------- */
 
@@ -393,7 +356,6 @@
         margin: 5% auto;
     }
 
-
     .form-grid {
         display: flex;
         flex-direction: column;
@@ -413,9 +375,7 @@
     }
 
     .section-sumate-contacto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex(flex, nowrap, column, center);
         align-items: center;
         width: 100%;
         min-width: 200px;
@@ -451,13 +411,10 @@
         margin: 1%;
     }
 
-
-
     /* seccion encontranos */
 
     .section-encontranos {
         margin-bottom: 5%;
-
 
         .section-encontranos__container {
             display: flex;
@@ -490,11 +447,8 @@
         padding: 10px;
 
         span {
-            color: $darkblue;
-            font-weight: 500;
-            font-family: Poppins;
+            @include font(1.1rem, Poppins, $darkBlue);           
+            font-weight: 500;          
         }
     }
-
-
 }

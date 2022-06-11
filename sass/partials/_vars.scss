@@ -1,13 +1,82 @@
 // variables
 
-$darkblue:#112D4E;
+$darkBlue:#112D4E;
 $blue:#3F72AF;
-$lightblue:#DBE2EF;
+$lightBlue:#DBE2EF;
 $white:#F9F7F7;
+$bgDefault: #ADA996;
 
-$boxShadow:1px 1px 8px #dfdfdd;
+$boxShadow: 1px 1px 8px #dfdfdd;
+$boxShadowImg: 2px 2px 2px #ADA996;
 
 
 $gradientOld:-webkit-linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
 
 $gradientNew: linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
+
+
+
+// mixins
+//sin argumentos
+
+@mixin backgroundHeaders {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+//con argumentos
+
+@mixin gridArea($area) {
+    justify-self: center;
+    grid-area: $area;
+}
+
+@mixin backgroundHeadersTop($bgPosition:top) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $bgPosition;
+}
+
+@mixin flex($display, $wrap, $direction, $justifyContent) {
+    display: $display;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+}
+
+@mixin grid($display, $column, $rows, $gap) {
+    display: $display;
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+    gap: $gap;
+}
+
+@mixin button($display, $padding, $bgColor, $textDecoration, $fontFamily, $fontWeight, $fontSize, $color) {
+    display: $display;
+    padding: $padding;
+    background-color: $bgColor;
+    text-decoration: $textDecoration;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
+
+@mixin font($fontSize, $fontFamily, $color) {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    color: $color
+}
+
+// maps-get
+
+$fontWeight: (
+    "weight2": 200,
+    "weight3": 300,
+    "weight4": 400,
+    "weight5": 500,
+    "weight6": 600,
+    "weight8": 800,
+    "weight9": 900,
+);

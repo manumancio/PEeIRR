@@ -26,15 +26,13 @@
         margin: 8% auto;
 
         .section__servicios-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 40vh);
+            @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 0 2%);
             grid-template-areas:
                 "cardServicios1 cardServicios5"
                 "cardServicios3 cardServicios6"
                 "cardServicios2 cardServicios4";
             justify-content: stretch;
-            row-gap: 2%;
+
 
             .grid-servicios {
                 min-width: 200px;
@@ -102,10 +100,7 @@
         margin: 10% 0;
 
         .section-equipo__container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-            gap: 1%;
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1%);
 
             .section-equipo__div {
                 width: 80%;
@@ -151,10 +146,7 @@
         width: 100%;
 
         .section-proyectos-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 30vh);
-            grid-gap: 1%;
+            @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
 
             .section-proyectos__item {
                 position: relative;
@@ -163,7 +155,7 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    box-shadow: 2px 2px 2px #ADA996;
+                    box-shadow: $boxShadowImg;
                 }
 
                 .section-proyectos__title {
@@ -217,7 +209,7 @@
     }
 
 
-  /*-------------------------PROYECTOS.HTML ------------------------*/
+    /*-------------------------PROYECTOS.HTML ------------------------*/
 
     .proyecto__container {
         margin: 5% 0;
@@ -301,19 +293,19 @@
         margin: 5% auto;
 
 
-       &__title {
+        &__title {
             color: $blue;
             font-size: 1.5rem;
         }
 
-       &__subtitle {
+        &__subtitle {
             font-size: 1.3rem;
             font-weight: 400;
             margin: 0;
             padding: 2% 0;
         }
 
-      &__img {
+        &__img {
             display: block;
             width: 100%;
             height: 400px;
@@ -362,7 +354,7 @@
         padding: 10px;
 
         span {
-            color: $darkblue;
+            color: $darkBlue;
             font-weight: 500;
             font-family: Poppins;
         }

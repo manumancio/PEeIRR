@@ -1,12 +1,10 @@
 .footer {
     padding-top: 3%;
-    background-color: #DBE2EF;
-    color: #112D4E;
+    background-color: $lightBlue;
+    color: $darkBlue;
 
     &__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        @include flex(flex, wrap, row, space-evenly);
 
         .footer__section {
             width: 20vw;
@@ -37,8 +35,7 @@
 
             .footer__paragraph {
                 padding: 5px 15px;
-                font-family: Raleway;
-                font-size: 1.3rem;
+                @include font(1.3rem, Raleway, black);
                 line-height: 1.3;
                 text-align: left;
             }
@@ -59,10 +56,8 @@
 .footer__link {
     padding: 1.5%;
     text-decoration: none;
-    font-size: 1.3rem;
-    font-family: Raleway;
-    line-height: 1.3;
-    color: #112D4E;
+    @include font(1.3rem, Raleway, $darkBlue);    
+    line-height: 1.3;    
 
     &:hover {
         text-decoration: underline
@@ -75,7 +70,7 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        text-decoration: underline
+        @extend .footer__link:hover;
     }
 }
 
@@ -93,11 +88,20 @@
     flex-direction: column;
 }
 
+.bi-twitter {
+    width: 50px;
+    margin: 2%;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
 /* footer final */
 .footer__final {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex(flex, wrap, row, space-around);
     background-color: #112D4E;
     color: #F9F7F7;
 }
