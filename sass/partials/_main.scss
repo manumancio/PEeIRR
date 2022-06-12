@@ -5,14 +5,14 @@
 .nuestros-servicios {
     margin: 4% auto;
 
-    .section__servicios-container {
+    .nuestros-servicios__container {
         @include grid(grid, repeat(3, 1fr), repeat(2, 50vh), 0 5%);
         grid-template-areas:
             "cardServicios1 cardServicios5 cardServicios3"
             "cardServicios6 cardServicios2 cardServicios4";
         justify-content: stretch;
 
-        .grid-servicios {
+        .nuestros-servicios-grid {
             @include flex(flex, nowrap, column, space-evenly);
             height: 100%;
             width: 60%;
@@ -28,7 +28,7 @@
                 text-align: center;
             }
 
-            .section__servicios-subtitles {
+            &__subtitles {
                 padding: 3%;
                 text-align: center;
                 @include font(1.05rem, Raleway, $blue);
@@ -36,32 +36,32 @@
                 font-weight: 600;
             }
 
-            .section__servicios-link {
+            &__link {
                 text-align: center;
             }
         }
 
-        .grid-servicios1 {
+        .nuestros-servicios-grid1 {
             @include gridArea(cardServicios1);
         }
 
-        .grid-servicios2 {
+        .nuestros-servicios-grid2 {
             @include gridArea(cardServicios2);
         }
 
-        .grid-servicios3 {
+        .nuestros-servicios-grid3 {
             @include gridArea(cardServicios3);
         }
 
-        .grid-servicios4 {
+        .nuestros-servicios-grid4 {
             @include gridArea(cardServicios4);
         }
 
-        .grid-servicios5 {
+        .nuestros-servicios-grid5 {
             @include gridArea(cardServicios5);
         }
 
-        .grid-servicios6 {
+        .nuestros-servicios-grid6 {
             @include gridArea(cardServicios6);
         }
     }
@@ -69,126 +69,131 @@
 
 /* From uiverse.io // boton de LEER MAS */
 button {
-    @include button(inline-block, 0, transparent, none, inherit, inherit, inherit, inherit);
     position: relative;
+    display: inline-block;
     cursor: pointer;
     outline: none;
     border: 0;
     vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
 
-    &.learn-more {
-        width: 10rem;
-        height: auto;
+button.learn-more {
+    width: 10rem;
+    height: auto;
 
-        .circle {
-            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-            position: relative;
-            display: block;
-            margin: 0;
-            width: 3rem;
-            height: 3rem;
-            background: #282936;
-            border-radius: 1.625rem;
+    & .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #282936;
+        border-radius: 1.625rem;
 
-            .icon {
-                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                background: #fff;
-
-                &.arrow {
-                    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-                    left: 0.625rem;
-                    width: 1.125rem;
-                    height: 0.125rem;
-                    background: none;
-
-                    button.learn-more .circle .icon.arrow::before {
-                        position: absolute;
-                        content: "";
-                        top: -0.29rem;
-                        right: 0.0625rem;
-                        width: 0.625rem;
-                        height: 0.625rem;
-                        border-top: 0.125rem solid #fff;
-                        border-right: 0.125rem solid #fff;
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-        }
-
-        .button-text {
+        & .icon {
             transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
-            padding: 0.75rem 0;
-            margin: 0 0 0 1.85rem;
-            color: #282936;
-            font-weight: 700;
-            line-height: 1.6;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: Raleway;
+            margin: auto;
+            background: #fff;
+
+            &.arrow {
+                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                left: 0.625rem;
+                width: 1.125rem;
+                height: 0.125rem;
+                background: none;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: -0.29rem;
+                    right: 0.0625rem;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    border-top: 0.125rem solid #fff;
+                    border-right: 0.125rem solid #fff;
+                    transform: rotate(45deg);
+                }
+            }
         }
     }
 
-    &:hover .circle {
-        width: 100%;
-
-        .icon.arrow {
-            background: $white;
-            transform: translate(1rem, 0);
-        }
+    .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Raleway;
     }
+}
 
-    &:hover .button-text {
-        color: $white;
+button:hover .circle {
+    width: 100%;
+
+    .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
     }
+}
+
+button:hover .button-text {
+    color: #fff;
 }
 
 /* Sobre Nosotros */
 
 .sobre-nosotros {
-    background-color: $darkBlue;
     margin: 10% 0 5%;
     padding-bottom: 5%;
+    background-color: $darkBlue;
 
-   .sobre-nosotros__title {
+    &__title {
         color: $white;
     }
 
-    .section__nosotros {
+    .sobre-nosotros__container {
         @include flex(flex, wrap, row, space-around);
 
-        &-div {
+        .sobre-nosotros-item {
             width: 45%;
             min-width: 400px;
             height: 50%;
             text-align: center;
             font-family: Raleway;
             line-height: 1.9;
-        }
 
-        &-img {
-            width: 80%;
-            height: 50vh;
-            margin-bottom: 3%;
-            object-fit: cover;
-        }
+            &__img {
+                width: 80%;
+                height: 50vh;
+                margin-bottom: 3%;
+                object-fit: cover;
+            }
 
-        &-subtitle {
-            padding: 1%;
-            @include font(1.8rem, Poppins, $white);
-        }
+            &__subtitle {
+                padding: 1%;
+                @include font(1.8rem, Poppins, $white);
+            }
 
-        &-paragraph {
-            color: $white;
+            &__paragraph {
+                color: $white;
+            }
         }
     }
 }
@@ -203,7 +208,7 @@ button {
 
 /* ---------------------------SERVICIOS.HTML----------------------------- */
 
-.section__servicios-div {
+.section-servicios-container {
     @include flex(flex, wrap, row, space-around);
     width: 100%;
     margin-bottom: 5%;
@@ -212,25 +217,25 @@ button {
     border-radius: 15px;
     box-shadow: $boxShadow;
 
-    &-item {
+    .section-servicios-item {
         width: 40%;
         min-width: 400px;
-    }
 
-    h3 {
-        font-size: 1.3rem;
-        padding: 3% 0;
-    }
+        h4 {
+            font-size: 1.3rem;
+            padding: 3% 0;
+        }
 
-    .section__servicios-img {
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-        margin: 2%;
+        &__img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            margin: 2%;
+        }
     }
 }
 
-.section__servicios-div--serv5 {
+.section-servicios-container--serv5 {
     background-color: $darkBlue;
 
     h4 {
@@ -242,7 +247,7 @@ button {
     }
 }
 
-.section__servicios-div--serv2 {
+.section-servicios-container--serv2 {
     background-color: $lightBlue;
     color: $darkBlue;
 }
@@ -257,46 +262,45 @@ button {
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
 
-.proyecto__container {
+.proyectos-container {
     @include flex(flex, wrap, row, space-around);
     margin: 3%;
     padding: 3%;
     border-radius: 15px;
     box-shadow: $boxShadow;
 
-
-    .proyecto1__div--img {
+    .proyectos-item-img {
         display: flex;
-    }
 
-    .proyecto1__img {
-        width: 40%;
-        height: auto;
-        object-fit: cover;
-        margin: 3% auto;
+        &__img {
+            width: 40%;
+            height: 400px;
+            object-fit: cover;
+            margin: 3% auto;
+        }
     }
 
     h3 {
         padding: 0 3%;
         text-align: left;
-
     }
 }
 
-.proyecto__container--proy3 {
+.proyectos-container--active {
     @include flex(flex, wrap, row, flex-start);
     background-color: $lightBlue;
 
-    .proyecto3__div {
+    .proyectos-item {
         width: 45%;
         min-width: 400px;
-    }
+        padding: 1%;
 
-    .proyecto3__img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        margin: 2% 0;
+        &__img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 2% 0;
+        }
     }
 }
 
@@ -610,7 +614,7 @@ button {
     }
 
     &__img {
-        width: 100%;       
+        width: 100%;
         display: block;
         margin-top: 30px;
         object-fit: top;

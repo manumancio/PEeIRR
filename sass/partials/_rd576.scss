@@ -42,7 +42,7 @@
         font-size: 1.1rem;
     }
 
-    .header__img-h1 {
+    .header-img-h1 {
         height: 20vh;
     }
 
@@ -50,19 +50,18 @@
 
     /* primera barra */
 
-    .nav__primeraBarra {
+    .primera-barra {
         padding-right: 2%;
         justify-content: center;
     }
 
-    .nav__img {
+    .primera-barra__img {
         width: 1.8rem;
     }
 
-    .nav__img--lkd {
+    .primera-barra__img--lkd {
         display: none;
     }
-
 
     /* segunda barra */
 
@@ -98,24 +97,22 @@
         }
     }
 
-
-
     /* Nuestros servicios */
 
     .nuestros-servicios {
         margin: 8% auto;
         height: auto;
 
-        .section__servicios-container {
+        .nuestros-servicios__container {
             display: flex;
             flex-direction: column;
 
-            .grid-servicios {
+            .nuestros-servicios-grid {
                 width: 90%;
                 height: 40vh;
                 margin: 3% auto;
 
-                .grid-servicios img {
+                .nuestros-servicios-grid img {
                     width: 20%;
                 }
             }
@@ -128,14 +125,14 @@
 
     /* Sobre Nosotros */
 
-    .section__nosotros-div {
+    .sobre-nosotros-item {
         padding: 0 20px;
 
-        .section__nosotros-subtitle {
+        .sobre-nosotros-item__subtitle {
             font-size: 1.2rem;
         }
 
-        .section__nosotros-img {
+        .sobre-nosotros-item__img {
             width: 100%;
             height: 40vh;
         }
@@ -159,14 +156,13 @@
             text-align: center;
         }
 
-
         .footer__list {
             padding: 1%;
             text-align: center;
         }
     }
 
-    .footer__img {
+    .footer-redes__img {
         margin-left: 10%;
         width: 1.5rem;
     }
@@ -181,7 +177,7 @@
         margin-right: 4%;
     }
 
-    .logo--footer {
+    .footer__logo {
         width: 55%;
         margin: 2%;
     }
@@ -194,16 +190,16 @@
 
     /* --------------------- SERVICIOS.HTML --------------------------*/
 
-    .section__servicios-div {
+    .section-servicios-container {
         padding: 0 5%;
         width: 100%;
 
-        .section__servicios-div-item {
+        .section-servicios-item {
             width: 100%;
             min-width: 200px;
             padding: 0;
 
-            .section__servicios-img {
+            .section-servicios-item__img {
                 height: 30vh;
                 width: 100%;
                 margin: 3% 0;
@@ -306,19 +302,19 @@
 
     /* ----------------------- PROYECTOS.HTML -----------------------*/
 
-    .proyecto__container {
+    .proyectos-container {
         margin: 0;
         padding: 3%;
 
-        .proyecto1__div--img {
+        .proyectos-item-img {
             flex-wrap: wrap;
         }
 
-        .proyecto3__div {
+        .proyectos-item {
             width: 100%;
             min-width: 200px;
 
-            .proyecto3__img {
+            .proyectos-item__img {
                 display: none;
             }
         }

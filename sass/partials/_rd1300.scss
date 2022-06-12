@@ -22,7 +22,7 @@
 
     /* Nuestros servicios */
 
-    .section__servicios-subtitles {
+    .nuestros-servicios-grid__subtitles {
         color: $blue;
         font-size: 1rem;
     }
@@ -43,7 +43,7 @@
     }
 
     .section-equipo__img {
-        @include images(80%, 60%);      
+        @include images(80%, 60%);
         margin-top: 0;
     }
 

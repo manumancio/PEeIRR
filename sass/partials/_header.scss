@@ -6,14 +6,14 @@
     /* fallback for old browsers */
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: $gradientNew, url(../images/index.jpg);
+    background: $gradientNew, url(../images/index.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeaders;
     background-attachment: fixed;
 }
 
 /* primera barra */
-.nav__primeraBarra {
+.primera-barra {
     @include flex(flex, wrap, row, flex-end);
     height: 2.6rem;
     width: 100vw;
@@ -24,7 +24,7 @@
     position: fixed;
     z-index: 100;
 
-    .nav__link {
+    &__link {
         @include flex(flex, nowrap, row, center);
         align-items: center;
         height: 100%;
@@ -42,7 +42,7 @@
         }
     }
 
-    .nav__img {
+    &__img {
         width: 2.5rem;
         margin-right: 1.1rem;
         transition: all 0.3 ease-in-out;
@@ -54,7 +54,7 @@
 }
 
 /* segunda barra */
-.nav__segundaBarra {
+.segunda-barra {
     width: 100%;
     padding-top: 2.6rem;
     box-shadow: 2px 2px 8px #9c988131;
@@ -129,7 +129,7 @@
     /* fallback for old browsers */
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: $gradientNew, url(../images/servicios.jpg);
+    background: $gradientNew, url(../images/servicios.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeaders;
 }
@@ -141,7 +141,7 @@
     /* fallback for old browsers */
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: $gradientNew, url(../images/proyectos.jpg);
+    background: $gradientNew, url(../images/proyectos.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeadersTop($bgPosition:top)
 }
@@ -153,8 +153,7 @@
     /* fallback for old browsers */
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: $gradientNew,
-        url(../images/sumate.jpg);
+    background: $gradientNew, url(../images/sumate.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeaders;
 }
@@ -167,7 +166,7 @@
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
     background: $gradientNew,
-        url(../images/nosotros.jpg);
+        url(../images/nosotros.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeaders;
 }
@@ -179,8 +178,7 @@
     /* fallback for old browsers */
     background: $gradientOld;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: $gradientNew,
-        url(../images/contacto.jpg);
+    background: $gradientNew, url(../images/contacto.webp);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     @include backgroundHeadersTop($bgPosition:top)
 }

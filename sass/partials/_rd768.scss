@@ -25,7 +25,7 @@
     .nuestros-servicios {
         margin: 8% auto;
 
-        .section__servicios-container {
+        .nuestros-servicios__container {
             @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 0 2%);
             grid-template-areas:
                 "cardServicios1 cardServicios5"
@@ -34,14 +34,14 @@
             justify-content: stretch;
 
 
-            .grid-servicios {
+            .nuestros-servicios-grid {
                 min-width: 200px;
 
                 img {
                     width: 45%;
                 }
 
-                .section__servicios-subtitles {
+                .nuestros-servicios-grid__subtitles {
                     font-size: 0.8rem;
                 }
             }
@@ -54,7 +54,7 @@
 
 
     /* Sobre Nosotros */
-    .section__nosotros-div {
+    .sobre-nosotros-item {
         width: 90%;
     }
 
@@ -78,11 +78,11 @@
 
     /*--------------------------SERVICIOS.HTML ------------------------------*/
 
-    .section__servicios-img {
+    .section-servicios-item__img {
         margin: 0;
     }
 
-    .section__servicios-div p {
+    .section-servicios-container p {
         padding: 0 2%;
     }
 
@@ -207,30 +207,30 @@
 
         /*-------------------------PROYECTOS.HTML ------------------------*/
 
-        .proyecto__container {
+        .proyectos-container {
             margin: 5% 0;
             width: 100%;
 
-            .proyecto3__div {
+            .proyectos-item {
                 width: 200px;
                 margin: 0;
                 object-fit: cover;
             }
 
-            .proyecto1__img {
+            .proyectos-item-img__img {
                 @include images(40vw, 30vh);
                 margin: 0.5%;
             }
         }
 
-        .proyecto__container--proy3 p {
+        .proyectos-container--active p {
             width: 100%;
 
-            .proyecto3__div {
+            .proyectos-item {
                 width: 90%;
                 min-width: 400px;
 
-                .proyecto3__img {
+                .proyectos-item__img {
                     margin: 2% 0%;
                 }
             }
@@ -306,7 +306,6 @@
             }
         }
 
-
         .section__button--contacto {
             padding: 1% 2%;
             margin: 1%;
@@ -337,7 +336,6 @@
                 }
             }
         }
-
 
         .section-encontranos-div__item {
             font-size: 1.3rem;

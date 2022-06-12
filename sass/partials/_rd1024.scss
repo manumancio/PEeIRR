@@ -42,7 +42,7 @@
         font-size: 1.1rem;
     }
 
-    .header__img-h1 {
+    .header-img-h1 {
         height: 20vh;
     }
 
@@ -50,18 +50,18 @@
 
     /* primera barra */
 
-    .nav__primeraBarra {
+    .primera-barra {
         padding-right: 3%;
         height: 2.4rem;
     }
 
-    .nav__img {
+    .primera-barra__img {
         width: 2rem;
     }
 
     /* segunda barra */
 
-    .nav__segundaBarra {
+    .segunda-barra {
         padding-top: 2.4rem;
     }
 
@@ -93,7 +93,7 @@
         font-size: 1.2rem;
     }
 
-    .section__servicios-container {
+    .nuestros-servicios__container {
         @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 0 2%);
         grid-template-areas:
             "cardServicios1 cardServicios5"
@@ -102,18 +102,18 @@
         justify-content: stretch;
     }
 
-    .section__servicios-subtitles {
+    .nuestros-servicios-grid__subtitles {
         font-size: 1.1rem;
     }
 
     /* Sobre Nosotros */
-    .section__nosotros-div {
+    .sobre-nosotros-item {
         width: 45%;
         min-width: 650px;
     }
 
     /* footer */
-    .footer__img {
+    .footer-redes__img {
         margin: 1%;
         width: 2.5rem;
     }
@@ -140,19 +140,19 @@
 
     /* ---------------------- SERVICIOS.HTML --------------------------*/
 
-    .section__servicios-div-item {
+    .section-servicios-item {
         width: 100%;
 
-        .section__servicios-img {
+        .section-servicios-item__img {
             margin: 0;
         }
 
-        .section__servicios-div p {
+        .section-servicios-container p {
             padding: 0 2%;
         }
     }
 
-    .section__servicios-div--serv2 {
+    .section-servicios-container--serv2 {
         width: 100%;
         margin: 0
     }
@@ -180,7 +180,7 @@
         @include images(80%, 60%);
         margin-left: auto;
         margin-right: auto;
-        margin-top: 0;       
+        margin-top: 0;
     }
 
     /* seccion sumate */
@@ -226,7 +226,7 @@
 
     /* --------------------- PROYECTOS.HTML -------------------------*/
 
-    .proyecto3__div {
+    .proyectos-item {
         width: 95%
     }
 

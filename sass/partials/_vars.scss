@@ -8,12 +8,11 @@ $bgDefault: #ADA996;
 
 $boxShadow: 1px 1px 8px #dfdfdd;
 $boxShadowImg: 2px 2px 2px #ADA996;
+$textShadow: 1px 1px 5px #999;
 
 
 $gradientOld:-webkit-linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
-
 $gradientNew: linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
-
 
 
 // mixins
@@ -79,8 +78,7 @@ $gradientNew: linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0
 
 // maps-get
 
-$fontWeight: (
-    "weight2": 200,
+$fontWeight: ("weight2": 200,
     "weight3": 300,
     "weight4": 400,
     "weight5": 500,
