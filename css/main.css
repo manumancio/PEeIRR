@@ -869,8 +869,10 @@ button:hover .button-text {
         list-style: none;
         text-align: left;
         transition: all 0.2s ease-in-out; }
+        .footer__container .footer__section .footer__list li {
+          padding: 3% 0; }
       .footer__container .footer__section .footer__subtitle {
-        padding: 5px 30px;
+        padding: 3.5% 30px;
         font-size: 1.3rem;
         text-align: left; }
       .footer__container .footer__section .footer__paragraph {
@@ -900,7 +902,7 @@ button:hover .button-text {
     text-decoration: underline; }
 
 .footer__link--navegacion {
-  padding: 1% 4%;
+  padding: 2% 4%;
   line-height: 1.4;
   transition: all 0.2s ease-in-out; }
 
@@ -915,13 +917,6 @@ button:hover .button-text {
 .nav__list--footer {
   flex-direction: column; }
 
-.bi-twitter {
-  width: 50px;
-  margin: 2%;
-  transition: all 0.2s ease-in-out; }
-  .bi-twitter:hover {
-    transform: scale(1.1); }
-
 /* footer final */
 .footer__final {
   display: flex;
@@ -929,8 +924,14 @@ button:hover .button-text {
   flex-direction: row;
   justify-content: space-around;
   background-color: #112D4E;
-  color: #F9F7F7;
   align-items: center; }
+  .footer__final h4 {
+    color: #F9F7F7;
+    padding: 1%;
+    font-size: 1.1rem;
+    font-family: Raleway;
+    color: #F9F7F7;
+    font-weight: 200; }
 
 @media only screen and (max-width: 1300px) {
   /* ---------------------INDEX.HTML----------------------------- */

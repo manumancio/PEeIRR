@@ -25,10 +25,14 @@
                 list-style: none;
                 text-align: left;
                 transition: all 0.2s ease-in-out;
+
+                li {
+                    padding: 3% 0;
+                }
             }
 
             .footer__subtitle {
-                padding: 5px 30px;
+                padding: 3.5% 30px;
                 font-size: 1.3rem;
                 text-align: left;
             }
@@ -66,7 +70,7 @@
 }
 
 .footer__link--navegacion {
-    padding: 1% 4%;
+    padding: 2% 4%;
     line-height: 1.4;
     transition: all 0.2s ease-in-out;
 
@@ -89,20 +93,16 @@
     flex-direction: column;
 }
 
-.bi-twitter {
-    width: 50px;
-    margin: 2%;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
 /* footer final */
 .footer__final {
     @include flex(flex, wrap, row, space-around);
     background-color: #112D4E;
-    color: $white;
     align-items: center;
+
+    h4 {
+        color: $white;
+        padding: 1%;
+        @include font(1.1rem, Raleway, $white);
+        font-weight: 200;
+    }
 }

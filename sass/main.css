@@ -1373,8 +1373,12 @@ button:hover .button-text {
   transition: all 0.2s ease-in-out;
 }
 
+.footer__container .footer__section .footer__list li {
+  padding: 3% 0;
+}
+
 .footer__container .footer__section .footer__subtitle {
-  padding: 5px 30px;
+  padding: 3.5% 30px;
   font-size: 1.3rem;
   text-align: left;
 }
@@ -1415,7 +1419,7 @@ button:hover .button-text {
 }
 
 .footer__link--navegacion {
-  padding: 1% 4%;
+  padding: 2% 4%;
   line-height: 1.4;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1438,18 +1442,6 @@ button:hover .button-text {
           flex-direction: column;
 }
 
-.bi-twitter {
-  width: 50px;
-  margin: 2%;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.bi-twitter:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 /* footer final */
 .footer__final {
   display: -webkit-box;
@@ -1464,10 +1456,18 @@ button:hover .button-text {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #112D4E;
-  color: #F9F7F7;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__final h4 {
+  color: #F9F7F7;
+  padding: 1%;
+  font-size: 1.1rem;
+  font-family: Raleway;
+  color: #F9F7F7;
+  font-weight: 200;
 }
 
 @media only screen and (max-width: 1300px) {
