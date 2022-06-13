@@ -6,7 +6,7 @@
     margin: 4% auto;
 
     .nuestros-servicios__container {
-        @include grid(grid, repeat(3, 1fr), repeat(2, 50vh), 0 5%);
+        @include grid(grid, repeat(3, 1fr), repeat(2, 50vh), 5%);
         grid-template-areas:
             "cardServicios1 cardServicios5 cardServicios3"
             "cardServicios6 cardServicios2 cardServicios4";
@@ -188,7 +188,8 @@ button:hover .button-text {
 
             &__subtitle {
                 padding: 1%;
-                @include font(1.8rem, Poppins, $white);
+                @include font(1.6rem, Poppins, $lightBlue);
+                text-align: left;
             }
 
             &__paragraph {

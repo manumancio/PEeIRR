@@ -416,7 +416,7 @@ input[type]:checked ~ span.middle {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (50vh)[2];
       grid-template-rows: repeat(2, 50vh);
-  gap: 0 5%;
+  gap: 5%;
       grid-template-areas: "cardServicios1 cardServicios5 cardServicios3" "cardServicios6 cardServicios2 cardServicios4";
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
@@ -654,9 +654,10 @@ button:hover .button-text {
 
 .sobre-nosotros .sobre-nosotros__container .sobre-nosotros-item__subtitle {
   padding: 1%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: Poppins;
-  color: #F9F7F7;
+  color: #DBE2EF;
+  text-align: left;
 }
 
 .sobre-nosotros .sobre-nosotros__container .sobre-nosotros-item__paragraph {
@@ -1607,32 +1608,35 @@ button:hover .button-text {
     font-size: 1.5rem;
   }
   /* Nuestros servicios */
-  .nuestros-servicios {
-    margin: 8% auto;
-  }
   .section__paragraph {
     font-size: 1.2rem;
   }
-  .nuestros-servicios__container {
+  .nuestros-servicios {
+    margin: 8% auto;
+  }
+  .nuestros-servicios .nuestros-servicios__container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (40vh)[3];
         grid-template-rows: repeat(3, 40vh);
-    gap: 0 2%;
+    gap: 2%;
         grid-template-areas: "cardServicios1 cardServicios5" "cardServicios3 cardServicios6" "cardServicios2 cardServicios4";
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
   }
-  .nuestros-servicios-grid__subtitles {
+  .nuestros-servicios .nuestros-servicios__container .nuestros-servicios-grid__subtitles {
     font-size: 1.1rem;
   }
   /* Sobre Nosotros */
   .sobre-nosotros-item {
     width: 45%;
     min-width: 650px;
+  }
+  .sobre-nosotros-item__subtitle {
+    font-size: 1.2rem;
   }
   /* footer */
   .footer-redes__img {
@@ -1678,7 +1682,7 @@ button:hover .button-text {
   .section-equipo {
     margin-bottom: 5%;
   }
-  .section-equipo .section-equipo__container {
+  .section-equipo__container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -1785,9 +1789,12 @@ button:hover .button-text {
   }
   h3 {
     padding: 2% 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
-  /* segunda barra */
+  /* hero */
+  .hero {
+    height: 75vh;
+  }
   /* Nuestros servicios */
   .nuestros-servicios {
     margin: 8% auto;
@@ -1799,7 +1806,7 @@ button:hover .button-text {
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (40vh)[3];
         grid-template-rows: repeat(3, 40vh);
-    gap: 0 2%;
+    gap: 2%;
         grid-template-areas: "cardServicios1 cardServicios5" "cardServicios3 cardServicios6" "cardServicios2 cardServicios4";
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
@@ -1812,7 +1819,7 @@ button:hover .button-text {
     width: 45%;
   }
   .nuestros-servicios .nuestros-servicios__container .nuestros-servicios-grid .nuestros-servicios-grid__subtitles {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .nuestros-servicios .section__paragraph {
     font-size: 1rem;
@@ -1820,6 +1827,9 @@ button:hover .button-text {
   /* Sobre Nosotros */
   .sobre-nosotros-item {
     width: 90%;
+  }
+  .sobre-nosotros-item__subtitle {
+    font-size: 1rem;
   }
   /* footer */
   .footer__link {
@@ -1850,14 +1860,6 @@ button:hover .button-text {
   /* seccion equipo */
   .section-equipo {
     margin: 10% 0;
-    /* seccion sumate */
-    /* seccion proyectos */
-    /*-------------------------PROYECTOS.HTML ------------------------*/
-    /* ----------------------- SUMATE.HTML ----------------------------*/
-    /* ------------------------CONTACTO.HTML------------------------ */
-    /* seccion formulario */
-    /* seccion sumate */
-    /* seccion encontranos */
   }
   .section-equipo .section-equipo__container {
     display: -ms-grid;
@@ -1866,10 +1868,10 @@ button:hover .button-text {
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[6];
         grid-template-rows: repeat(6, 1fr);
-    gap: 1%;
+    gap: 2%;
   }
   .section-equipo .section-equipo__container .section-equipo__div {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
   }
   .section-equipo .section-equipo__container .section-equipo__div .section-equipo__img {
@@ -1881,37 +1883,39 @@ button:hover .button-text {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .section-equipo .section-sumate {
+  /* seccion sumate */
+  .section-sumate {
     margin-top: 5%;
-    width: 100vw;
+    width: 80vw;
   }
-  .section-equipo .section-sumate .section-sumate h4 {
+  .section-sumate .section-sumate h4 {
     font-size: 1.2rem;
   }
-  .section-equipo .section-sumate .section-sumate__flex p {
+  .section-sumate .section-sumate__flex p {
     font-size: 1.1rem;
     padding: 0 4%;
   }
-  .section-equipo .section__button {
+  .section__button {
     padding: 8px 22px;
     font-size: 1.1rem;
   }
-  .section-equipo .section-proyectos {
+  /* seccion proyectos */
+  .section-proyectos {
     width: 100%;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid {
+  .section-proyectos .section-proyectos-grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
     -ms-grid-rows: (30vh)[3];
         grid-template-rows: repeat(3, 30vh);
     gap: 1%;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item {
     position: relative;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__img {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -1919,7 +1923,7 @@ button:hover .button-text {
     -webkit-box-shadow: 2px 2px 2px #ADA996;
             box-shadow: 2px 2px 2px #ADA996;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__title {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item .section-proyectos__title {
     width: 100%;
     padding: 2%;
     position: absolute;
@@ -1929,17 +1933,17 @@ button:hover .button-text {
     background: linear-gradient(rgba(255, 255, 255, 0), black);
     font-size: 1.3rem;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--1 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--1 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 3;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--4 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--4 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 2;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--5 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--5 {
     -ms-grid-column: 2;
         grid-column-start: 2;
     grid-column-end: 3;
@@ -1947,16 +1951,16 @@ button:hover .button-text {
         grid-row-start: 2;
     grid-row-end: 3;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--6 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--6 {
     -ms-grid-column: span 2;
         grid-column-start: span 2;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--7 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--7 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--8 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--8 {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2/4;
@@ -1964,7 +1968,7 @@ button:hover .button-text {
     -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
-  .section-equipo .section-proyectos .section-proyectos-grid .section-proyectos__item--9 {
+  .section-proyectos .section-proyectos-grid .section-proyectos__item--9 {
     -ms-grid-column: 4;
         grid-column-start: 4;
     grid-column-end: 5;
@@ -1972,52 +1976,56 @@ button:hover .button-text {
         grid-row-start: 3;
     grid-row-end: 4;
   }
-  .section-equipo .proyectos-container {
+  /*-------------------------PROYECTOS.HTML ------------------------*/
+  .proyectos-container {
     margin: 5% 0;
     width: 100%;
   }
-  .section-equipo .proyectos-container .proyectos-item {
+  .proyectos-container .proyectos-item {
     width: 200px;
     margin: 0;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .section-equipo .proyectos-container .proyectos-item-img__img {
+  .proyectos-container .proyectos-item-img__img {
     width: 40vw;
     height: 30vh;
     -o-object-fit: cover;
        object-fit: cover;
     margin: 0.5%;
   }
-  .section-equipo .proyectos-container--active p {
+  .proyectos-container--active p {
     width: 100%;
   }
-  .section-equipo .proyectos-container--active p .proyectos-item {
+  .proyectos-container--active p .proyectos-item {
     width: 90%;
     min-width: 400px;
   }
-  .section-equipo .proyectos-container--active p .proyectos-item .proyectos-item__img {
+  .proyectos-container--active p .proyectos-item .proyectos-item__img {
     margin: 2% 0%;
   }
-  .section-equipo .sumate-principal__title {
+  /* ----------------------- SUMATE.HTML ----------------------------*/
+  .sumate-principal__title {
     font-size: 1.1rem;
   }
-  .section-equipo .sumate-principal__subtitle {
+  .sumate-principal__subtitle {
     font-size: 1.2rem;
   }
-  .section-equipo .main-div-flex {
+  /* ------------------------CONTACTO.HTML------------------------ */
+  .main-div-flex {
     width: 90%;
     margin: 0 auto;
   }
-  .section-equipo .section-formulario {
+  /* seccion formulario */
+  .section-formulario {
     width: 90%;
     min-width: none;
     margin: 5% auto;
   }
-  .section-equipo .input {
+  .input {
     padding: 8px 10px;
   }
-  .section-equipo .form-grid {
+  .form-grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2029,7 +2037,8 @@ button:hover .button-text {
     height: auto;
     row-gap: 5px;
   }
-  .section-equipo .section-sumate-contacto {
+  /* seccion sumate */
+  .section-sumate-contacto {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2047,17 +2056,17 @@ button:hover .button-text {
     min-width: none;
     margin: 5% auto;
   }
-  .section-equipo .section-sumate-contacto__title {
+  .section-sumate-contacto__title {
     color: #3F72AF;
     font-size: 1.5rem;
   }
-  .section-equipo .section-sumate-contacto__subtitle {
+  .section-sumate-contacto__subtitle {
     font-size: 1.3rem;
     font-weight: 400;
     margin: 0;
     padding: 2% 0;
   }
-  .section-equipo .section-sumate-contacto__img {
+  .section-sumate-contacto__img {
     display: block;
     width: 100%;
     height: 400px;
@@ -2065,37 +2074,38 @@ button:hover .button-text {
        object-fit: cover;
     margin-top: 30px;
   }
-  .section-equipo .section__button--contacto {
+  .section__button--contacto {
     padding: 1% 2%;
     margin: 1%;
   }
-  .section-equipo .section-encontranos {
+  /* seccion encontranos */
+  .section-encontranos {
     margin-bottom: 5%;
   }
-  .section-equipo .section-encontranos .section-encontranos__container {
+  .section-encontranos .section-encontranos__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div {
+  .section-encontranos .section-encontranos__container .section-encontranos-div {
     width: 100%;
     min-width: 350px;
     font-family: Raleway;
   }
-  .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div__title {
+  .section-encontranos .section-encontranos__container .section-encontranos-div__title {
     font-size: 1.4rem;
   }
-  .section-equipo .section-encontranos .section-encontranos__container .section-encontranos-div__iframe {
+  .section-encontranos .section-encontranos__container .section-encontranos-div__iframe {
     width: 100%;
     margin: 3%;
   }
-  .section-equipo .section-encontranos-div__item {
+  .section-encontranos-div__item {
     font-size: 1.3rem;
     padding: 10px;
   }
-  .section-equipo .section-encontranos-div__item span {
+  .section-encontranos-div__item span {
     color: #112D4E;
     font-weight: 500;
     font-family: Poppins;
@@ -2164,7 +2174,7 @@ button:hover .button-text {
   }
   /* hero */
   .hero {
-    height: 50vh;
+    height: 75vh;
   }
   .hero__title {
     font-size: 1.2rem;
@@ -2191,9 +2201,10 @@ button:hover .button-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 5%;
   }
   .nuestros-servicios .nuestros-servicios__container .nuestros-servicios-grid {
-    width: 90%;
+    width: 60%;
     height: 40vh;
     margin: 3% auto;
   }
@@ -2208,7 +2219,7 @@ button:hover .button-text {
     padding: 0 20px;
   }
   .sobre-nosotros-item .sobre-nosotros-item__subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .sobre-nosotros-item .sobre-nosotros-item__img {
     width: 100%;
@@ -2535,6 +2546,9 @@ button:hover .button-text {
   .sobre-nosotros-item__paragraph,
   .sobre-nosotros-item__subtitle {
     margin: 0 50px;
+  }
+  .sobre-nosotros-item__subtitle {
+    font-size: 1rem;
   }
   /* seccion peeirr */
   .section-peeirr-div {

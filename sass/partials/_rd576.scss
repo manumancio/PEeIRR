@@ -78,7 +78,7 @@
     /* hero */
 
     .hero {
-        height: 50vh;
+        height: 75vh;
 
         &__title {
             font-size: 1.2rem;
@@ -106,9 +106,10 @@
         .nuestros-servicios__container {
             display: flex;
             flex-direction: column;
+            gap: 5%;
 
             .nuestros-servicios-grid {
-                width: 90%;
+                width: 60%;
                 height: 40vh;
                 margin: 3% auto;
 
@@ -129,7 +130,7 @@
         padding: 0 20px;
 
         .sobre-nosotros-item__subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .sobre-nosotros-item__img {

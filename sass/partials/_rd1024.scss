@@ -85,32 +85,38 @@
 
     /* Nuestros servicios */
 
-    .nuestros-servicios {
-        margin: 8% auto;
-    }
-
     .section__paragraph {
         font-size: 1.2rem;
     }
 
-    .nuestros-servicios__container {
-        @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 0 2%);
-        grid-template-areas:
-            "cardServicios1 cardServicios5"
-            "cardServicios3 cardServicios6"
-            "cardServicios2 cardServicios4";
-        justify-content: stretch;
+    .nuestros-servicios {
+        margin: 8% auto;
+
+
+        .nuestros-servicios__container {
+            @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 2%);
+            grid-template-areas:
+                "cardServicios1 cardServicios5"
+                "cardServicios3 cardServicios6"
+                "cardServicios2 cardServicios4";
+            justify-content: stretch;
+
+            .nuestros-servicios-grid__subtitles {
+                font-size: 1.1rem;
+            }
+        }
     }
 
-    .nuestros-servicios-grid__subtitles {
-        font-size: 1.1rem;
-    }
 
     /* Sobre Nosotros */
     .sobre-nosotros-item {
         width: 45%;
         min-width: 650px;
     }
+
+     .sobre-nosotros-item__subtitle {
+         font-size:1.2rem ;
+     }
 
     /* footer */
     .footer-redes__img {
@@ -168,13 +174,14 @@
 
     .section-equipo {
         margin-bottom: 5%;
-
-        .section-equipo__container {
-            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1%);
-            margin: 0 auto;
-            width: 80%;
-        }
     }
+
+    .section-equipo__container {
+        @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1%);
+        margin: 0 auto;
+        width: 80%;
+    }
+
 
     .section-equipo__img {
         @include images(80%, 60%);
