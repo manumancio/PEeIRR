@@ -211,7 +211,6 @@
         }
     }
 
-
     /*-------------------------PROYECTOS.HTML ------------------------*/
 
     .proyectos-container {
@@ -226,7 +225,7 @@
 
         .proyectos-item-img__img {
             @include images(40vw, 30vh);
-            margin: 0.5%;
+            margin: 0.5% auto;           
         }
     }
 
@@ -347,7 +346,7 @@
         padding: 10px;
 
         span {
-            color: $darkBlue;
+            color: $dark-blue;
             font-weight: 500;
             font-family: Poppins;
         }

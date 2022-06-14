@@ -93,7 +93,7 @@ button.learn-more {
         margin: 0;
         width: 3rem;
         height: 3rem;
-        background: #282936;
+        background: rgb(39, 40, 53);
         border-radius: 1.625rem;
 
         & .icon {
@@ -102,7 +102,7 @@ button.learn-more {
             top: 0;
             bottom: 0;
             margin: auto;
-            background: #fff;
+            background: $white;
 
             &.arrow {
                 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -118,8 +118,8 @@ button.learn-more {
                     right: 0.0625rem;
                     width: 0.625rem;
                     height: 0.625rem;
-                    border-top: 0.125rem solid #fff;
-                    border-right: 0.125rem solid #fff;
+                    border-top: 0.125rem solid $white;
+                    border-right: 0.125rem solid $white;
                     transform: rotate(45deg);
                 }
             }
@@ -135,7 +135,7 @@ button.learn-more {
         bottom: 0;
         padding: 0.75rem 0;
         margin: 0 0 0 1.85rem;
-        color: #282936;
+        color: rgb(39, 40, 53);
         font-weight: 700;
         line-height: 1.6;
         text-align: center;
@@ -148,13 +148,13 @@ button:hover .circle {
     width: 100%;
 
     .icon.arrow {
-        background: #fff;
+        background: $white;
         transform: translate(1rem, 0);
     }
 }
 
 button:hover .button-text {
-    color: #fff;
+    color: $white;
 }
 
 /* Sobre Nosotros */
@@ -162,7 +162,7 @@ button:hover .button-text {
 .sobre-nosotros {
     margin: 10% 0 5%;
     padding-bottom: 5%;
-    background-color: $darkBlue;
+    background-color: $dark-blue;
 
     &__title {
         color: $white;
@@ -188,7 +188,7 @@ button:hover .button-text {
 
             &__subtitle {
                 padding: 1%;
-                @include font(1.6rem, Poppins, $lightBlue);
+                @include font(1.6rem, Poppins, $light-blue);
                 text-align: left;
             }
 
@@ -203,7 +203,7 @@ button:hover .button-text {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #282936;
+    background-color: rgb(39, 40, 53);
     border-radius: 50px;
 }
 
@@ -237,7 +237,7 @@ button:hover .button-text {
 }
 
 .section-servicios-container--serv5 {
-    background-color: $darkBlue;
+    background-color: $dark-blue;
 
     h4 {
         color: $white;
@@ -249,8 +249,8 @@ button:hover .button-text {
 }
 
 .section-servicios-container--serv2 {
-    background-color: $lightBlue;
-    color: $darkBlue;
+    background-color: $light-blue;
+    color: $dark-blue;
 }
 
 /* acordeon bootstrap //FAQS */
@@ -272,6 +272,7 @@ button:hover .button-text {
 
     .proyectos-item-img {
         display: flex;
+        flex-wrap: wrap;
 
         &__img {
             width: 40%;
@@ -284,12 +285,21 @@ button:hover .button-text {
     h3 {
         padding: 0 3%;
         text-align: left;
+        font-size: 1.5rem;
+        text-align: center;
     }
+
+    .proyectos-item__list{
+        padding: 0 5%;
+    }
+}
+li::marker {
+    color: $dark-blue;
 }
 
 .proyectos-container--active {
     @include flex(flex, wrap, row, flex-start);
-    background-color: $lightBlue;
+    background-color: $light-blue;
 
     .proyectos-item {
         width: 45%;
@@ -313,7 +323,7 @@ button:hover .button-text {
 
     &__title {
         padding: 1%;
-        @include font(1.5rem, Raleway, #000);
+        @include font(1.5rem, Raleway, $black);
         font-weight: 300;
     }
 
@@ -363,7 +373,7 @@ button:hover .button-text {
 /* seccion peeirr */
 .section-peeirr {
     @include flex(flex, wrap, row, space-around);
-    background-color: $lightBlue;
+    background-color: $light-blue;
     margin-bottom: 5%;
     padding: 2%;
 
@@ -373,12 +383,12 @@ button:hover .button-text {
 
         &__subtitle {
             margin: 0;
-            color: $darkBlue;
+            color: $dark-blue;
         }
 
         &__item {
             padding-bottom: 1.5%;
-            @include font(1.3rem, Raleway, $darkBlue);
+            @include font(1.3rem, Raleway, $dark-blue);
             line-height: 1.9;
         }
     }
@@ -411,12 +421,12 @@ button:hover .button-text {
 
             .section-equipo__title {
                 padding: 1.5%;
-                @include font(1.1rem, Poppins, $darkBlue);
+                @include font(1.1rem, Poppins, $dark-blue);
             }
 
             .section-equipo__paragraph {
                 padding: 0 1.5%;
-                @include font(1rem, Raleway, #000);
+                @include font(1rem, Raleway, $black);
                 line-height: 1.4;
             }
         }
@@ -440,10 +450,10 @@ button:hover .button-text {
 }
 
 .section__button {
-    @include button (inline-block, 10px 25px, $darkBlue, none, Poppins, 300, 1.3rem, $white);
+    @include button (inline-block, 10px 25px, $dark-blue, none, Poppins, 300, 1.3rem, $white);
     margin: 0 4%;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 4px #999;
+    box-shadow: 0 0 4px $textShadow;
 
     &:hover {
         transform: scale(1.1);
@@ -574,22 +584,22 @@ button:hover .button-text {
     width: 100%;
     padding: 5px 10px;
     margin: 0;
-    background-color: $lightBlue;
-    @include font(1.3rem, Raleway, #000);
+    background-color: $light-blue;
+    @include font(1.3rem, Raleway, $black);
     border: none;
 
     &:active {
-        border: 1px solid $darkBlue;
+        border: 1px solid $dark-blue;
     }
 }
 
 .input__button {
     @include button (block, 1.5% 2.5%, $blue, none, Poppins, 300, 1.2rem, $white);
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 4px #999;
+    box-shadow: $textShadow;
 
     &:hover {
-        background-color: #366094;
+        background-color: rgb(54, 97, 150);
     }
 }
 
@@ -620,7 +630,6 @@ button:hover .button-text {
         margin-top: 30px;
         object-fit: top;
     }
-
 }
 
 .section__button--contacto {
@@ -634,7 +643,6 @@ button:hover .button-text {
 
     &__container {
         @include flex(flex, wrap, row, flex-start);
-
     }
 
     &-div {
@@ -651,7 +659,7 @@ button:hover .button-text {
             padding: 10px;
 
             span {
-                color: $darkBlue;
+                color: $dark-blue;
                 font-weight: 500;
                 font-family: Poppins;
             }

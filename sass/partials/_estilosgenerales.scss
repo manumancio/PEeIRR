@@ -19,7 +19,7 @@ main {
 h1 {
     padding-top: 4%;
     text-align: center;
-    @include font(3rem, Poppins, $darkBlue);
+    @include font(3rem, Poppins, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 }
@@ -27,7 +27,7 @@ h1 {
 h2 {
     padding: 2.5%;
     text-align: left;
-    @include font(2rem, Raleway, $darkBlue);
+    @include font(2rem, Raleway, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 }
@@ -120,7 +120,7 @@ input[type]:checked~span.bottom {
     transform-origin: top left;
     width: 48px;
     bottom: -1px;
-    box-shadow: 0 0 10px #ADA996;
+    box-shadow: 0 0 10px hsl(50, 12%, 63%);
 }
 
 input[type]:checked~span.middle {

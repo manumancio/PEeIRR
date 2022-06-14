@@ -309,11 +309,15 @@
 
         .proyectos-item-img {
             flex-wrap: wrap;
+             .proyectos-item-img__img {
+                 @include images(30vw, 30vh);
+                 margin: 0.5% auto;
+             }
         }
 
         .proyectos-item {
             width: 100%;
-            min-width: 200px;
+            min-width: none;
 
             .proyectos-item__img {
                 display: none;
@@ -439,7 +443,7 @@
         padding: 10px;
 
         span {
-            @include font(1.1rem, Poppins, $darkBlue);
+            @include font(1.1rem, Poppins, $dark-blue);
             font-weight: 500;
         }
     }

@@ -61,7 +61,7 @@
 
     .footer h6 {
         text-align: center;
-        color: $darkBlue
+        color: $dark-blue
     }
 
     /* ----------------------------NOSOTROS.HTML------------------------- */
@@ -70,6 +70,32 @@
 
     .section-sumate__flex p {
         text-align: center
+    }
+
+    /* --------------------------PROYECTOS.HTML--------------------------- */
+    .proyectos-container,
+    .proyectos-container--active {
+        margin: 0;
+        padding: 3%;
+        min-width: none;
+
+          .proyectos-item-img {
+              flex-wrap: wrap;
+
+              .proyectos-item-img__img {
+                  @include images(40vw, 30vh);
+                  margin: 0.5% auto;
+              }
+          }
+
+         .proyectos-item {
+             width: 100%;
+             min-width: none;
+
+             .proyectos-item__img {
+                 display: none;
+             }
+         }
     }
 
     /* --------------------------CONTACTO.HTML--------------------------- */

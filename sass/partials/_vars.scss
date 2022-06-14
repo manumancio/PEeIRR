@@ -1,37 +1,26 @@
 // variables
 
-$darkBlue:#112D4E;
-$blue:#3F72AF;
-$lightBlue:#DBE2EF;
-$white:#F9F7F7;
-$bgDefault: #ADA996;
+$dark-blue:rgb(17, 46, 79);
+$blue:rgb(64, 114, 176);
+$light-blue:rgb(220, 227, 239);
+$white:rgb(248, 246, 246);
+$black: rgb(0, 0, 0);
 
-$boxShadow: 1px 1px 8px #dfdfdd;
-$boxShadowImg: 2px 2px 2px #ADA996;
-$textShadow: 1px 1px 5px #999;
+$boxShadow: 1px 1px 8px rgb(223, 223, 221);
+$boxShadowImg: 2px 2px 2px rgb(172, 168, 149);
+$textShadow: 1px 1px 5px rgb(153, 153, 153);
 
-
-$gradientOld:-webkit-linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
-$gradientNew: linear-gradient(to left, hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.6), hsla(0, 0%, 95%, 0.6), hsla(50, 12%, 63%, 0.6));
+$gradientHeaders: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
 
 
-// mixins
-//sin argumentos
-
-@mixin backgroundHeaders {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-//con argumentos
+// mixin
 
 @mixin gridArea($area) {
     justify-self: center;
     grid-area: $area;
 }
 
-@mixin backgroundHeadersTop($bgPosition:top) {
+@mixin backgroundHeaders($bgPosition) {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: $bgPosition;

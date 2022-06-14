@@ -152,17 +152,45 @@ input[type]:checked ~ span.middle {
 }
 
 /* --------------------INDEX.HTML---------------------- */
+.header-index {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/index.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/index.webp");
+}
+
+.header-servicios {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/servicios.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/servicios.webp");
+}
+
+.header-nosotros {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/nosotros.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/nosotros.webp");
+}
+
+.header-proyectos {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/proyectos.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/proyectos.webp");
+}
+
+.header-contacto {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/contacto.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/contacto.webp");
+}
+
+.header-sumate {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url("../images/sumate.webp");
+  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url("../images/sumate.webp");
+}
+
 /* header */
 .header-index {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/index.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/index.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
+  /* Chrome 10-25, Safari 5.1-6 */
   background-attachment: fixed;
 }
 
@@ -340,25 +368,17 @@ input[type]:checked ~ span.middle {
 
 /* ------------------------ SERVICIOS.HTML ------------------------------*/
 .header-servicios {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/servicios.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/servicios.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
+  /* Chrome 10-25, Safari 5.1-6 */
 }
 
 /*---------------------------PROYECTOS.HTML -----------------------------*/
 .header-proyectos {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/proyectos.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/proyectos.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -366,38 +386,28 @@ input[type]:checked ~ span.middle {
 
 /* ------------------------------SUMATE.HTML---------------------------- */
 .header-sumate {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/sumate.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/sumate.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
+  /* Chrome 10-25, Safari 5.1-6 */
 }
 
 /* ---------------------------NOSOTROS.HTML----------------------------- */
 .header-nosotros {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/nosotros.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/nosotros.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
+  /* Chrome 10-25, Safari 5.1-6 */
 }
 
 /* ----------------------------CONTACTO.HTML---------------------------- */
 .header-contacto {
-  background: #ADA996;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(rgba(235, 235, 235, 0.8)), color-stop(rgba(219, 219, 219, 0.6)), color-stop(rgba(242, 242, 242, 0.6)), to(rgba(172, 168, 149, 0.6))), url(../images/contacto.webp);
-  background: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6)), url(../images/contacto.webp);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -417,7 +427,8 @@ input[type]:checked ~ span.middle {
   -ms-grid-rows: (50vh)[2];
       grid-template-rows: repeat(2, 50vh);
   gap: 5%;
-      grid-template-areas: "cardServicios1 cardServicios5 cardServicios3" "cardServicios6 cardServicios2 cardServicios4";
+      grid-template-areas: "cardServicios1 cardServicios5 cardServicios3"
+ "cardServicios6 cardServicios2 cardServicios4";
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
@@ -1152,7 +1163,10 @@ button:hover .button-text {
   gap: 8% 2%;
   width: 100%;
   height: 530px;
-      grid-template-areas: "grid-nombre grid-apellido" "grid-email grid-telefono" "grid-asunto grid-asunto" "grid-mensaje grid-mensaje";
+      grid-template-areas: "grid-nombre grid-apellido"
+ "grid-email grid-telefono"
+ "grid-asunto grid-asunto"
+ "grid-mensaje grid-mensaje";
 }
 
 .section-formulario__form fieldset .form-grid__nombre {
@@ -1622,7 +1636,9 @@ button:hover .button-text {
     -ms-grid-rows: (40vh)[3];
         grid-template-rows: repeat(3, 40vh);
     gap: 2%;
-        grid-template-areas: "cardServicios1 cardServicios5" "cardServicios3 cardServicios6" "cardServicios2 cardServicios4";
+        grid-template-areas: "cardServicios1 cardServicios5"
+ "cardServicios3 cardServicios6"
+ "cardServicios2 cardServicios4";
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
@@ -1807,7 +1823,9 @@ button:hover .button-text {
     -ms-grid-rows: (40vh)[3];
         grid-template-rows: repeat(3, 40vh);
     gap: 2%;
-        grid-template-areas: "cardServicios1 cardServicios5" "cardServicios3 cardServicios6" "cardServicios2 cardServicios4";
+        grid-template-areas: "cardServicios1 cardServicios5"
+ "cardServicios3 cardServicios6"
+ "cardServicios2 cardServicios4";
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;

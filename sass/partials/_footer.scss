@@ -1,7 +1,7 @@
 .footer {
     padding-top: 3%;
-    background-color: $lightBlue;
-    color: $darkBlue;
+    background-color: $light-blue;
+    color: $dark-blue;
 
     &__container {
         @include flex(flex, wrap, row, space-evenly);
@@ -10,10 +10,10 @@
             width: 20vw;
             min-width: 200px;
             padding: 1%;
-            border-left: 2px solid #cfd8e2;
+            border-left: 2px solid rgb(207, 216, 226);
 
             &:first-child {
-                border-left: 2px solid #DBE2EF;
+                border-left: 2px solid rgb(220, 227, 239);
             }
 
             .footer-redes {
@@ -49,7 +49,7 @@
 
 .footer-redes__img {
     width: 1.8rem;
-    color: $darkBlue;
+    color: $dark-blue;
     margin: 2%;
     transition: all 0.2s ease-in-out;
 
@@ -61,7 +61,7 @@
 .footer__link {
     padding: 1.5%;
     text-decoration: none;
-    @include font(1.3rem, Raleway, $darkBlue);
+    @include font(1.3rem, Raleway, $dark-blue);
     line-height: 1.3;
 
     &:hover {
@@ -96,7 +96,7 @@
 /* footer final */
 .footer__final {
     @include flex(flex, wrap, row, space-around);
-    background-color: #112D4E;
+    background-color: $dark-blue;
     align-items: center;
 
     h4 {
