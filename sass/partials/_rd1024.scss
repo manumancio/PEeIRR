@@ -53,7 +53,12 @@
     .primera-barra {
         padding-right: 3%;
         height: 2.4rem;
+
+        &__link {
+            font-size: 1.2rem;
+        }
     }
+
 
     .primera-barra__img {
         width: 2rem;
@@ -92,55 +97,56 @@
     .nuestros-servicios {
         margin: 8% auto;
 
-
         .nuestros-servicios__container {
-            @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 2%);
+            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 3%);
             grid-template-areas:
                 "cardServicios1 cardServicios5"
                 "cardServicios3 cardServicios6"
                 "cardServicios2 cardServicios4";
             justify-content: stretch;
-
-            .nuestros-servicios-grid__subtitles {
-                font-size: 1.1rem;
-            }
         }
     }
 
+    .nuestros-servicios-grid__subtitles {
+        font-size: 1rem;
+        font-weight: 400;
+        color: red;
+    }
 
     /* Sobre Nosotros */
     .sobre-nosotros-item {
-        width: 45%;
+        width: 80%;
         min-width: 650px;
-    }
 
-     .sobre-nosotros-item__subtitle {
-         font-size:1.2rem ;
-     }
+        .sobre-nosotros-item__subtitle {
+            font-size: 1.1rem;
+            color: red;
+        }
+    }
 
     /* footer */
     .footer-redes__img {
         margin: 1%;
-        width: 2.5rem;
+        width: 1.5rem;
     }
 
     .footer__link {
         padding: 1.3%;
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .footer__list li {
+        font-size: 1.1rem;
     }
 
     .footer__subtitle {
         padding: 1% 1%;
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: left;
     }
 
-    .footer__paragraph {
-        font-size: 1rem;
-    }
-
     .footer__icons {
-        width: 11%;
+        width: 20px;
         margin-right: 4%;
     }
 
@@ -149,11 +155,11 @@
     .section-servicios-item {
         width: 100%;
 
-        .section-servicios-item__img {
+        &__img {
             margin: 0;
         }
 
-        .section-servicios-container p {
+        p {
             padding: 0 2%;
         }
     }

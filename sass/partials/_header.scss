@@ -2,7 +2,7 @@
 
 // bucle - each
 
-$bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
+$bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
 
 
 @each $bgImageHeader in $bgImages {
@@ -14,8 +14,6 @@ $bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
 
 /* header */
 .header-index {
-    background: $gradientHeaders,
-    url(../images/index.webp);
     @include backgroundHeaders(center);
     background-attachment: fixed;
 }
@@ -46,7 +44,10 @@ $bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
         transition: all 0.2 ease-in-out;
 
         &:hover {
-            background-color: rgb(212, 224, 247);
+            background-color: rgb(225, 231, 241);
+            text-decoration: none;
+            color: $dark-blue;
+            color: $blue;
         }
     }
 
@@ -56,7 +57,7 @@ $bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
         transition: all 0.3 ease-in-out;
 
         &:hover {
-            background-color: rgb(21, 59, 102);
+            background-color: rgb(22, 66, 116);
         }
     }
 }
@@ -66,7 +67,7 @@ $bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
     width: 100%;
     padding-top: 2.6rem;
     box-shadow: 2px 2px 8px rgba(156, 152, 129, 0.192);
-    background-color: rgba(178, 176, 169, 0.231);
+    background-color: rgba(175, 175, 172, 0.336);
 
     .logo {
         width: 60%;
@@ -123,9 +124,13 @@ $bgImages: (index, servicios, nosotros, proyectos, contacto, sumate);
         border: $dark-blue 3px solid;
         transition: all 0.2s ease-in-out;
         box-shadow: $boxShadowImg;
+        border: none;
 
-        &__button:hover {
-            transform: scale(1.05);
+        &:hover {
+            transform: scale(1.02);
+            text-decoration: none;
+            color: $white;
+            background-color: rgb(22, 66, 116);       
         }
     }
 }

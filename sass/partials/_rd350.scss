@@ -59,10 +59,23 @@
 
     /* footer */
 
+    .footer__section {
+        width: 80%;
+        border-left: none;
+    }
+
     .footer h6 {
         text-align: center;
         color: $dark-blue
     }
+    /* footer final */
+
+    .footer__final h6 {
+        font-size: 1.1rem;
+        color: $white;
+        margin-top: 0;
+    }
+
 
     /* ----------------------------NOSOTROS.HTML------------------------- */
 
@@ -79,23 +92,23 @@
         padding: 3%;
         min-width: none;
 
-          .proyectos-item-img {
-              flex-wrap: wrap;
+        .proyectos-item-img {
+            flex-wrap: wrap;
 
-              .proyectos-item-img__img {
-                  @include images(40vw, 30vh);
-                  margin: 0.5% auto;
-              }
-          }
+            .proyectos-item-img__img {
+                @include images(40vw, 30vh);
+                margin: 0.5% auto;
+            }
+        }
 
-         .proyectos-item {
-             width: 100%;
-             min-width: none;
+        .proyectos-item {
+            width: 100%;
+            min-width: none;
 
-             .proyectos-item__img {
-                 display: none;
-             }
-         }
+            .proyectos-item__img {
+                display: none;
+            }
+        }
     }
 
     /* --------------------------CONTACTO.HTML--------------------------- */

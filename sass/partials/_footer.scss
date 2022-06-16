@@ -28,29 +28,25 @@
 
                 li {
                     padding: 3% 0;
+                      @include font(1.2rem, Raleway, black);
+                        line-height: 1.3;
+                        text-align: left;
                 }
             }
 
             .footer__subtitle {
                 padding: 3.5% 30px;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 text-align: left;
-            }
-
-            .footer__paragraph {
-                padding: 5px 15px;
-                @include font(1.3rem, Raleway, black);
-                line-height: 1.3;
-                text-align: left;
-            }
+            }            
         }
     }
 }
 
 .footer-redes__img {
-    width: 1.8rem;
+    width: 1.5rem;
     color: $dark-blue;
-    margin: 2%;
+    margin: 6% 3%;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -61,11 +57,12 @@
 .footer__link {
     padding: 1.5%;
     text-decoration: none;
-    @include font(1.3rem, Raleway, $dark-blue);
+    @include font(1.2rem, Raleway, $dark-blue);
     line-height: 1.3;
 
     &:hover {
-        text-decoration: underline
+        text-decoration: underline;
+        color: $dark-blue;
     }
 }
 
@@ -80,12 +77,13 @@
 }
 
 .footer__icons {
-    width: 7%;
+    width: 20px;
     margin-right: 4%;
 }
 
 .footer__logo {
     width: 100%;
+    min-width: 180px;
     margin-bottom: 10%;
 }
 

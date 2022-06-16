@@ -1,6 +1,6 @@
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
-    /* ------------------------INDEX.HTML---------------------- */
+
     /* general */
     h1 {
         padding-top: 2%;
@@ -18,10 +18,27 @@
         font-size: 1.3rem;
     }
 
+    /* ------------------------INDEX.HTML---------------------- */
+
     /* hero */
 
     .hero {
         height: 75vh;
+    }
+
+    /* primera barra */
+
+    .primera-barra {
+        padding-right: 3%;
+        height: 2.4rem;
+
+        &__link {
+            font-size: 1.2rem;
+        }
+    }
+
+    .primera-barra__img {
+        width: 2rem;
     }
 
 
@@ -31,7 +48,7 @@
         margin: 8% auto;
 
         .nuestros-servicios__container {
-            @include grid(grid, repeat(2, 1fr), repeat(3, 40vh), 2%);
+            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 2%);
             grid-template-areas:
                 "cardServicios1 cardServicios5"
                 "cardServicios3 cardServicios6"
@@ -40,7 +57,7 @@
 
 
             .nuestros-servicios-grid {
-                min-width: 200px;
+                min-width: 225px;
 
                 img {
                     width: 45%;
@@ -68,19 +85,19 @@
 
     /* footer */
     .footer__link {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .footer__list li {
+        font-size: 1.1rem;
     }
 
     .footer__subtitle {
         font-size: 1rem;
     }
 
-    .footer__paragraph {
-        font-size: 1.1rem;
-    }
-
     .footer__icons {
-        width: 11%;
+        width: 20px;
         margin-right: 4%;
     }
 
@@ -225,7 +242,7 @@
 
         .proyectos-item-img__img {
             @include images(40vw, 30vh);
-            margin: 0.5% auto;           
+            margin: 0.5% auto;
         }
     }
 
