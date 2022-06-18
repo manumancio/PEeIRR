@@ -12,6 +12,8 @@ $textShadow: 1px 1px 5px rgb(153, 153, 153);
 
 $gradientHeaders: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 219, 219, 0.6), rgba(242, 242, 242, 0.6), rgba(172, 168, 149, 0.6));
 
+$margin-bottom-section: 5%;
+
 
 // mixin
 
@@ -65,6 +67,38 @@ $gradientHeaders: linear-gradient(to left, rgba(235, 235, 235, 0.8), rgba(219, 2
 }
 
 
+//media-queries - mixin
+
+@mixin compu-xl {
+    @media screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin compu {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }    
+}
+
+@mixin movil {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin movil-xs {
+    @media screen and (max-width:350px) {
+        @content;
+    }
+}
+
 // maps-get
 
 $fontWeight: ("weight2": 200,
@@ -75,3 +109,6 @@ $fontWeight: ("weight2": 200,
     "weight8": 800,
     "weight9": 900,
 );
+
+
+

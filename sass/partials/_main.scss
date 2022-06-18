@@ -1,0 +1,1450 @@
+/* ---------------------------INDEX.HTML----------------------------- */
+
+/* Nuestros servicios */
+
+.nuestros-servicios {
+    margin: 4% auto;
+
+    @include compu {
+        margin: 8% auto;
+    }
+
+    @include tablet {
+        margin: 8% auto;
+    }
+
+    @include movil {
+        margin: 8% auto;
+        height: auto;
+    }
+
+    .nuestros-servicios__container {
+        @include grid(grid, repeat(3, 1fr), repeat(2, 300px), 3%);
+        grid-template-areas:
+            "cardServicios1 cardServicios5 cardServicios3"
+            "cardServicios6 cardServicios2 cardServicios4";
+        justify-content: stretch;
+
+        @include compu {
+            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 3%);
+            grid-template-areas: "cardServicios1 cardServicios5"
+                "cardServicios3 cardServicios6"
+                "cardServicios2 cardServicios4";
+            justify-content: stretch;
+        }
+
+        @include tablet {
+            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 2%);
+            grid-template-areas: "cardServicios1 cardServicios5"
+                "cardServicios3 cardServicios6"
+                "cardServicios2 cardServicios4";
+            justify-content: stretch;
+        }
+
+        @include movil {
+            display: flex;
+            flex-direction: column;
+            gap: 5%;
+        }
+
+        .nuestros-servicios-grid {
+            @include flex(flex, nowrap, column, space-evenly);
+            height: 100%;
+            width: 60%;
+            min-width: 250px;
+            border-radius: 15px;
+            box-shadow: $boxShadow;
+
+            @include tablet {
+                min-width: 225px;
+            }
+
+            @include movil {
+                width: 60%;
+                height: 300px;
+                margin: 3% auto;
+            }
+
+            img {
+                display: block;
+                width: 36%;
+                height: auto;
+                margin: 2% auto;
+                text-align: center;
+
+                @include tablet {
+                    width: 45%;
+                }
+
+                @include movil {
+                    width: 20%;
+                }
+
+            }
+
+            &__subtitles {
+                padding: 3%;
+                text-align: center;
+                @include font(1.05rem, Raleway, $blue);
+                line-height: 1.5;
+                font-weight: 600;
+
+                @include compu-xl {
+                    color: $blue;
+                    font-size: 1rem;
+                }
+
+                @include compu {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $blue;
+                }
+
+                @include tablet {
+                    font-size: 1rem;
+                }
+            }
+
+            &__link {
+                text-align: center;
+            }
+        }
+
+        @each $grid-numero in 1,
+        2,
+        3,
+        4,
+        5,
+        6 {
+            .nuestros-servicios-grid#{$grid-numero} {
+                @include gridArea(cardServicios#{$grid-numero});
+            }
+        }
+    }
+}
+
+/* From uiverse.io // boton de LEER MAS */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 10rem;
+    height: auto;
+
+    & .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: rgb(39, 40, 53);
+        border-radius: 1.625rem;
+
+        & .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: $white;
+
+            &.arrow {
+                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                left: 0.625rem;
+                width: 1.125rem;
+                height: 0.125rem;
+                background: none;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: -0.29rem;
+                    right: 0.0625rem;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    border-top: 0.125rem solid $white;
+                    border-right: 0.125rem solid $white;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: rgb(39, 40, 53);
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Raleway;
+    }
+}
+
+button:hover .circle {
+    width: 100%;
+
+    .icon.arrow {
+        background: $white;
+        transform: translate(1rem, 0);
+    }
+}
+
+button:hover .button-text {
+    color: $white;
+}
+
+/* Sobre Nosotros */
+
+.sobre-nosotros {
+    margin: 10% 0 5%;
+    padding-bottom: 5%;
+    background-color: $dark-blue;
+
+    &__title {
+        color: $white;
+    }
+
+    .sobre-nosotros__container {
+        @include flex(flex, wrap, row, space-around);
+
+        .sobre-nosotros-item {
+            width: 45%;
+            min-width: 400px;
+            height: 50%;
+            text-align: center;
+            font-family: Raleway;
+            line-height: 1.9;
+
+            @include compu {
+                width: 80%;
+                min-width: 650px;
+            }
+
+            @include tablet {
+                width: 90%;
+            }
+
+            @include movil {
+                padding: 0 20px;
+            }
+
+            &__img {
+                width: 80%;
+                height: 50vh;
+                margin-bottom: 3%;
+                object-fit: cover;
+
+                @include movil {
+                    width: 100%;
+                    height: 40vh;
+                }
+            }
+
+            &__subtitle {
+                padding: 1%;
+                @include font(1.6rem, Poppins, $light-blue);
+                text-align: left;
+                margin: 0 10%;
+
+                @include compu {
+                    font-size: 1.4rem;
+                }
+
+                @include tablet {
+                    font-size: 1.3rem;
+                }
+
+                @include movil {
+                    font-size: 1.1rem;
+                    margin: 0 30%;
+                    padding: 0 5%;
+                }
+
+                @include movil-xs {
+                    margin: 0 50px;
+                    font-size: 1rem;
+                }
+            }
+
+            &__paragraph {
+                color: $white;
+                margin: 0 10%;
+
+                @include movil-xs {
+                    margin: 0 50px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* Algunos de nuestros clientes //carrousel*/
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgb(39, 40, 53);
+    border-radius: 50px;
+}
+
+/* ---------------------------SERVICIOS.HTML----------------------------- */
+
+.section-servicios-container {
+    @include flex(flex, wrap, row, space-around);
+    width: 100%;
+    margin-bottom: $margin-bottom-section;
+    padding: 3% 0;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+
+    @include movil {
+        padding: 0 5%;
+        width: 100%;
+    }
+
+    .section-servicios-item {
+        width: 40%;
+        min-width: 400px;
+
+        @include compu {
+            width: 100%;
+        }
+
+        @include movil {
+            width: 100%;
+            min-width: 200px;
+            padding: 0;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            padding: 3% 0;
+        }
+
+        &__img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            margin: 2%;
+
+            @include compu {
+                margin: 0;
+            }
+
+            @include tablet {
+                margin: 0;
+            }
+
+            @include movil {
+                height: 30vh;
+                width: 100%;
+                margin: 3% 0;
+            }
+        }
+
+        p {
+            @include compu {
+                padding: 0 2%;
+            }
+
+            @include tablet {
+                padding: 0 2%;
+            }
+        }
+    }
+}
+
+.section-servicios-container--serv5 {
+    background-color: $dark-blue;
+
+    h4, p {
+        color: $white;
+    }
+}
+
+.section-servicios-container--serv2 {
+    background-color: $light-blue;
+    color: $dark-blue;
+
+    @include compu {
+        width: 100%;
+        margin: 0
+    }
+}
+
+/* acordeon bootstrap //FAQS */
+
+.accordion-button,
+.accordion {
+    font-family: Raleway;
+    font-size: 1.3rem;
+}
+
+/* ---------------------------PROYECTOS.HTML----------------------------- */
+
+.proyectos-container {
+    @include flex(flex, wrap, row, space-around);
+    margin: 3%;
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+
+    @include tablet {
+        margin: 5% 0;
+        width: 100%;
+    }
+
+    @include movil {
+        margin: 0;
+        padding: 3%;
+    }
+
+    @include movil-xs {
+        margin: 0;
+        padding: 3%;
+        min-width: none;
+    }
+
+    .proyectos-item-img {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include movil {
+            flex-wrap: wrap;
+        }
+
+        @include movil-xs {
+            flex-wrap: wrap;
+        }
+
+        &__img {
+            width: 40%;
+            height: 400px;
+            object-fit: cover;
+            margin: 3% auto;
+
+            @include tablet {
+                @include images(40vw, 30vh);
+                margin: 0.5% auto;
+            }
+
+            @include movil {
+                @include images(30vw, 30vh);
+                margin: 0.5% auto;
+            }
+
+            @include movil-xs {
+                @include images(40vw, 30vh);
+                margin: 0.5% auto;
+            }
+        }
+    }
+
+    h3 {
+        padding: 0 3%;
+        text-align: left;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .proyectos-item__list {
+        padding: 0 5%;
+    }
+}
+
+li::marker {
+    color: $dark-blue;
+}
+
+.proyectos-container--active {
+    @include flex(flex, wrap, row, flex-start);
+    background-color: $light-blue;
+
+    @include movil-xs {
+        margin: 0;
+        padding: 3%;
+        min-width: none;
+    }
+
+    p {
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .proyectos-item {
+        width: 45%;
+        min-width: 400px;
+        padding: 1%;
+
+        @include compu {
+            width: 95%
+        }
+
+        @include tablet {
+            width: 200px;
+            margin: 0;
+            object-fit: cover;
+
+            width: 90%;
+            min-width: 400px;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include movil {
+            width: 100%;
+            min-width: none;
+        }
+
+        @include movil-xs {
+            width: 100%;
+            min-width: none;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin: 2% 0;
+
+            @include tablet {
+                margin: 2% 0%;
+            }
+
+            @include movil {
+                display: none;
+            }
+
+            @include movil-xs {
+                display: none;
+            }
+        }
+    }
+}
+
+/* ---------------------------SUMATE.HTML----------------------------- */
+
+.sumate-principal {
+    @include flex(flex, nowrap, column, space-around);
+    align-items: center;
+
+    &__title {
+        padding: 1%;
+        @include font(1.5rem, Raleway, $black);
+        font-weight: 300;
+
+        @include compu {
+            font-size: 1.1rem;
+        }
+
+        @include tablet {
+            font-size: 1.1rem;
+        }
+
+        @include movil {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__subtitle {
+        color: $blue;
+
+        @include compu {
+            font-size: 1.2rem;
+        }
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include movil {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__iframe {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 2%;
+        text-align: center;
+        border: none;
+    }
+}
+
+/* ---------------------------NOSOTROS.HTML----------------------------- */
+
+/* seccion empresa */
+.section-empresa {
+    @include flex(flex, wrap, row, space-evenly);
+    margin-top: 2%;
+    margin-bottom: $margin-bottom-section;
+
+    &__div {
+        width: 30%;
+        min-width: 400px;
+        margin: 0 1.6%
+    }
+
+    &__img {
+        display: block;
+        width: 25%;
+        margin: 2% auto;
+        text-align: center;
+    }
+
+    &__title {
+        padding: 2% 0;
+    }
+
+    &__paragraph {
+        text-align: center;
+    }
+}
+
+/* seccion peeirr */
+.section-peeirr {
+    @include flex(flex, wrap, row, space-around);
+    background-color: $light-blue;
+    margin-bottom: $margin-bottom-section;
+    padding: 2%;
+
+    &-div {
+        width: 30vw;
+        min-width: 400px;
+
+        @include compu {
+            margin: 3%;
+        }
+
+        @include tablet {
+            margin: 3%;
+        }
+
+        @include movil {
+            padding: 5%;
+            width: 90%;
+            min-width: 150px;
+        }
+
+        @include movil-xs {
+            min-width: 100px;
+            width: 90%;
+        }
+
+        &__subtitle {
+            margin: 0;
+            color: $dark-blue;
+        }
+
+        &__item {
+            padding-bottom: 1.5%;
+            @include font(1.3rem, Raleway, $dark-blue);
+            line-height: 1.9;
+
+            @include movil {
+                padding-bottom: 1%;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+/* seccion equipo */
+.section-equipo {
+    margin: 0 auto;
+
+    @include compu-xl {
+        margin-bottom: $margin-bottom-section;
+    }
+
+    @include compu {
+        margin-bottom: $margin-bottom-section;
+    }
+
+    @include tablet {
+        margin: 10% 0;
+    }
+
+    @include movil {
+        margin: 15% 0;
+    }
+
+    &__container {
+        @include grid(grid, repeat(3, 1fr), repeat(4, auto), 1%);
+        width: 95%;
+        margin: 0 auto;
+
+        @include compu-xl {
+            @include grid(grid, repeat(3, 1fr), repeat(4, auto),
+                1.2%);
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        @include compu {
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1%);
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        @include tablet {
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 2%);
+        }
+
+        @include movil {
+            @include grid(grid, 1fr, repeat(12, 1fr), 0.5%);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section-equipo__div {
+            @include flex(flex, nowrap, column, flex-start);
+            align-items: center;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: $boxShadow;
+
+            @include tablet {
+                width: 95%;
+                margin: 0 auto;
+            }
+
+            .section-equipo__img {
+                @include images(90%, 60%);
+                object-position: top;
+                margin-top: 0;
+                padding-top: 0;
+
+                @include compu-xl {
+                    @include images(80%, 60%);
+                    margin-top: 0;
+                }
+
+                @include compu {
+                    @include images(80%, 60%);
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0;
+                }
+
+                @include tablet {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0;
+                    @include images(80%, 60%);
+                }
+
+                @include movil {
+                    @include images(80%, 60%);
+                    margin-top: 0;
+                }
+            }
+
+            .section-equipo__title {
+                padding: 1.5%;
+                @include font(1.1rem, Poppins, $dark-blue);
+            }
+
+            .section-equipo__paragraph {
+                padding: 0 1.5%;
+                @include font(1rem, Raleway, $black);
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+/* seccion sumate */
+.section-sumate {
+    margin: 5% 0;
+    padding: 2%;
+
+    @include tablet {
+        margin-top: 5%;
+        width: 80vw;
+    }
+
+    @include movil {
+        margin-top: 5%;
+        width: 100vw;
+    }
+
+    h4 {
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        @include movil {
+            font-size: 1.2rem;
+        }
+    }
+
+    &-flex {
+        @include flex(flex, wrap, row, center);
+        width: 100%;
+
+        p {
+            padding: 0 4%;
+            font-size: 1.3rem;
+
+            @include compu-xl {
+                padding: 0 3%;
+                font-size: 1.1rem;
+            }
+
+            @include tablet {
+                font-size: 1.1rem;
+                padding: 0 4%;
+            }
+
+            @include movil {
+                font-size: 1.1rem;
+                padding: 0 4%;
+            }
+
+            @include movil-xs {
+                text-align: center
+            }
+        }
+    }
+}
+
+.section__button {
+    @include button (inline-block, 10px 25px, $dark-blue, none, Poppins, 300, 1.3rem, $white);
+    margin: 0 4%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 4px $textShadow;
+
+    @include compu-xl {
+        font-size: 1.1rem;
+    }
+
+    @include tablet {
+        padding: 8px 22px;
+        font-size: 1.1rem;
+    }
+
+    @include movil {
+        padding: 8px 22px;
+        font-size: 1.1rem;
+    }
+
+    &:hover {
+        @extend .hero__button:hover;
+    }
+}
+
+/* seccion proyectos */
+
+.section-proyectos {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto 8%;
+
+    @include compu {
+        margin: 0 auto 8%;
+    }
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include movil {
+        width: 100%;
+        margin: 0;
+    }
+
+    .section-proyectos-grid {
+        @include grid(grid, repeat(5, 1fr), repeat(3, 30vh), 1%);
+
+        @include compu {
+            @include grid(grid, repeat(4, 1fr), repeat(4, 30vh), 1%);
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @include tablet {
+            @include grid(grid, repeat(4, auto), repeat(3, 30vh), 1%);
+        }
+
+        @include movil {
+            @include grid(grid, repeat(2, 1fr), repeat(6, 30vh), 1%);
+            margin-bottom: 5%;
+        }
+
+        .section-proyectos__item {
+            position: relative;
+
+            @include tablet {
+                position: relative;
+            }
+
+            .section-proyectos__img {
+                @include images(100%, 100%);
+                box-shadow: $boxShadow;
+
+                @include tablet {
+                    @include images(100%, 100%);
+                    box-shadow: $boxShadowImg;
+                }
+
+                @include movil {
+                    @include images(100%, 100%);
+                    box-shadow: $boxShadowImg;
+                }
+            }
+
+            .section-proyectos__title {
+                position: absolute;
+                width: 100%;
+                padding: 2%;
+                bottom: 0;
+                background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                @include font(1.3rem, Raleway, $white);
+
+                @include compu {
+                    font-size: 1.1rem;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    padding: 2%;
+                    position: absolute;
+                    bottom: 0;
+                    color: $white;
+                    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                    font-size: 1.3rem;
+                }
+
+                @include movil {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .section-proyectos__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            @include compu {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            @include movil {
+                grid-column-start: span 2;
+            }
+        }
+
+        .section-proyectos__item--4 {
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            @include movil {
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+        }
+
+        .section-proyectos__item--5 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            @include compu {
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+
+            @include tablet {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+        }
+
+        .section-proyectos__item--6 {
+            @include compu {
+                grid-column-start: span 2;
+            }
+
+            @include tablet {
+                grid-column-start: span 2;
+            }
+        }
+
+        .section-proyectos__item--7 {
+            grid-column-start: span 2;
+
+            @include compu {
+                grid-column-start: span 2;
+            }
+
+            @include tablet {
+                grid-column: 1/2;
+            }
+        }
+
+        .section-proyectos__item--8 {
+            grid-row-start: span 2;
+
+            @include tablet {
+                grid-column: 2/4;
+                grid-row: 3/4;
+            }
+        }
+
+        .section-proyectos__item--9 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+
+            @include compu {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            @include tablet {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+            @include movil {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+        }
+    }
+}
+
+/* --------------------------CONTACTOS.HTML----------------------------- */
+
+.main-div-flex {
+    @include flex(flex, nowrap, row, space-between);
+
+    @include compu-xl {
+        flex-wrap: wrap;
+    }
+
+    @include compu {
+        width: 95%;
+    }
+
+    @include tablet {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include movil {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+/* seccion formulario */
+.section-formulario {
+    width: 60%;
+
+    @include compu-xl {
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    @include compu {
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    @include tablet {
+        width: 90%;
+        min-width: none;
+        margin: 5% auto;
+    }
+
+    @include movil {
+        width: 90%;
+        min-width: none;
+        margin: 5% auto;
+    }
+
+    &__paragraph {
+        padding: 1%;
+    }
+
+    &__form {
+        width: 100%;
+
+        fieldset {
+            border: none;
+
+            legend {
+                display: none;
+            }
+
+            .form-grid {
+                @include grid(grid, 1fr 1fr, repeat(3, 3%), 8% 2%);
+                width: 100%;
+                height: 530px;
+                grid-template-areas: "grid-nombre grid-apellido"
+                    "grid-email grid-telefono"
+                    "grid-asunto grid-asunto"
+                    "grid-mensaje grid-mensaje";
+
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: auto;
+                    row-gap: 5px;
+                }
+
+                @include movil {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: auto;
+                    row-gap: 5px;
+                }
+
+                $input: nombre,
+                apellido,
+                email,
+                telefono,
+                asunto;
+
+                @each $nombre-input in $input {
+                    &__#{$nombre-input} {
+                        grid-area: grid-#{$nombre-input};
+                    }
+                }
+
+                &__mensaje {
+                    grid-area: grid-mensaje;
+
+                    .input--mensaje {
+                        resize: none;
+                        margin-top: 3.5%;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: $light-blue;
+    @include font(1.3rem, Raleway, $black);
+    border: none;
+
+    @include compu-xl {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    @include tablet {
+        padding: 8px 10px;
+    }
+
+    @include movil {
+        padding: 8px 10px;
+    }
+
+    &:active {
+        border: 1px solid $dark-blue;
+    }
+}
+
+.input__button {
+    @include button (block, 1.5% 2.5%, $blue, none, Poppins, 300, 1.2rem, $white);
+    transition: all 0.2s ease-in-out;
+    box-shadow: $textShadow;
+    border: none;
+
+    &:hover {
+        @extend .hero__button:hover;
+    }
+}
+
+/* seccion sumate */
+.section-sumate-contacto {
+    @include flex(flex, nowrap, column, center);
+    align-items: center;
+    width: 30%;
+
+    @include compu-xl {
+        width: 50%;
+        margin: 0px auto;
+    }
+
+    @include compu {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        min-width: none;
+        margin: 5% auto;
+    }
+
+    @include movil {
+        @include flex(flex, nowrap, column, center);
+        align-items: center;
+        width: 100%;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 2% 0;
+        @include font(1.5rem, Raleway, $blue);
+
+        @include tablet {
+            color: $blue;
+            font-size: 1.5rem;
+        }
+
+        @include movil {
+            color: $blue;
+            font-size: 1.5rem;
+            margin: 0;
+            padding: 2% 0;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        padding: 2% 0;
+
+        @include tablet {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 2% 0;
+        }
+
+        @include movil {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 2% 0;
+        }
+
+        @include movil-xs {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0 20px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+        margin-top: 30px;
+        object-fit: top;
+
+        @include tablet {
+            display: block;
+            @include images(100%, 400px);
+            margin-top: 30px;
+        }
+
+        @include movil {
+            @include images(100%, 400px);
+            display: block;
+            margin-top: 30px;
+            object-fit: top;
+        }
+    }
+}
+
+.section__button--contacto {
+    padding: 1% 2%;
+    margin: 1%;
+
+    @include tablet {
+        padding: 1% 2%;
+        margin: 1%;
+    }
+
+    @include movil {
+        padding: 1% 2%;
+        margin: 1%;
+    }
+}
+
+/* seccion encontranos */
+.section-encontranos {
+    margin-bottom: $margin-bottom-section;
+
+    @include tablet {
+        margin-bottom: $margin-bottom-section;
+    }
+
+    @include movil {
+        margin-bottom: $margin-bottom-section;
+    }
+
+    @include movil-xs {
+        margin-bottom: $margin-bottom-section;
+    }
+
+    &__container {
+        @include flex(flex, wrap, row, flex-start);
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include movil {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-div {
+        width: 40vw;
+        min-width: 350px;
+        font-family: Raleway;
+
+        @include compu {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+            min-width: 350px;
+            font-family: Raleway;
+        }
+
+        @include movil {
+            width: 100%;
+            min-width: none;
+            font-family: Raleway;
+        }
+
+        @include movil-xs {
+            width: 100%;
+            min-width: none;
+        }
+
+        &__title {
+            font-size: 1.4rem;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+
+            @include movil {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__item {
+            font-size: 1.3rem;
+            padding: 10px;
+
+            @include tablet {
+                font-size: 1.3rem;
+                padding: 10px;
+            }
+
+            @include movil {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+
+            @include movil-xs {
+                font-size: 0.5rem;
+                padding: 0px;
+                margin: 0px
+            }
+
+            span {
+                color: $dark-blue;
+                font-weight: 500;
+                font-family: Poppins;
+
+                @include tablet {
+                    color: $dark-blue;
+                    font-weight: 500;
+                    font-family: Poppins;
+                }
+
+                @include movil {
+                    @include font(1.1rem, Poppins, $dark-blue);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__iframe {
+            width: 100%;
+            margin: 3%;
+            box-shadow: $boxShadow;
+
+            @include tablet {
+                width: 100%;
+                margin: 3%;
+            }
+
+            @include movil {
+                width: 100%;
+                margin: 0%;
+                border-radius: 0;
+            }
+
+            @include movil-xs {
+                margin: 0%;
+            }
+        }
+    }
+}

@@ -2,8 +2,7 @@
 
 // bucle - each
 
-$bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
-
+$bgImages: index servicios nosotros proyectos contacto sumate;
 
 @each $bgImageHeader in $bgImages {
     .header-#{$bgImageHeader} {
@@ -30,6 +29,21 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
     position: fixed;
     z-index: 100;
 
+    @include movil {
+        padding-right: 2%;
+        justify-content: center;
+    }
+
+    @include tablet {
+        padding-right: 3%;
+        height: 2.4rem;
+    }
+
+    @include compu {
+        padding-right: 3%;
+        height: 2.4rem;
+    }
+
     &__link {
         @include flex(flex, nowrap, row, center);
         align-items: center;
@@ -43,6 +57,20 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
         font-weight: map-get($fontWeight, weight4);
         transition: all 0.2 ease-in-out;
 
+        @include movil {
+            font-size: 1.1rem;
+        }
+
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+
+        @include compu {
+            font-size: 1.2rem;
+        }
+
         &:hover {
             background-color: rgb(225, 231, 241);
             text-decoration: none;
@@ -50,15 +78,40 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
             color: $blue;
         }
     }
+}
 
-    &__img {
-        width: 2.5rem;
-        margin-right: 1.1rem;
-        transition: all 0.3 ease-in-out;
+.primera-barra__img {
+    width: 2.5rem;
+    margin-right: 1.1rem;
+    transition: all 0.3 ease-in-out;
 
-        &:hover {
-            background-color: rgb(22, 66, 116);
-        }
+    @include movil-xs {
+        width: 2rem;
+        margin-left: 2px;
+    }
+
+    @include movil {
+        width: 2rem;
+        margin-left: 5px;
+    }
+
+    @include tablet {
+        width: 2rem;
+        margin-left: 5px;
+    }
+
+    @include compu {
+        width: 2rem;
+    }
+
+    &:hover {
+        background-color: rgb(22, 66, 116);
+    }
+}
+
+.primera-barra__img--lkd {
+    @include movil {
+        display: none;
     }
 }
 
@@ -69,19 +122,57 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
     box-shadow: 2px 2px 8px rgba(156, 152, 129, 0.192);
     background-color: rgba(175, 175, 172, 0.336);
 
+    @include compu {
+        padding-top: 2.4rem;
+    }
+}
+
+.navbar {
+    @include movil-xs {
+        padding: 0;
+    }
+
+     @include movil {
+         padding: 0;
+     }
+}
+
+.navbar-toggler {
+    @include movil-xs {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+}
+
+
+.navbar-brand {
+    width: 40%;
+
     .logo {
         width: 60%;
         min-width: 250px;
-    }
 
-    .navbar-brand {
-        width: 40%;
+        @include movil {
+            width: 30px;
+            min-width: none;
+            padding: 2%;
+        }
+
+        @include movil-xs {
+            width: 30px;
+            padding-top: 60px;
+        }
     }
 }
 
 .nav-link {
     @include font(1.3rem, Poppins, $dark-blue);
     font-weight: map-get($fontWeight, weight6);
+
+    @include movil {
+        font-size: 1.2rem;
+    }
 
     &:hover {
         border-bottom: 2px solid $dark-blue;
@@ -95,7 +186,23 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
     align-items: center;
     height: 90vh;
 
-    &__title {
+    @include compu {
+        height: 75vh;
+    }
+
+    @include tablet {
+        height: 75vh;
+    }
+
+    @include movil {
+        height: 75vh;
+    }
+
+    @include movil-xs {
+        height: 60vh;
+    }
+
+    .hero__title {
         padding: 10px;
         text-align: center;
         @include font(2rem, Poppins, $dark-blue);
@@ -103,21 +210,62 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
         line-height: 1.6;
         text-shadow: $boxShadowImg;
 
+        @include compu-xl {
+            font-size: 1.4rem;
+        }
+
+        @include compu {
+            font-size: 2rem;
+        }
+
+        @include movil {
+            font-size: 1.2rem;
+        }
+
         span {
             font-weight: map-get($fontWeight, weight9);
-            @include font(5rem, Poppins, rgb(28, 28, 28));
+            @include font(4.5rem, Poppins, rgb(28, 28, 28));
+
+            @include compu-xl {
+                font-size: 3rem;
+            }
+
+            @include compu {
+                font-size: 3rem;
+            }
+
+            @include movil {
+                font-size: 2.5rem;
+            }
+
+
+            @include movil-xs {
+                font-size: 2.5rem;
+            }
         }
     }
 
-    &__subtitle {
+    .hero__subtitle {
         padding: 10px;
         @include font(1.7rem, Raleway, $black);
         font-weight: map-get($fontWeight, weight5);
         text-align: center;
         background-color: rgba(248, 246, 246, 0.557);
+
+        @include compu-xl {
+            font-size: 1.4rem;
+        }
+
+        @include compu {
+            font-size: 1.54rem;
+        }
+
+        @include movil {
+            font-size: 1.1rem;
+        }
     }
 
-    &__button {
+    .hero__button {
         @include button(inline-block, 0.5% 1.3%, $dark-blue, none, Poppins, 300, 1.4rem, $white);
         margin-top: 5%;
         text-align: center;
@@ -126,11 +274,19 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
         box-shadow: $boxShadowImg;
         border: none;
 
+        @include compu-xl {
+            font-size: 1.1rem;
+        }
+
+        @include movil {
+            font-size: 1rem;
+        }
+
         &:hover {
             transform: scale(1.02);
             text-decoration: none;
             color: $white;
-            background-color: rgb(22, 66, 116);       
+            background-color: rgb(22, 66, 116);
         }
     }
 }
@@ -163,4 +319,8 @@ $bgImages: index, servicios, nosotros, proyectos, contacto, sumate;
 
 .header-contacto {
     @include backgroundHeaders(top);
+
+    @include movil {
+          background-position: top 50%;
+    }
 }

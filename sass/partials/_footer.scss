@@ -12,8 +12,21 @@
             padding: 1%;
             border-left: 2px solid rgb(207, 216, 226);
 
-            &:first-child {
-                border-left: 2px solid rgb(220, 227, 239);
+            @include movil {
+                padding-top: 0;
+                width: 100vw;
+                text-align: center;
+            }
+
+            @include movil-xs {
+                width: 80%;
+                border-left: none;
+            }
+
+            .footer__section:first-child {
+                @include movil {
+                    border-top: none;
+                }
             }
 
             .footer-redes {
@@ -26,19 +39,82 @@
                 text-align: left;
                 transition: all 0.2s ease-in-out;
 
+                @include movil {
+                    padding: 1%;
+                    text-align: center;
+                }
+
                 li {
                     padding: 3% 0;
-                      @include font(1.2rem, Raleway, black);
+                    @include font(1.2rem, Raleway, black);
+                    line-height: 1.3;
+                    text-align: left;
+
+                    @include compu {
+                        font-size: 1.1rem;
+                    }
+
+                    @include tablet {
+                        font-size: 1.1rem;
+                    }
+
+                    @include movil {
+                        font-size: 1.1rem;
+                        text-align: center;
+                    }
+
+                    .footer__link {
+                        padding: 1.5%;
+                        text-decoration: none;
+                        @include font(1.2rem, Raleway, $dark-blue);
                         line-height: 1.3;
-                        text-align: left;
+
+                        @include compu {
+                            padding: 1.3%;
+                            font-size: 1.1rem;
+                        }
+
+                        @include tablet {
+                            font-size: 1.1rem;
+                        }
+
+                        @include movil {
+                            padding: 1%;
+                            font-size: 1.1rem;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                            color: $dark-blue;
+                        }
+                    }
+
+                    .footer__link--navegacion {
+                        padding: 2% 4%;
+                        line-height: 1.4;
+                        transition: all 0.2s ease-in-out;
+
+                        &:hover {
+                            @extend .footer__link:hover;
+                        }
+                    }
                 }
             }
 
             .footer__subtitle {
-                padding: 3.5% 30px;
+                padding: 2% 30px;
                 font-size: 1.2rem;
                 text-align: left;
-            }            
+
+                @include tablet {
+                    font-size: 1rem;
+                }
+
+                @include movil {
+                    font-size: 1.1rem;
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -49,46 +125,55 @@
     margin: 6% 3%;
     transition: all 0.2s ease-in-out;
 
+    @include compu {
+        margin: 1%;
+        width: 1.5rem;
+    }
+
+    @include movil {
+        margin-left: 10%;
+        width: 1.5rem;
+    }
+
     &:hover {
         transform: scale(1.1);
-    }
-}
-
-.footer__link {
-    padding: 1.5%;
-    text-decoration: none;
-    @include font(1.2rem, Raleway, $dark-blue);
-    line-height: 1.3;
-
-    &:hover {
-        text-decoration: underline;
-        color: $dark-blue;
-    }
-}
-
-.footer__link--navegacion {
-    padding: 2% 4%;
-    line-height: 1.4;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        @extend .footer__link:hover;
     }
 }
 
 .footer__icons {
     width: 20px;
     margin-right: 4%;
+
+    @include compu {
+        width: 20px;
+        margin-right: 4%;
+    }
+
+    @include tablet {
+        width: 20px;
+        margin-right: 4%;
+    }
+
+    @include movil {
+        width: 10%;
+        margin-right: 4%;
+    }
 }
 
 .footer__logo {
     width: 100%;
     min-width: 180px;
     margin-bottom: 10%;
-}
 
-.nav__list--footer {
-    flex-direction: column;
+    @include movil {
+        width: 50%;
+        margin: 2%;
+    }
+
+    @include movil-xs {
+        width: 70%;
+        margin: 5% 2%;
+    }
 }
 
 /* footer final */
@@ -102,5 +187,19 @@
         padding: 1%;
         @include font(1.1rem, Raleway, $white);
         font-weight: 200;
+    }
+
+    h6 {
+        @include movil {
+            font-size: 1.1rem;
+        }
+
+        @include movil-xs {
+            text-align: center;
+            color: $dark-blue;
+            font-size: 1.1rem;
+            color: $white;
+            margin-top: 0;
+        }
     }
 }
