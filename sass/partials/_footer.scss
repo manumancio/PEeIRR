@@ -151,18 +151,4 @@
             text-align: center;
         }
     }
-
-    h6 {
-        @include movil {
-            font-size: 1.2rem;
-        }
-
-        @include movil-xs {
-            margin-top: 0;
-            text-align: center;
-            color: $dark-blue;
-            font-size: 1.1rem;
-            color: $white;
-        }
-    }
 }

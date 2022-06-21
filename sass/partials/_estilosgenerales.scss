@@ -115,16 +115,6 @@ h5 {
     }
 }
 
-h6 {
-    padding: 1%;
-    @include font(1.25rem, Raleway, $white);
-    font-weight: 200;
-
-    @include compu {
-        font-size: 1.2rem;
-    }
-}
-
 p {
     padding: 2%;
     @include font(1.15rem, Raleway, black);
