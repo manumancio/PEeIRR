@@ -2,7 +2,7 @@
 
 // bucle - each
 
-$bgImages: index servicios nosotros proyectos contacto sumate;
+$bgImages: servicios nosotros proyectos contacto sumate;
 
 @each $bgImageHeader in $bgImages {
     .header-#{$bgImageHeader} {
@@ -13,6 +13,8 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
 
 /* header */
 .header-index {
+    background: $gradientHeaders,
+        url(../images/index.webp);
     @include backgroundHeaders(center);
     background-attachment: fixed;
 }
@@ -29,19 +31,14 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
     position: fixed;
     z-index: 100;
 
-    @include movil {
-        padding-right: 2%;
-        justify-content: center;
-    }
-
-    @include tablet {
-        padding-right: 3%;
-        height: 2.4rem;
-    }
-
     @include compu {
         padding-right: 3%;
         height: 2.4rem;
+    }
+
+    @include movil {
+        padding-right: 2%;
+        justify-content: center;
     }
 
     &__link {
@@ -57,24 +54,17 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
         font-weight: map-get($fontWeight, weight4);
         transition: all 0.2 ease-in-out;
 
-        @include movil {
-            font-size: 1.1rem;
-        }
-
-
-        @include tablet {
-            font-size: 1.2rem;
-        }
-
-
         @include compu {
             font-size: 1.2rem;
+        }
+
+        @include movil {
+            font-size: 1.1rem;
         }
 
         &:hover {
             background-color: rgb(225, 231, 241);
             text-decoration: none;
-            color: $dark-blue;
             color: $blue;
         }
     }
@@ -85,23 +75,16 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
     margin-right: 1.1rem;
     transition: all 0.3 ease-in-out;
 
-    @include movil-xs {
+    @include compu {
         width: 2rem;
-        margin-left: 2px;
-    }
-
-    @include movil {
-        width: 2rem;
-        margin-left: 5px;
     }
 
     @include tablet {
-        width: 2rem;
         margin-left: 5px;
     }
 
-    @include compu {
-        width: 2rem;
+    @include movil-xs {
+        margin-left: 2px;
     }
 
     &:hover {
@@ -110,7 +93,7 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
 }
 
 .primera-barra__img--lkd {
-    @include movil {
+    @include movil-xs {
         display: none;
     }
 }
@@ -128,13 +111,9 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
 }
 
 .navbar {
-    @include movil-xs {
+    @include movil {
         padding: 0;
     }
-
-     @include movil {
-         padding: 0;
-     }
 }
 
 .navbar-toggler {
@@ -144,7 +123,6 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
         right: 0;
     }
 }
-
 
 .navbar-brand {
     width: 40%;
@@ -160,7 +138,6 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
         }
 
         @include movil-xs {
-            width: 30px;
             padding-top: 60px;
         }
     }
@@ -184,38 +161,27 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
 .hero {
     @include flex(flex, wrap, column, center);
     align-items: center;
-    height: 90vh;
+    height: 90vh;  
 
     @include compu {
         height: 75vh;
+        padding-right: 25%;
     }
 
     @include tablet {
-        height: 75vh;
+        padding: 5%;
     }
 
-    @include movil {
-        height: 75vh;
-    }
-
-    @include movil-xs {
-        height: 60vh;
-    }
-
-    .hero__title {
+    &__title {
         padding: 10px;
         text-align: center;
-        @include font(2rem, Poppins, $dark-blue);
+        @include font(1.4rem, Poppins, $dark-blue);
         font-weight: map-get($fontWeight, weight5);
         line-height: 1.6;
         text-shadow: $boxShadowImg;
 
-        @include compu-xl {
-            font-size: 1.4rem;
-        }
-
         @include compu {
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
 
         @include movil {
@@ -224,63 +190,39 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
 
         span {
             font-weight: map-get($fontWeight, weight9);
-            @include font(4.5rem, Poppins, rgb(28, 28, 28));
-
-            @include compu-xl {
-                font-size: 3rem;
-            }
+            @include font(3rem, Poppins, rgb(28, 28, 28));
 
             @include compu {
-                font-size: 3rem;
-            }
-
-            @include movil {
                 font-size: 2.5rem;
             }
-
 
             @include movil-xs {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
     }
 
-    .hero__subtitle {
+    &__subtitle {
         padding: 10px;
-        @include font(1.7rem, Raleway, $black);
+        @include font(1.3rem, Raleway, $black);
         font-weight: map-get($fontWeight, weight5);
         text-align: center;
-        background-color: rgba(248, 246, 246, 0.557);
-
-        @include compu-xl {
-            font-size: 1.4rem;
-        }
+        background-color: rgba(248, 246, 246, 0.199);
 
         @include compu {
-            font-size: 1.54rem;
+            font-size: 1.2rem;
         }
 
-        @include movil {
-            font-size: 1.1rem;
-        }
     }
 
-    .hero__button {
-        @include button(inline-block, 0.5% 1.3%, $dark-blue, none, Poppins, 300, 1.4rem, $white);
+    &__button {
+        @include button(inline-block, 0.9% 1.3%, $dark-blue, none, Poppins, 300, 1.15rem, $white);
         margin-top: 5%;
         text-align: center;
         border: $dark-blue 3px solid;
         transition: all 0.2s ease-in-out;
-        box-shadow: $boxShadowImg;
+        box-shadow: $textShadow;
         border: none;
-
-        @include compu-xl {
-            font-size: 1.1rem;
-        }
-
-        @include movil {
-            font-size: 1rem;
-        }
 
         &:hover {
             transform: scale(1.02);
@@ -321,6 +263,6 @@ $bgImages: index servicios nosotros proyectos contacto sumate;
     @include backgroundHeaders(top);
 
     @include movil {
-          background-position: top 50%;
+        background-position: top 50%;
     }
 }

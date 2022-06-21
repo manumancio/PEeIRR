@@ -19,14 +19,7 @@
             }
 
             @include movil-xs {
-                width: 80%;
                 border-left: none;
-            }
-
-            .footer__section:first-child {
-                @include movil {
-                    border-top: none;
-                }
             }
 
             .footer-redes {
@@ -46,41 +39,26 @@
 
                 li {
                     padding: 3% 0;
-                    @include font(1.2rem, Raleway, black);
+                    @include font(1.15rem, Raleway, black);
                     line-height: 1.3;
                     text-align: left;
 
-                    @include compu {
-                        font-size: 1.1rem;
-                    }
-
-                    @include tablet {
-                        font-size: 1.1rem;
-                    }
-
                     @include movil {
-                        font-size: 1.1rem;
                         text-align: center;
                     }
 
                     .footer__link {
                         padding: 1.5%;
                         text-decoration: none;
-                        @include font(1.2rem, Raleway, $dark-blue);
+                        @include font(1.15rem, Raleway, $dark-blue);
                         line-height: 1.3;
 
                         @include compu {
-                            padding: 1.3%;
-                            font-size: 1.1rem;
-                        }
-
-                        @include tablet {
-                            font-size: 1.1rem;
+                            padding: 1.3%;                           
                         }
 
                         @include movil {
                             padding: 1%;
-                            font-size: 1.1rem;
                         }
 
                         &:hover {
@@ -107,11 +85,10 @@
                 text-align: left;
 
                 @include tablet {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
 
                 @include movil {
-                    font-size: 1.1rem;
                     text-align: center;
                 }
             }
@@ -121,18 +98,16 @@
 
 .footer-redes__img {
     width: 1.5rem;
-    color: $dark-blue;
     margin: 6% 3%;
-    transition: all 0.2s ease-in-out;
+    color: $dark-blue;
+    transition: all 0.1s ease-in-out;
 
     @include compu {
         margin: 1%;
-        width: 1.5rem;
     }
 
     @include movil {
         margin-left: 10%;
-        width: 1.5rem;
     }
 
     &:hover {
@@ -143,21 +118,6 @@
 .footer__icons {
     width: 20px;
     margin-right: 4%;
-
-    @include compu {
-        width: 20px;
-        margin-right: 4%;
-    }
-
-    @include tablet {
-        width: 20px;
-        margin-right: 4%;
-    }
-
-    @include movil {
-        width: 10%;
-        margin-right: 4%;
-    }
 }
 
 .footer__logo {
@@ -166,13 +126,12 @@
     margin-bottom: 10%;
 
     @include movil {
-        width: 50%;
-        margin: 2%;
+        width: 60%;
+        margin-bottom: 5%;
     }
 
     @include movil-xs {
         width: 70%;
-        margin: 5% 2%;
     }
 }
 
@@ -185,21 +144,25 @@
     h4 {
         color: $white;
         padding: 1%;
-        @include font(1.1rem, Raleway, $white);
+        @include font(1.2rem, Raleway, $white);
         font-weight: 200;
+
+        @include movil-xs {
+            text-align: center;
+        }
     }
 
     h6 {
         @include movil {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         @include movil-xs {
+            margin-top: 0;
             text-align: center;
             color: $dark-blue;
             font-size: 1.1rem;
             color: $white;
-            margin-top: 0;
         }
     }
 }

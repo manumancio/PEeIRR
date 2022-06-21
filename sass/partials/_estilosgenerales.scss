@@ -27,80 +27,65 @@ main {
 h1 {
     padding-top: 4%;
     text-align: center;
-    @include font(3rem, Poppins, $dark-blue);
+    @include font(2.7rem, Poppins, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 
     @include compu {
         padding-top: 2%;
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     @include tablet {
-        padding-top: 2%;
         font-size: 2.2rem;
     }
 
     @include movil {
-        padding-top: 2%;
-        font-size: 2.3rem;
-    }
-
-    @include movil-xs {
-        padding-top: 8%;
-        font-size: 1.8rem;
+        font-size: 2.1rem;
     }
 }
 
 h2 {
     padding: 2.5%;
     text-align: left;
-    @include font(2rem, Raleway, $dark-blue);
+    @include font(2.25rem, Raleway, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 
     @include compu {
-        padding: 1.5%;
-        padding-top: 3.5%;
-        font-size: 1.5rem;
+        padding: 3.5% 1.5% 1.5%;
+        font-size: 2rem;
     }
 
     @include tablet {
-        padding: 1.5%;
-        padding-top: 3.5%;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+        text-align: center;
     }
 
     @include movil {
-        padding: 1.5%;
-        padding-top: 3.5%;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     @include movil-xs {
-        padding: 1.5%;
-        font-size: 1.1rem;
+        padding: 2%;
     }
 }
 
 h3 {
-    padding: 2.5% 0;
+    padding: 2% 0;
     text-align: center;
     @include font(2rem, Poppins, $blue);
 
     @include compu {
-        padding: 2% 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     @include tablet {
-        padding: 2% 0;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     @include movil {
-        padding: 2% 0;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -109,59 +94,43 @@ h4 {
     @include font(1.75rem, Poppins, black);
 
     @include compu {
-        padding: 1%;
         font-size: 1.5rem;
     }
 
+     @include tablet {
+         font-size: 1.4rem;
+     }
+
     @include movil {
-        padding: 1%;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 }
 
 h5 {
     padding: 1%;
-    @include font(1.1rem, Poppins, black);
+    @include font(1.5rem, Poppins, black);
 
     @include compu {
-        padding: 1%;
-        font-size: 1.2rem;
-    }
-
-    @include movil {
-        padding: 1%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 
 h6 {
     padding: 1%;
-    @include font(1.1rem, Raleway, $white);
+    @include font(1.25rem, Raleway, $white);
     font-weight: 200;
 
     @include compu {
-        padding: 1%;
-        font-size: 1.1rem;
-    }
-
-    @include movil {
-        padding: 1%;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
 p {
-    padding: 0.5%;
-    @include font(1.25rem, Raleway, black);
+    padding: 2%;
+    @include font(1.15rem, Raleway, black);
     line-height: 1.7;
 
     @include compu {
-        padding: 0.5%;
-        font-size: 1.1rem;
-    }
-
-    @include movil {
-        padding: 0.5%;
         font-size: 1.1rem;
     }
 }
@@ -172,27 +141,16 @@ p {
     @include compu {
         height: 20vh;
     }
-
-    @include movil {
-        height: 20vh;
-    }
 }
 
 .section__paragraph {
     padding-bottom: 3%;
     text-align: center;
     line-height: 1.9;
+    font-size: 1.20rem;
 
     @include compu {
-        font-size: 1.2rem;
-    }
-
-    @include tablet {
-        font-size: 1rem;
-    }
-
-    @include movil {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -232,7 +190,6 @@ input[type="checkbox"] {
         }
     }
 }
-
 
 input[type]:checked~span.top {
     transform: rotate(45deg);

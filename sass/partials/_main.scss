@@ -9,41 +9,26 @@
         margin: 8% auto;
     }
 
-    @include tablet {
-        margin: 8% auto;
-    }
-
-    @include movil {
-        margin: 8% auto;
-        height: auto;
-    }
-
     .nuestros-servicios__container {
-        @include grid(grid, repeat(3, 1fr), repeat(2, 300px), 3%);
+        @include grid(grid, repeat(3, 1fr), repeat(2, 350px), 3%);
         grid-template-areas:
             "cardServicios1 cardServicios5 cardServicios3"
             "cardServicios6 cardServicios2 cardServicios4";
         justify-content: stretch;
 
         @include compu {
-            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 3%);
+            @include grid(grid, repeat(2, 1fr), repeat(3, 350px), 3%);
             grid-template-areas: "cardServicios1 cardServicios5"
                 "cardServicios3 cardServicios6"
                 "cardServicios2 cardServicios4";
-            justify-content: stretch;
         }
 
         @include tablet {
-            @include grid(grid, repeat(2, 1fr), repeat(3, 300px), 2%);
-            grid-template-areas: "cardServicios1 cardServicios5"
-                "cardServicios3 cardServicios6"
-                "cardServicios2 cardServicios4";
-            justify-content: stretch;
+            gap: 2%;
         }
 
         @include movil {
-            display: flex;
-            flex-direction: column;
+            @include flex(flex, nowrap, column, flex-start);
             gap: 5%;
         }
 
@@ -60,8 +45,7 @@
             }
 
             @include movil {
-                width: 60%;
-                height: 300px;
+                height: 350px;
                 margin: 3% auto;
             }
 
@@ -77,31 +61,19 @@
                 }
 
                 @include movil {
-                    width: 20%;
+                    width: 30%;
                 }
-
             }
 
             &__subtitles {
                 padding: 3%;
                 text-align: center;
-                @include font(1.05rem, Raleway, $blue);
+                @include font(1.1rem, Poppins, $blue);
                 line-height: 1.5;
                 font-weight: 600;
 
-                @include compu-xl {
-                    color: $blue;
-                    font-size: 1rem;
-                }
-
                 @include compu {
-                    font-size: 1rem;
                     font-weight: 400;
-                    color: $blue;
-                }
-
-                @include tablet {
-                    font-size: 1rem;
                 }
             }
 
@@ -125,17 +97,12 @@
 
 /* From uiverse.io // boton de LEER MAS */
 button {
+    @include button(inline-block, 0, transparent, none, inherit, 400, inherit, $white);
     position: relative;
-    display: inline-block;
     cursor: pointer;
     outline: none;
     border: 0;
     vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
 }
 
 button.learn-more {
@@ -224,24 +191,25 @@ button:hover .button-text {
         color: $white;
     }
 
-    .sobre-nosotros__container {
+    &__container {
         @include flex(flex, wrap, row, space-around);
 
         .sobre-nosotros-item {
-            width: 45%;
+            width: 50%;
             min-width: 400px;
             height: 50%;
-            text-align: center;
+            text-align: left;
             font-family: Raleway;
             line-height: 1.9;
 
             @include compu {
-                width: 80%;
-                min-width: 650px;
+                width: 95%;
+                text-align: center;
             }
 
             @include tablet {
-                width: 90%;
+                width: 95%;
+                min-width: none;
             }
 
             @include movil {
@@ -251,23 +219,25 @@ button:hover .button-text {
             &__img {
                 width: 80%;
                 height: 50vh;
-                margin-bottom: 3%;
+                margin: 3%;
                 object-fit: cover;
 
                 @include movil {
-                    width: 100%;
+                    width: 100vw;
                     height: 40vh;
+                    margin: 0;
                 }
             }
 
             &__subtitle {
+                margin: 0 10%;
                 padding: 1%;
                 @include font(1.6rem, Poppins, $light-blue);
                 text-align: left;
-                margin: 0 10%;
 
                 @include compu {
                     font-size: 1.4rem;
+                    text-align: center;
                 }
 
                 @include tablet {
@@ -275,14 +245,11 @@ button:hover .button-text {
                 }
 
                 @include movil {
-                    font-size: 1.1rem;
-                    margin: 0 30%;
                     padding: 0 5%;
                 }
 
                 @include movil-xs {
                     margin: 0 50px;
-                    font-size: 1rem;
                 }
             }
 
@@ -291,8 +258,8 @@ button:hover .button-text {
                 margin: 0 10%;
 
                 @include movil-xs {
-                    margin: 0 50px;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
+                    margin: 0 15%;
                 }
             }
         }
@@ -320,7 +287,6 @@ button:hover .button-text {
 
     @include movil {
         padding: 0 5%;
-        width: 100%;
     }
 
     .section-servicios-item {
@@ -332,7 +298,6 @@ button:hover .button-text {
         }
 
         @include movil {
-            width: 100%;
             min-width: 200px;
             padding: 0;
         }
@@ -352,13 +317,8 @@ button:hover .button-text {
                 margin: 0;
             }
 
-            @include tablet {
-                margin: 0;
-            }
-
             @include movil {
                 height: 30vh;
-                width: 100%;
                 margin: 3% 0;
             }
         }
@@ -378,7 +338,8 @@ button:hover .button-text {
 .section-servicios-container--serv5 {
     background-color: $dark-blue;
 
-    h4, p {
+    h4,
+    p {
         color: $white;
     }
 }
@@ -398,7 +359,8 @@ button:hover .button-text {
 .accordion-button,
 .accordion {
     font-family: Raleway;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: $black;
 }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
@@ -417,44 +379,17 @@ button:hover .button-text {
 
     @include movil {
         margin: 0;
-        padding: 3%;
-    }
-
-    @include movil-xs {
-        margin: 0;
-        padding: 3%;
-        min-width: none;
     }
 
     .proyectos-item-img {
         display: flex;
         flex-wrap: wrap;
 
-        @include movil {
-            flex-wrap: wrap;
-        }
-
-        @include movil-xs {
-            flex-wrap: wrap;
-        }
-
         &__img {
-            width: 40%;
-            height: 400px;
-            object-fit: cover;
+            @include images(40%, 400px);
             margin: 3% auto;
 
             @include tablet {
-                @include images(40vw, 30vh);
-                margin: 0.5% auto;
-            }
-
-            @include movil {
-                @include images(30vw, 30vh);
-                margin: 0.5% auto;
-            }
-
-            @include movil-xs {
                 @include images(40vw, 30vh);
                 margin: 0.5% auto;
             }
@@ -463,9 +398,8 @@ button:hover .button-text {
 
     h3 {
         padding: 0 3%;
-        text-align: left;
-        font-size: 1.5rem;
         text-align: center;
+        font-size: 1.5rem;
     }
 
     .proyectos-item__list {
@@ -494,8 +428,7 @@ li::marker {
     }
 
     .proyectos-item {
-        width: 45%;
-        min-width: 400px;
+        width: 45%;       
         padding: 1%;
 
         @include compu {
@@ -503,43 +436,20 @@ li::marker {
         }
 
         @include tablet {
-            width: 200px;
+            @include images(90%, auto);
             margin: 0;
-            object-fit: cover;
-
-            width: 90%;
-            min-width: 400px;
-        }
-
-        @include tablet {
             width: 100%;
         }
 
         @include movil {
-            width: 100%;
-            min-width: none;
-        }
-
-        @include movil-xs {
-            width: 100%;
             min-width: none;
         }
 
         &__img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+            @include images(100%, auto);
             margin: 2% 0;
 
-            @include tablet {
-                margin: 2% 0%;
-            }
-
             @include movil {
-                display: none;
-            }
-
-            @include movil-xs {
                 display: none;
             }
         }
@@ -558,32 +468,13 @@ li::marker {
         font-weight: 300;
 
         @include compu {
-            font-size: 1.1rem;
-        }
-
-        @include tablet {
-            font-size: 1.1rem;
-        }
-
-        @include movil {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
         }
     }
 
     &__subtitle {
         color: $blue;
-
-        @include compu {
-            font-size: 1.2rem;
-        }
-
-        @include tablet {
-            font-size: 1.2rem;
-        }
-
-        @include movil {
-            font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
     }
 
     &__iframe {
@@ -606,7 +497,11 @@ li::marker {
     &__div {
         width: 30%;
         min-width: 400px;
-        margin: 0 1.6%
+        margin: 0 1.6%;
+
+        @include tablet {
+            min-width: none;
+        }
     }
 
     &__img {
@@ -618,10 +513,19 @@ li::marker {
 
     &__title {
         padding: 2% 0;
+        font-size: 1.8rem;
     }
 
     &__paragraph {
-        text-align: center;
+        text-align: center;        
+
+        @include tablet {
+            margin: 0 7%;
+        }
+
+        @include movil-xs {
+            margin: 0 15%;
+        }
     }
 }
 
@@ -637,15 +541,11 @@ li::marker {
         min-width: 400px;
 
         @include compu {
-            margin: 3%;
-        }
-
-        @include tablet {
-            margin: 3%;
+            margin: 0 3%;
         }
 
         @include movil {
-            padding: 5%;
+            padding: 2% 5%;
             width: 90%;
             min-width: 150px;
         }
@@ -667,7 +567,7 @@ li::marker {
 
             @include movil {
                 padding-bottom: 1%;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
         }
     }
@@ -681,10 +581,6 @@ li::marker {
         margin-bottom: $margin-bottom-section;
     }
 
-    @include compu {
-        margin-bottom: $margin-bottom-section;
-    }
-
     @include tablet {
         margin: 10% 0;
     }
@@ -694,39 +590,34 @@ li::marker {
     }
 
     &__container {
-        @include grid(grid, repeat(3, 1fr), repeat(4, auto), 1%);
+        @include grid(grid, repeat(3, 1fr), repeat(4, 1fr), 1.5%);
         width: 95%;
         margin: 0 auto;
 
         @include compu-xl {
-            @include grid(grid, repeat(3, 1fr), repeat(4, auto),
-                1.2%);
-            width: 90%;
-            height: 100%;
-            margin: 0 auto;
+            @include grid(grid, repeat(3, 1fr), repeat(4, 1fr), 1.5%);
         }
 
         @include compu {
-            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1%);
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 1.5%);
             margin: 0 auto;
-            width: 80%;
-        }
-
-        @include tablet {
-            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 2%);
+            width: 90%;
         }
 
         @include movil {
             @include grid(grid, 1fr, repeat(12, 1fr), 0.5%);
-            width: 80%;
             margin: 0 auto;
+        }
+
+        @include movil-xs {
+            width: 100%;
         }
 
         .section-equipo__div {
             @include flex(flex, nowrap, column, flex-start);
-            align-items: center;
             width: 100%;
             height: auto;
+            align-items: center;
             text-align: center;
             border-radius: 15px;
             box-shadow: $boxShadow;
@@ -737,44 +628,29 @@ li::marker {
             }
 
             .section-equipo__img {
-                @include images(90%, 60%);
+                @include images(80%, 75%);
                 object-position: top;
                 margin-top: 0;
                 padding-top: 0;
 
                 @include compu-xl {
-                    @include images(80%, 60%);
+                    @include images(80%, 75%);
                     margin-top: 0;
                 }
 
                 @include compu {
-                    @include images(80%, 60%);
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-top: 0;
-                }
-
-                @include tablet {
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-top: 0;
-                    @include images(80%, 60%);
-                }
-
-                @include movil {
-                    @include images(80%, 60%);
-                    margin-top: 0;
+                    margin: 0 auto;
                 }
             }
 
             .section-equipo__title {
                 padding: 1.5%;
-                @include font(1.1rem, Poppins, $dark-blue);
+                @include font(1.2rem, Poppins, $dark-blue);
             }
 
             .section-equipo__paragraph {
                 padding: 0 1.5%;
-                @include font(1rem, Raleway, $black);
+                @include font(1.15rem, Raleway, $black);
                 line-height: 1.4;
             }
         }
@@ -783,7 +659,7 @@ li::marker {
 
 /* seccion sumate */
 .section-sumate {
-    margin: 5% 0;
+    margin: $margin-bottom-section 0;
     padding: 2%;
 
     @include tablet {
@@ -792,17 +668,12 @@ li::marker {
     }
 
     @include movil {
-        margin-top: 5%;
         width: 100vw;
     }
 
     h4 {
         @include tablet {
-            font-size: 1.2rem;
-        }
-
-        @include movil {
-            font-size: 1.2rem;
+            font-size: 1.3em;
         }
     }
 
@@ -812,113 +683,65 @@ li::marker {
 
         p {
             padding: 0 4%;
-            font-size: 1.3rem;
-
-            @include compu-xl {
-                padding: 0 3%;
-                font-size: 1.1rem;
-            }
-
-            @include tablet {
-                font-size: 1.1rem;
-                padding: 0 4%;
-            }
-
-            @include movil {
-                font-size: 1.1rem;
-                padding: 0 4%;
-            }
+            font-size: 1.15rem;
 
             @include movil-xs {
-                text-align: center
+                text-align: center;
             }
         }
     }
 }
 
 .section__button {
-    @include button (inline-block, 10px 25px, $dark-blue, none, Poppins, 300, 1.3rem, $white);
+    @include button (inline-block, 10px 25px, $dark-blue, none, Poppins, 300, 1.2rem, $white);
     margin: 0 4%;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 0 4px $textShadow;
-
-    @include compu-xl {
-        font-size: 1.1rem;
-    }
+    box-shadow: $textShadow;
 
     @include tablet {
         padding: 8px 22px;
-        font-size: 1.1rem;
-    }
-
-    @include movil {
-        padding: 8px 22px;
-        font-size: 1.1rem;
     }
 
     &:hover {
-        @extend .hero__button:hover;
+        transform: scale(1.02);
+        text-decoration: none;
+        color: $white;
+        background-color: rgb(22, 66, 116);
     }
 }
 
 /* seccion proyectos */
 
 .section-proyectos {
-    width: 90%;
+    width: 95%;
     height: 100%;
     margin: 0 auto 8%;
 
-    @include compu {
-        margin: 0 auto 8%;
-    }
-
-    @include tablet {
+    @include movil-xs {
         width: 100%;
     }
 
-    @include movil {
-        width: 100%;
-        margin: 0;
-    }
-
-    .section-proyectos-grid {
+    &-grid {
         @include grid(grid, repeat(5, 1fr), repeat(3, 30vh), 1%);
 
         @include compu {
-            @include grid(grid, repeat(4, 1fr), repeat(4, 30vh), 1%);
-            width: 95%;
-            margin: 0 auto;
-        }
-
-        @include tablet {
-            @include grid(grid, repeat(4, auto), repeat(3, 30vh), 1%);
+            @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
         }
 
         @include movil {
-            @include grid(grid, repeat(2, 1fr), repeat(6, 30vh), 1%);
-            margin-bottom: 5%;
+            @include grid(grid, repeat(3, 1fr), repeat(4, 30vh), 1%);
+        }
+
+        @include movil-xs {
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 0.5%);
         }
 
         .section-proyectos__item {
             position: relative;
 
-            @include tablet {
-                position: relative;
-            }
-
             .section-proyectos__img {
                 @include images(100%, 100%);
-                box-shadow: $boxShadow;
-
-                @include tablet {
-                    @include images(100%, 100%);
-                    box-shadow: $boxShadowImg;
-                }
-
-                @include movil {
-                    @include images(100%, 100%);
-                    box-shadow: $boxShadowImg;
-                }
+                box-shadow: $boxShadowImg;
             }
 
             .section-proyectos__title {
@@ -926,22 +749,9 @@ li::marker {
                 width: 100%;
                 padding: 2%;
                 bottom: 0;
+                text-align: center;
                 background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-                @include font(1.3rem, Raleway, $white);
-
-                @include compu {
-                    font-size: 1.1rem;
-                }
-
-                @include tablet {
-                    width: 100%;
-                    padding: 2%;
-                    position: absolute;
-                    bottom: 0;
-                    color: $white;
-                    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-                    font-size: 1.3rem;
-                }
+                @include font(1.15rem, Raleway, $white);
 
                 @include movil {
                     font-size: 1.1rem;
@@ -953,18 +763,24 @@ li::marker {
             grid-column-start: 1;
             grid-column-end: 3;
 
-            @include compu {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            @include tablet {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
             @include movil {
                 grid-column-start: span 2;
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 3, 1, 2);
+            }
+        }
+
+        .section-proyectos__item--2 {
+            @include movil-xs {
+                @include grid-position(1, 2, 2, 3);
+            }
+        }
+
+        .section-proyectos__item--3 {
+            @include movil-xs {
+                @include grid-position(2, 3, 2, 3);
             }
         }
 
@@ -975,8 +791,12 @@ li::marker {
             }
 
             @include movil {
-                grid-row-start: 3;
-                grid-row-end: 4;
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 3, 5);
             }
         }
 
@@ -984,16 +804,16 @@ li::marker {
             grid-row-start: 2;
             grid-row-end: 4;
 
-            @include compu {
-                grid-row-start: 2;
-                grid-row-end: 4;
+            @include tablet {
+                @include grid-position(2, 3, 2, 3);
             }
 
-            @include tablet {
-                grid-column-start: 2;
-                grid-column-end: 3;
-                grid-row-start: 2;
-                grid-row-end: 3;
+            @include movil {
+                @include grid-position(1, 2, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 3, 4);
             }
         }
 
@@ -1002,20 +822,28 @@ li::marker {
                 grid-column-start: span 2;
             }
 
-            @include tablet {
-                grid-column-start: span 2;
+            @include movil {
+                @include grid-position(2, 3, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 4, 6);
             }
         }
 
         .section-proyectos__item--7 {
             grid-column-start: span 2;
 
-            @include compu {
-                grid-column-start: span 2;
-            }
-
             @include tablet {
                 grid-column: 1/2;
+            }
+
+            @include movil {
+                @include grid-position(3, 4, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 5, 6);
             }
         }
 
@@ -1025,6 +853,14 @@ li::marker {
             @include tablet {
                 grid-column: 2/4;
                 grid-row: 3/4;
+            }
+
+            @include movil {
+                @include grid-position(1, 3, 4, 5);
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 6, 7);
             }
         }
 
@@ -1038,15 +874,15 @@ li::marker {
             }
 
             @include tablet {
-                grid-column-start: 4;
-                grid-column-end: 5;
-                grid-row-start: 3;
-                grid-row-end: 4;
+                @include grid-position(4, 5, 3, 4);
             }
 
             @include movil {
-                grid-column-start: 2;
-                grid-column-end: 3;
+                @include grid-position(3, 4, 4, 5);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 6, 7);
             }
         }
     }
@@ -1056,23 +892,18 @@ li::marker {
 
 .main-div-flex {
     @include flex(flex, nowrap, row, space-between);
+    margin: 0 auto;
 
     @include compu-xl {
         flex-wrap: wrap;
     }
 
     @include compu {
-        width: 95%;
-    }
-
-    @include tablet {
         width: 90%;
-        margin: 0 auto;
     }
 
     @include movil {
         width: 95%;
-        margin: 0 auto;
     }
 }
 
@@ -1085,19 +916,8 @@ li::marker {
         margin: 5% auto;
     }
 
-    @include compu {
-        width: 80%;
-        margin: 5% auto;
-    }
-
     @include tablet {
-        width: 90%;
-        min-width: none;
-        margin: 5% auto;
-    }
-
-    @include movil {
-        width: 90%;
+        width: 95%;
         min-width: none;
         margin: 5% auto;
     }
@@ -1126,16 +946,7 @@ li::marker {
                     "grid-mensaje grid-mensaje";
 
                 @include tablet {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    height: auto;
-                    row-gap: 5px;
-                }
-
-                @include movil {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex(flex, nowrap, column, flex-start);
                     width: 100%;
                     height: auto;
                     row-gap: 5px;
@@ -1175,16 +986,7 @@ li::marker {
     @include font(1.3rem, Raleway, $black);
     border: none;
 
-    @include compu-xl {
-        width: 100%;
-        padding: 5px 10px;
-    }
-
     @include tablet {
-        padding: 8px 10px;
-    }
-
-    @include movil {
         padding: 8px 10px;
     }
 
@@ -1198,6 +1000,7 @@ li::marker {
     transition: all 0.2s ease-in-out;
     box-shadow: $textShadow;
     border: none;
+    margin: 2% 0;
 
     &:hover {
         @extend .hero__button:hover;
@@ -1215,176 +1018,73 @@ li::marker {
         margin: 0px auto;
     }
 
-    @include compu {
-        width: 50%;
-        margin: 0 auto;
-    }
-
     @include tablet {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        min-width: none;
         margin: 5% auto;
+        width: 90%;
     }
 
     @include movil {
-        @include flex(flex, nowrap, column, center);
-        align-items: center;
         width: 100%;
         min-width: 200px;
-        margin: 0 auto;
     }
 
     &__title {
         margin: 0;
         padding: 2% 0;
         @include font(1.5rem, Raleway, $blue);
-
-        @include tablet {
-            color: $blue;
-            font-size: 1.5rem;
-        }
-
-        @include movil {
-            color: $blue;
-            font-size: 1.5rem;
-            margin: 0;
-            padding: 2% 0;
-        }
     }
 
     &__subtitle {
-        font-size: 1.2rem;
-        font-weight: 400;
-        text-align: center;
         margin: 0;
         padding: 2% 0;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+
 
         @include tablet {
-            font-size: 1.3rem;
-            font-weight: 400;
-            margin: 0;
-            padding: 2% 0;
-        }
-
-        @include movil {
-            font-size: 1.3rem;
-            font-weight: 400;
-            margin: 0;
-            padding: 2% 0;
-        }
-
-        @include movil-xs {
-            font-size: 1.1rem;
-            text-align: center;
-            margin: 0 20px;
+            font-size: 1.2rem;
         }
     }
 
     &__img {
-        width: 100%;
         display: block;
+        width: 100%;
         margin-top: 30px;
         object-fit: top;
 
         @include tablet {
-            display: block;
             @include images(100%, 400px);
-            margin-top: 30px;
-        }
-
-        @include movil {
-            @include images(100%, 400px);
-            display: block;
-            margin-top: 30px;
-            object-fit: top;
         }
     }
 }
 
 .section__button--contacto {
-    padding: 1% 2%;
+    padding: 2% 2.5%;
     margin: 1%;
-
-    @include tablet {
-        padding: 1% 2%;
-        margin: 1%;
-    }
-
-    @include movil {
-        padding: 1% 2%;
-        margin: 1%;
-    }
 }
 
 /* seccion encontranos */
 .section-encontranos {
     margin-bottom: $margin-bottom-section;
 
-    @include tablet {
-        margin-bottom: $margin-bottom-section;
-    }
-
-    @include movil {
-        margin-bottom: $margin-bottom-section;
-    }
-
-    @include movil-xs {
-        margin-bottom: $margin-bottom-section;
-    }
-
     &__container {
         @include flex(flex, wrap, row, flex-start);
-
-        @include tablet {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        @include movil {
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 
     &-div {
-        width: 40vw;
-        min-width: 350px;
+        width: 40vw;        
         font-family: Raleway;
 
         @include compu {
             width: 100%;
         }
 
-        @include tablet {
-            width: 100%;
-            min-width: 350px;
-            font-family: Raleway;
-        }
-
-        @include movil {
-            width: 100%;
-            min-width: none;
-            font-family: Raleway;
-        }
-
-        @include movil-xs {
-            width: 100%;
-            min-width: none;
-        }
-
         &__title {
             font-size: 1.4rem;
 
             @include tablet {
-                font-size: 1.4rem;
-            }
-
-            @include movil {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
             }
         }
 
@@ -1393,36 +1093,13 @@ li::marker {
             padding: 10px;
 
             @include tablet {
-                font-size: 1.3rem;
-                padding: 10px;
-            }
-
-            @include movil {
-                font-size: 1.1rem;
-                padding: 10px;
-            }
-
-            @include movil-xs {
-                font-size: 0.5rem;
-                padding: 0px;
-                margin: 0px
-            }
+                font-size: 1.2rem;
+            }    
 
             span {
                 color: $dark-blue;
                 font-weight: 500;
                 font-family: Poppins;
-
-                @include tablet {
-                    color: $dark-blue;
-                    font-weight: 500;
-                    font-family: Poppins;
-                }
-
-                @include movil {
-                    @include font(1.1rem, Poppins, $dark-blue);
-                    font-weight: 500;
-                }
             }
         }
 
@@ -1431,18 +1108,7 @@ li::marker {
             margin: 3%;
             box-shadow: $boxShadow;
 
-            @include tablet {
-                width: 100%;
-                margin: 3%;
-            }
-
             @include movil {
-                width: 100%;
-                margin: 0%;
-                border-radius: 0;
-            }
-
-            @include movil-xs {
                 margin: 0%;
             }
         }
