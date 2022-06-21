@@ -428,7 +428,7 @@ li::marker {
     }
 
     .proyectos-item {
-        width: 45%;       
+        width: 45%;
         padding: 1%;
 
         @include compu {
@@ -517,7 +517,7 @@ li::marker {
     }
 
     &__paragraph {
-        text-align: center;        
+        text-align: center;
 
         @include tablet {
             margin: 0 7%;
@@ -1073,7 +1073,7 @@ li::marker {
     }
 
     &-div {
-        width: 40vw;        
+        width: 40vw;
         font-family: Raleway;
 
         @include compu {
@@ -1094,7 +1094,7 @@ li::marker {
 
             @include tablet {
                 font-size: 1.2rem;
-            }    
+            }
 
             span {
                 color: $dark-blue;

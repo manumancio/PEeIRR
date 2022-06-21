@@ -100,16 +100,6 @@ h5 {
     h5 {
       font-size: 1.3rem; } }
 
-h6 {
-  padding: 1%;
-  font-size: 1.25rem;
-  font-family: Raleway;
-  color: #f8f6f6;
-  font-weight: 200; }
-  @media screen and (max-width: 1024px) {
-    h6 {
-      font-size: 1.2rem; } }
-
 p {
   padding: 2%;
   font-size: 1.15rem;
@@ -1543,13 +1533,3 @@ li::marker {
     @media screen and (max-width: 350px) {
       .footer__final h4 {
         text-align: center; } }
-  @media screen and (max-width: 576px) {
-    .footer__final h6 {
-      font-size: 1.2rem; } }
-  @media screen and (max-width: 350px) {
-    .footer__final h6 {
-      margin-top: 0;
-      text-align: center;
-      color: #112e4f;
-      font-size: 1.1rem;
-      color: #f8f6f6; } }

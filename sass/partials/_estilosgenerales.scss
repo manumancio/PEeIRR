@@ -97,9 +97,9 @@ h4 {
         font-size: 1.5rem;
     }
 
-     @include tablet {
-         font-size: 1.4rem;
-     }
+    @include tablet {
+        font-size: 1.4rem;
+    }
 
     @include movil {
         font-size: 1.3rem;

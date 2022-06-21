@@ -161,7 +161,7 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 .hero {
     @include flex(flex, wrap, column, center);
     align-items: center;
-    height: 90vh;  
+    height: 90vh;
 
     @include compu {
         height: 75vh;
