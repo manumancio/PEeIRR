@@ -48,7 +48,7 @@ h1 {
 h2 {
     padding: 2.5%;
     text-align: left;
-    @include font(2.25rem, Raleway, $dark-blue);
+    @include font(2.15rem, Raleway, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 
@@ -75,6 +75,7 @@ h3 {
     padding: 2% 0;
     text-align: center;
     @include font(2rem, Poppins, $blue);
+    text-shadow: $textShadow;
 
     @include compu {
         font-size: 1.8rem;
