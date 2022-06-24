@@ -372,9 +372,8 @@ button:hover .button-text {
     color: $black;
 
     .accordion-button:hover {
-        background-color: $light-blue;
-        border: none;
-    }
+        background-color: $light-blue;       
+    }    
 }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
@@ -511,7 +510,7 @@ li::marker {
             .section-proyectos__title {
                 position: absolute;
                 width: 100%;
-                padding: 12% 0 6%;
+                padding: 30% 0 6%;
                 bottom: 0;
                 text-align: center;
                 background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
@@ -681,8 +680,7 @@ li::marker {
 /* ---------------------------SUMATE.HTML----------------------------- */
 
 .sumate-principal {
-    @include flex(flex, nowrap, column, space-around);
-    align-items: center;
+    @include flex(flex, nowrap, column, space-around);   
 
     &__title {
         padding: 1%;
@@ -697,6 +695,7 @@ li::marker {
     &__subtitle {
         color: $blue;
         font-size: 1.2rem;
+        text-align: center;
     }
 
     &__iframe {

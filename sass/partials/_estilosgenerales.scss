@@ -46,13 +46,12 @@ h1 {
 }
 
 h2 {
-    padding: 2.5%;
+     padding: 4.5% 1.5% 2%;
     text-align: left;
     @include font(2.15rem, Raleway, $dark-blue);
     font-weight: 600;
     
-    @include compu {
-        padding: 3.5% 1.5% 1.5%;
+    @include compu {        
         font-size: 2rem;
     }
 
@@ -63,10 +62,6 @@ h2 {
 
     @include movil {
         font-size: 1.6rem;
-    }
-
-    @include movil-xs {
-        padding: 2%;
     }
 }
 

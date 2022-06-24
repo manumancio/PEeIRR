@@ -137,7 +137,7 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 }
 
 .nav-link {
-    @include font(1.3rem, Poppins, $dark-blue);
+    @include font(1.3rem, Raleway, $dark-blue);
     font-weight: map-get($fontWeight, weight6);
 
     @include movil {
@@ -148,6 +148,20 @@ $bgImages: servicios nosotros proyectos contacto sumate;
         border-bottom: 2px solid $dark-blue;
         color: $dark-blue;
     }
+}
+
+.bi-x-circle,
+.bi-three-dots-vertical {
+    font-size:30px;
+    color: $dark-blue;
+}
+
+.offcanvas-end {
+    background-color: $white;
+}
+
+.nav-item--offcanvas {
+    border-bottom: 1px solid rgb(216, 220, 224); 
 }
 
 /* hero */
