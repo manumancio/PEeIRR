@@ -50,8 +50,7 @@ h2 {
     text-align: left;
     @include font(2.15rem, Raleway, $dark-blue);
     font-weight: 600;
-    text-shadow: $textShadow;
-
+    
     @include compu {
         padding: 3.5% 1.5% 1.5%;
         font-size: 2rem;
@@ -75,8 +74,7 @@ h3 {
     padding: 2% 0;
     text-align: center;
     @include font(2rem, Poppins, $blue);
-    text-shadow: $textShadow;
-
+   
     @include compu {
         font-size: 1.8rem;
     }
@@ -127,22 +125,41 @@ p {
 }
 
 .header-img-h1 {
-    @include images(100vw, 25vh);
+    @include images(100%, 25vh);
 
     @include compu {
         height: 20vh;
     }
 }
 
-.section__paragraph {
-    padding-bottom: 3%;
-    text-align: center;
-    line-height: 1.9;
-    font-size: 1.20rem;
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+     margin: 0 auto 4%;
 
-    @include compu {
-        font-size: 1.15rem;
+    @include tablet {
+        display: block;
     }
+
+    .section-flex__paragraph {
+        width: 50%;
+        padding: 0 2% 3%;
+        line-height: 1.9;
+        font-size: 1.20rem;
+
+        @include tablet {
+            width: 90%;
+            padding: 0 2%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.section__paragraph {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto 4%;
 }
 
 /* From uiverse.io by @Ali-Tahmazi99// TRANSICION ICONO MENU HAMBURGUESA */

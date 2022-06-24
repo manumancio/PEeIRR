@@ -46,6 +46,13 @@
 
             @include movil {
                 height: 350px;
+                width: 65%;
+                margin: 3% auto;
+            }
+
+            @include movil-xs {
+                width: 80%;
+                height: 350px;
                 margin: 3% auto;
             }
 
@@ -57,11 +64,7 @@
                 text-align: center;
 
                 @include tablet {
-                    width: 45%;
-                }
-
-                @include movil {
-                    width: 30%;
+                    width: 40%;
                 }
             }
 
@@ -208,22 +211,21 @@ button:hover .button-text {
             }
 
             @include tablet {
-                width: 95%;
                 min-width: none;
             }
 
             @include movil {
-                padding: 0 20px;
+                padding: 0;
             }
 
             &__img {
                 width: 80%;
-                height: 50vh;
+                height: 40vh;
                 margin: 3%;
                 object-fit: cover;
 
                 @include movil {
-                    width: 100vw;
+                    width: 100%;
                     height: 40vh;
                     margin: 0;
                 }
@@ -255,11 +257,18 @@ button:hover .button-text {
 
             &__paragraph {
                 color: $white;
-                margin: 0 10%;
+                margin: 0 5%;
+                padding: 0 5%;
+
+                @include tablet {
+                    margin: 0 2%;
+                    padding: 0 5%;
+                }
 
                 @include movil-xs {
                     font-size: 1.1rem;
-                    margin: 0 15%;
+                    margin: 0 8%;
+                    padding: 0 10%;
                 }
             }
         }
@@ -361,6 +370,11 @@ button:hover .button-text {
     font-family: Raleway;
     font-size: 1.2rem;
     color: $black;
+
+    .accordion-button:hover {
+        background-color: $light-blue;
+        border: none;
+    }
 }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
@@ -404,6 +418,10 @@ button:hover .button-text {
 
     .proyectos-item__list {
         padding: 0 5%;
+
+        li {
+            list-style: none;
+        }
     }
 }
 
@@ -453,6 +471,210 @@ li::marker {
                 display: none;
             }
         }
+    }
+}
+
+/* otros proyectos */
+
+.section-proyectos {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto 8%;
+
+    @include movil-xs {
+        width: 100%;
+    }
+
+    &-grid {
+        @include grid(grid, repeat(5, 1fr), repeat(3, 30vh), 1%);
+
+        @include compu {
+            @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
+        }
+
+        @include movil {
+            @include grid(grid, repeat(3, 1fr), repeat(4, 30vh), 1%);
+        }
+
+        @include movil-xs {
+            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 0.5%);
+        }
+
+        .section-proyectos__item {
+            position: relative;
+
+            .section-proyectos__img {
+                @include images(100%, 100%);
+                box-shadow: $boxShadowImg;
+            }
+
+            .section-proyectos__title {
+                position: absolute;
+                width: 100%;
+                padding: 12% 0 6%;
+                bottom: 0;
+                text-align: center;
+                background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                opacity: 0;
+                @include font(1.15rem, Raleway, $white);
+
+                &:hover {
+                    opacity: 1;
+                    cursor: default;
+                }
+
+                @include movil {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .section-proyectos__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            @include movil {
+                grid-column-start: span 2;
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 3, 1, 2);
+            }
+
+        }
+
+        .section-proyectos__item--2 {
+            @include movil-xs {
+                @include grid-position(1, 2, 2, 3);
+            }
+        }
+
+        .section-proyectos__item--3 {
+            @include movil-xs {
+                @include grid-position(2, 3, 2, 3);
+            }
+        }
+
+        .section-proyectos__item--4 {
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            @include movil {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 3, 5);
+            }
+        }
+
+        .section-proyectos__item--5 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+            @include tablet {
+                @include grid-position(2, 3, 2, 3);
+            }
+
+            @include movil {
+                @include grid-position(1, 2, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 3, 4);
+            }
+        }
+
+        .section-proyectos__item--6 {
+            @include compu {
+                grid-column-start: span 2;
+            }
+
+            @include movil {
+                @include grid-position(2, 3, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 4, 6);
+            }
+        }
+
+        .section-proyectos__item--7 {
+            grid-column-start: span 2;
+
+            @include tablet {
+                grid-column: 1/2;
+            }
+
+            @include movil {
+                @include grid-position(3, 4, 3, 4);
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 5, 6);
+            }
+        }
+
+        .section-proyectos__item--8 {
+            grid-row-start: span 2;
+
+            @include tablet {
+                grid-column: 2/4;
+                grid-row: 3/4;
+            }
+
+            @include movil {
+                @include grid-position(1, 3, 4, 5);
+            }
+
+            @include movil-xs {
+                @include grid-position(1, 2, 6, 7);
+            }
+        }
+
+        .section-proyectos__item--9 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+
+            @include compu {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            @include tablet {
+                @include grid-position(4, 5, 3, 4);
+            }
+
+            @include movil {
+                @include grid-position(3, 4, 4, 5);
+            }
+
+            @include movil-xs {
+                @include grid-position(2, 3, 6, 7);
+            }
+        }
+    }
+}
+
+/* --------------------------CONTACTOS.HTML----------------------------- */
+
+.main-div-flex {
+    @include flex(flex, nowrap, row, space-between);
+    margin: 0 auto;
+
+    @include compu-xl {
+        flex-wrap: wrap;
+    }
+
+    @include compu {
+        width: 90%;
+    }
+
+    @include movil {
+        width: 95%;
     }
 }
 
@@ -707,203 +929,6 @@ li::marker {
         text-decoration: none;
         color: $white;
         background-color: rgb(22, 66, 116);
-    }
-}
-
-/* seccion proyectos */
-
-.section-proyectos {
-    width: 95%;
-    height: 100%;
-    margin: 0 auto 8%;
-
-    @include movil-xs {
-        width: 100%;
-    }
-
-    &-grid {
-        @include grid(grid, repeat(5, 1fr), repeat(3, 30vh), 1%);
-
-        @include compu {
-            @include grid(grid, repeat(4, 1fr), repeat(3, 30vh), 1%);
-        }
-
-        @include movil {
-            @include grid(grid, repeat(3, 1fr), repeat(4, 30vh), 1%);
-        }
-
-        @include movil-xs {
-            @include grid(grid, repeat(2, 1fr), repeat(6, 1fr), 0.5%);
-        }
-
-        .section-proyectos__item {
-            position: relative;
-
-            .section-proyectos__img {
-                @include images(100%, 100%);
-                box-shadow: $boxShadowImg;
-            }
-
-            .section-proyectos__title {
-                position: absolute;
-                width: 100%;
-                padding: 2%;
-                bottom: 0;
-                text-align: center;
-                background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-                @include font(1.15rem, Raleway, $white);
-
-                @include movil {
-                    font-size: 1.1rem;
-                }
-            }
-        }
-
-        .section-proyectos__item--1 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-
-            @include movil {
-                grid-column-start: span 2;
-            }
-
-            @include movil-xs {
-                @include grid-position(1, 3, 1, 2);
-            }
-        }
-
-        .section-proyectos__item--2 {
-            @include movil-xs {
-                @include grid-position(1, 2, 2, 3);
-            }
-        }
-
-        .section-proyectos__item--3 {
-            @include movil-xs {
-                @include grid-position(2, 3, 2, 3);
-            }
-        }
-
-        .section-proyectos__item--4 {
-            @include tablet {
-                grid-column-start: 1;
-                grid-column-end: 2;
-            }
-
-            @include movil {
-                grid-column-start: 2;
-                grid-column-end: 4;
-            }
-
-            @include movil-xs {
-                @include grid-position(1, 2, 3, 5);
-            }
-        }
-
-        .section-proyectos__item--5 {
-            grid-row-start: 2;
-            grid-row-end: 4;
-
-            @include tablet {
-                @include grid-position(2, 3, 2, 3);
-            }
-
-            @include movil {
-                @include grid-position(1, 2, 3, 4);
-            }
-
-            @include movil-xs {
-                @include grid-position(2, 3, 3, 4);
-            }
-        }
-
-        .section-proyectos__item--6 {
-            @include compu {
-                grid-column-start: span 2;
-            }
-
-            @include movil {
-                @include grid-position(2, 3, 3, 4);
-            }
-
-            @include movil-xs {
-                @include grid-position(2, 3, 4, 6);
-            }
-        }
-
-        .section-proyectos__item--7 {
-            grid-column-start: span 2;
-
-            @include tablet {
-                grid-column: 1/2;
-            }
-
-            @include movil {
-                @include grid-position(3, 4, 3, 4);
-            }
-
-            @include movil-xs {
-                @include grid-position(1, 2, 5, 6);
-            }
-        }
-
-        .section-proyectos__item--8 {
-            grid-row-start: span 2;
-
-            @include tablet {
-                grid-column: 2/4;
-                grid-row: 3/4;
-            }
-
-            @include movil {
-                @include grid-position(1, 3, 4, 5);
-            }
-
-            @include movil-xs {
-                @include grid-position(1, 2, 6, 7);
-            }
-        }
-
-        .section-proyectos__item--9 {
-            grid-column-start: 2;
-            grid-column-end: 5;
-
-            @include compu {
-                grid-column-start: 1;
-                grid-column-end: 4;
-            }
-
-            @include tablet {
-                @include grid-position(4, 5, 3, 4);
-            }
-
-            @include movil {
-                @include grid-position(3, 4, 4, 5);
-            }
-
-            @include movil-xs {
-                @include grid-position(2, 3, 6, 7);
-            }
-        }
-    }
-}
-
-/* --------------------------CONTACTOS.HTML----------------------------- */
-
-.main-div-flex {
-    @include flex(flex, nowrap, row, space-between);
-    margin: 0 auto;
-
-    @include compu-xl {
-        flex-wrap: wrap;
-    }
-
-    @include compu {
-        width: 90%;
-    }
-
-    @include movil {
-        width: 95%;
     }
 }
 
