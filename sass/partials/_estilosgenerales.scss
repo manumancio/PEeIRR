@@ -25,39 +25,30 @@ main {
 }
 
 h1 {
-    padding-top: 4%;
+    padding: 4% 0;
     text-align: center;
     @include font(2.7rem, Poppins, $dark-blue);
     font-weight: 600;
     text-shadow: $textShadow;
 
     @include compu {
-        padding-top: 2%;
+        padding: 2% 0;
         font-size: 2.4rem;
     }
 
-    @include tablet {
-        font-size: 2.2rem;
-    }
-
     @include movil {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 }
 
 h2 {
-     padding: 4.5% 1.5% 2%;
+    padding: 8% 1.5% 2%;
     text-align: left;
-    @include font(2.15rem, Raleway, $dark-blue);
+    @include font(2rem, Raleway, $dark-blue);
     font-weight: 600;
-    
-    @include compu {        
-        font-size: 2rem;
-    }
 
-    @include tablet {
+    @include compu {
         font-size: 1.8rem;
-        text-align: center;
     }
 
     @include movil {
@@ -66,26 +57,18 @@ h2 {
 }
 
 h3 {
-    padding: 2% 0;
+    padding-top: 6%;
     text-align: center;
-    @include font(2rem, Poppins, $blue);
-   
-    @include compu {
-        font-size: 1.8rem;
-    }    
+    @include font(1.75rem, Poppins, $blue);
 }
 
 h4 {
-    padding: 1%;
-    @include font(1.75rem, Poppins, black);
-
-    @include compu {
-        font-size: 1.55rem;
-    }
+    padding-top: 6%;
+    @include font(1.5rem, Poppins, black);
 }
 
 h5 {
-    padding: 1%;
+    padding-top: 3%;
     @include font(1.5rem, Poppins, black);
 
     @include compu {
@@ -115,7 +98,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-     margin: 0 auto 4%;
+    margin: 2% auto;
 
     @include tablet {
         display: block;
@@ -126,11 +109,11 @@ p {
         padding: 0 2% 3%;
         line-height: 1.9;
         font-size: 1.20rem;
+        margin: 0 auto;
 
         @include tablet {
             width: 90%;
-            padding: 0 2%;
-            margin: 0 auto;
+            padding: 0 2%;           
         }
     }
 }
@@ -141,7 +124,6 @@ p {
     margin: 0 auto 4%;
 }
 
-.icono-burguer:focus{
+.icono-burguer:focus {
     border: none
-
 }

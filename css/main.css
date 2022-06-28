@@ -19,7 +19,7 @@ main {
       width: 100vw; } }
 
 h1 {
-  padding-top: 4%;
+  padding: 4% 0;
   text-align: center;
   font-size: 2.7rem;
   font-family: Poppins;
@@ -28,54 +28,41 @@ h1 {
   text-shadow: 1px 1px 5px #999999; }
   @media screen and (max-width: 1024px) {
     h1 {
-      padding-top: 2%;
+      padding: 2% 0;
       font-size: 2.4rem; } }
-  @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 2.2rem; } }
   @media screen and (max-width: 576px) {
     h1 {
-      font-size: 2.1rem; } }
+      font-size: 2.2rem; } }
 
 h2 {
-  padding: 4.5% 1.5% 2%;
+  padding: 8% 1.5% 2%;
   text-align: left;
-  font-size: 2.15rem;
+  font-size: 2rem;
   font-family: Raleway;
   color: #112e4f;
   font-weight: 600; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-size: 2rem; } }
-  @media screen and (max-width: 768px) {
-    h2 {
-      font-size: 1.8rem;
-      text-align: center; } }
+      font-size: 1.8rem; } }
   @media screen and (max-width: 576px) {
     h2 {
       font-size: 1.6rem; } }
 
 h3 {
-  padding: 2% 0;
+  padding-top: 6%;
   text-align: center;
-  font-size: 2rem;
-  font-family: Poppins;
-  color: #4072b0; }
-  @media screen and (max-width: 1024px) {
-    h3 {
-      font-size: 1.8rem; } }
-
-h4 {
-  padding: 1%;
   font-size: 1.75rem;
   font-family: Poppins;
+  color: #4072b0; }
+
+h4 {
+  padding-top: 6%;
+  font-size: 1.5rem;
+  font-family: Poppins;
   color: black; }
-  @media screen and (max-width: 1024px) {
-    h4 {
-      font-size: 1.55rem; } }
 
 h5 {
-  padding: 1%;
+  padding-top: 3%;
   font-size: 1.5rem;
   font-family: Poppins;
   color: black; }
@@ -105,7 +92,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto 4%; }
+  margin: 2% auto; }
   @media screen and (max-width: 768px) {
     .section-flex {
       display: block; } }
@@ -113,12 +100,12 @@ p {
     width: 50%;
     padding: 0 2% 3%;
     line-height: 1.9;
-    font-size: 1.20rem; }
+    font-size: 1.20rem;
+    margin: 0 auto; }
     @media screen and (max-width: 768px) {
       .section-flex .section-flex__paragraph {
         width: 90%;
-        padding: 0 2%;
-        margin: 0 auto; } }
+        padding: 0 2%; } }
 
 .section__paragraph {
   text-align: center;
@@ -605,7 +592,7 @@ button:hover .button-text {
             margin: 0; } }
       .sobre-nosotros__container .sobre-nosotros-item__subtitle {
         margin: 0 10%;
-        padding: 1%;
+        padding: 5%;
         font-size: 1.6rem;
         font-family: Poppins;
         color: #dce3ef;

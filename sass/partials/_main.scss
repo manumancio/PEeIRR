@@ -233,7 +233,7 @@ button:hover .button-text {
 
             &__subtitle {
                 margin: 0 10%;
-                padding: 1%;
+                padding: 5%;
                 @include font(1.6rem, Poppins, $light-blue);
                 text-align: left;
 
@@ -524,7 +524,7 @@ li::marker {
 
                 @include movil {
                     font-size: 1rem;
-                }
+                }               
             }          
         }
 
@@ -657,6 +657,7 @@ li::marker {
         }
     }
 }
+
 
 /* --------------------------CONTACTOS.HTML----------------------------- */
 
