@@ -157,59 +157,7 @@ p {
     margin: 0 auto 4%;
 }
 
-/* From uiverse.io by @Ali-Tahmazi99// TRANSICION ICONO MENU HAMBURGUESA */
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    display: none;
-    visibility: hidden;
-}
+.icono-burguer:focus{
+    border: none
 
-.bar {
-    position: relative;
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-
-    span {
-        position: absolute;
-        width: 40px;
-        height: 6.22px;
-        background: $white;
-        border-radius: 100px;
-        display: inline-block;
-        transition: 0.3s ease;
-        left: 0;
-
-        &.top {
-            top: 0;
-        }
-
-        &.middle {
-            top: 17px;
-        }
-
-        &.bottom {
-            bottom: 0;
-        }
-    }
-}
-
-input[type]:checked~span.top {
-    transform: rotate(45deg);
-    transform-origin: top left;
-    width: 48px;
-    left: 5px;
-}
-
-input[type]:checked~span.bottom {
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    width: 48px;
-    bottom: -1px;
-    box-shadow: 0 0 10px hsl(50, 12%, 63%);
-}
-
-input[type]:checked~span.middle {
-    transform: translateX(-20px);
-    opacity: 0;
 }

@@ -150,6 +150,8 @@ $bgImages: servicios nosotros proyectos contacto sumate;
     }
 }
 
+
+
 .bi-x-circle,
 .bi-three-dots-vertical {
     font-size:30px;
@@ -162,6 +164,10 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 
 .nav-item--offcanvas {
     border-bottom: 1px solid rgb(216, 220, 224); 
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 /* hero */

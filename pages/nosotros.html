@@ -48,21 +48,17 @@
 
             <!-- segunda barra -->
             <div class="segunda-barra">
+
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logocompleto.webp"
                                 alt="Logo de PEeIRR."></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span><label for="check" class="bar">
-                                    <input id="check" type="checkbox">
-                                    <span class="top"></span>
-                                    <span class="middle"></span>
-                                    <span class="bottom"></span>
-                                </label></span>
+                            <span class="navbar-toggler-icon"><i class="bi bi-three-dots-vertical"></i></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav mx-auto align-items-center">
                                 <li class="nav-item px-3">
                                     <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
@@ -83,8 +79,46 @@
                         </div>
                     </div>
                 </nav>
-            </div>
 
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+
+                        <button type="button" class="bi bi-x-circle text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto align-items-left">
+                            <li class="nav-item px-3 nav-item--offcanvas">
+                                <a class="nav-link active" aria-current="page" href="../index.html"><i
+                                        class="bi bi-house pt-3 px-3"></i>Home</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./servicios.html"><i
+                                        class="bi bi-lightbulb px-3"></i>Servicios</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./nosotros.html"><i
+                                        class="bi bi-people px-3"></i></i>Nosotros</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./proyectos.html"><i
+                                        class="bi bi-lightning px-3"></i>Proyectos</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./contacto.html"><i
+                                        class="bi bi-envelope px-3"></i>Contactos</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./sumate.html"><i class="bi bi-briefcase px-3"></i>Trabajá con
+                                    Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="header-img-h1">
             <h1>Sobre Nosotros</h1>
@@ -92,7 +126,7 @@
     </header>
 
     <main>
-        <h2><i class="fa-regular fa-flag  px-2"></i> Los pilares de nuestra empresa</h2>
+        <h2> Los pilares de nuestra empresa</h2>
         <p class="section__paragraph">Somos una Empresa comprometida, trabajamos bajo principios de calidad, seguridad y
             beneficio mutuo, preocupados siempre por la calidad de nuestros servicios, para satisfacer de la mejor
             manera las necesidades

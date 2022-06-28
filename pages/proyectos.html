@@ -20,15 +20,16 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@100;300;500&family=Raleway:ital,wght@0,200;0,400;0,900;1,800;1,900&display=swap"
         rel="stylesheet">
 
-   <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/main.css">
 
-     <!--  Fontawesome -->
-     <script src="https://kit.fontawesome.com/1a7eb8c875.js" crossorigin="anonymous"></script>
-     <!--  Bootstrap-icons -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--  Fontawesome -->
+    <script src="https://kit.fontawesome.com/1a7eb8c875.js" crossorigin="anonymous"></script>
+    <!--  Bootstrap-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -41,28 +42,26 @@
                     href="https://api.whatsapp.com/send/?phone=5493364888888&text&app_absent=0" target="_blank">Tel:
                     +54 9 336-4430893</a>
 
-                <a href="./contacto.html#formulario" target="_blank"><i class="bi bi-envelope primera-barra__icon"></i></a>
+                <a href="./contacto.html#formulario" target="_blank"><i
+                        class="bi bi-envelope primera-barra__icon"></i></a>
 
-                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in primera-barra__icon primera-barra__icon--lkd"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in primera-barra__icon primera-barra__icon--lkd"></i></a>
             </div>
 
             <!-- segunda barra -->
             <div class="segunda-barra">
+
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logocompleto.webp"
-                                alt="Logo de PEEIRR."></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                                alt="Logo de PEeIRR."></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span><label for="check" class="bar">
-                                    <input id="check" type="checkbox">
-                                    <span class="top"></span>
-                                    <span class="middle"></span>
-                                    <span class="bottom"></span>
-                                </label></span>
+                            <span class="navbar-toggler-icon"><i class="bi bi-three-dots-vertical"></i></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav mx-auto align-items-center">
                                 <li class="nav-item px-3">
                                     <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
@@ -83,6 +82,45 @@
                         </div>
                     </div>
                 </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+
+                        <button type="button" class="bi bi-x-circle text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto align-items-left">
+                            <li class="nav-item px-3 nav-item--offcanvas">
+                                <a class="nav-link active" aria-current="page" href="../index.html"><i
+                                        class="bi bi-house pt-3 px-3"></i>Home</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./servicios.html"><i
+                                        class="bi bi-lightbulb px-3"></i>Servicios</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./nosotros.html"><i
+                                        class="bi bi-people px-3"></i></i>Nosotros</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./proyectos.html"><i
+                                        class="bi bi-lightning px-3"></i>Proyectos</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./contacto.html"><i
+                                        class="bi bi-envelope px-3"></i>Contactos</a>
+                            </li>
+                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
+                                <a class="nav-link" href="./sumate.html"><i class="bi bi-briefcase px-3"></i>Trabajá con
+                                    Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="header-img-h1">
@@ -92,7 +130,7 @@
 
     <main>
         <section>
-            <h2><i class="bi bi-lightning px-2"></i> Trabajamos bajo principios de calidad y seguridad</h2>
+            <h2>Trabajamos bajo principios de calidad y seguridad</h2>
             <div class="section-flex">
                 <p class="section-flex__paragraph">Siempre con la garantía de que nuestros diseños e ingeniería, cumplen
                     con las
@@ -113,14 +151,15 @@
                 <div>
                     <h3>Trabajos Eléctricos efectuados para la Empresa SIDERAR SA.Sector: Redes</h3>
                     <ul class="proyectos-item__list">
-                        <li><i class="bi bi-check"></i> NUEVA SALA ELÉCTRICA CENTRO DE COMPUTOS.</li>
-                        <li><i class="bi bi-check"></i> ACONDICIONAMIENTO RED ELÉCTRICA PARA MANTENIMIENTO TG2.</li>
-                        <li><i class="bi bi-check"></i> CETE - BARRA DE CARGA 4 – RACK DE PROTECCIONES Y ESTRATEGIA DE PROTECCIONES.</li>
-                        <li><i class="bi bi-check"></i> LAYOUT Y LISTADO GENERAL DE TRANSFORMADORES DE PLANTA.</li>
-                        <li><i class="bi bi-check"></i> ALIMENTADORES DESDE BARRA DE CARGA 4</li>
-                        <li><i class="bi bi-check"></i> AMPLIACION CASA DE BOMBAS</li>
-                        <li><i class="bi bi-check"></i> ALIMENTADORES 13,8KV (PLAYA CETE A MH-5)</li>
-                        <li><i class="bi bi-check"></i> CANALIZACIÓN FIBRA OPTICA SIEMENS MARTIN/PLANTA DE OXIGENO.</li>
+                        <li><i class="bi bi-check"></i> Nueva sala eléctrica centro de cómputos.</li>
+                        <li><i class="bi bi-check"></i> Acondicionamiento red eléctrica para mantenimiento TG2.</li>
+                        <li><i class="bi bi-check"></i> Cete - Barra de carga 4 – Rack de protecciones y estrategia de
+                            protecciones.</li>
+                        <li><i class="bi bi-check"></i> Layout y listado general de transformadores de planta.</li>
+                        <li><i class="bi bi-check"></i> Alimentadores desde barra de carga 4.</li>
+                        <li><i class="bi bi-check"></i> Ampliación casa de bombas.</li>
+                        <li><i class="bi bi-check"></i> Alimentadores 13,8kv (playa CETE a MH-5).</li>
+                        <li><i class="bi bi-check"></i> Canalización fibra óptica Siemens Martin/Planta de oxígeno.</li>
                     </ul>
                 </div>
                 <div class="proyectos-item-img">
@@ -133,15 +172,15 @@
                 <div>
                     <h3>Trabajos Eléctricos efectuados para la Empresa ALUAR SA</h3>
                     <ul class="proyectos-item__list">
-                        <li><i class="bi bi-check"></i> SISTEMA DE DESCARGA DE ESCOMBROS EN COCCION DE ANODOS.</li>
-                        <li><i class="bi bi-check"></i> VOLCADOR DE ESCOMBROS.</li>
-                        <li><i class="bi bi-check"></i> TABLERO TERMICAS.</li>
-                        <li><i class="bi bi-check"></i> CAO SYPRIM SECTORES B Y C.</li>
-                        <li><i class="bi bi-check"></i> INSTALACION ELECTRICA EN OFICINAS DEPSEIENCLAV.</li>
-                        <li><i class="bi bi-check"></i> APERTURA PORTON PPSE CON EST. DE ESPUMADO DPSEI.</li>
-                        <li><i class="bi bi-check"></i> NUEVA SALA DE COMPRESORES.</li>
-                        <li><i class="bi bi-check"></i> NUEVA SALA DE COMPRESORES.</li>
-                        <li><i class="bi bi-check"></i> NUEVA SALA DE COMPRESORES</li>
+                        <li><i class="bi bi-check"></i> • Sistema de descarga de escombros en cocción de ánodos.</li>
+                        <li><i class="bi bi-check"></i> Volcador de escombros.</li>
+                        <li><i class="bi bi-check"></i> Tablero térmicas.</li>
+                        <li><i class="bi bi-check"></i> CAO Syprim Sectores B y C.</li>
+                        <li><i class="bi bi-check"></i> Instalación eléctrica en oficinas Depseienclav.</li>
+                        <li><i class="bi bi-check"></i> Apertura portón ppse con estación de espumado Dpsei.</li>
+                        <li><i class="bi bi-check"></i> Nueva sala de compresores.</li>
+                        <li><i class="bi bi-check"></i> Nueva sala de compresores.</li>
+                        <li><i class="bi bi-check"></i> Nueva sala de compresores.</li>
                     </ul>
                 </div>
                 <div class="proyectos-item-img">
@@ -155,15 +194,17 @@
                 <div class="proyectos-item">
                     <h3>Trabajos Eléctricos efectuados para la Central Térmica AES:</h3>
                     <ul class="proyectos-item__list">
-                        <li><i class="bi bi-check"></i> REDIBUJADO PLANOS GRUAS</li>
-                        <li><i class="bi bi-check"></i> ILUMINACION EDIFICIO BLOQUE6</li>
-                        <li><i class="bi bi-check"></i> SISTEMA DE PROTECCIONES DE LOS TRANSFORMADORES DE MEDIO BLOQUE</li>
-                        <li><i class="bi bi-check"></i> ARRANCADOR SUAVE BOMBA LLENADO DE CALDERA</li>
-                        <li><i class="bi bi-check"></i> ESTUDIO DE CC, SELECTIVIDAD Y FLUJO DE CARGAS</li>
-                        <li><i class="bi bi-check"></i> DIAGRAMA FUNCIONAL TRAFOS SERVICIOS PESADADO 1 Y 2</li>
-                        <li><i class="bi bi-check"></i> REVAMPING SISTEMA DE CARGA DE CARBON-BASICA PARA LICITACION</li>
-                        <li><i class="bi bi-check"></i> PLC SILOS</li>
-                        <li><i class="bi bi-check"></i> TABLEROS TRADUSCTORES</li>
+                        <li><i class="bi bi-check"></i> Redibujado de planos grúas.</li>
+                        <li><i class="bi bi-check"></i> Iluminación edificio Bloque 6.</li>
+                        <li><i class="bi bi-check"></i> Sistema de protecciones de los transformadores de medio bloque.
+                        </li>
+                        <li><i class="bi bi-check"></i>Arrancador suave bomba llenado de caldera.</li>
+                        <li><i class="bi bi-check"></i> Estudio de CC, selectividad y flujo de cargas.</li>
+                        <li><i class="bi bi-check"></i> Diagrama funcional trafos servicios pesado 1 y 2.</li>
+                        <li><i class="bi bi-check"></i> Revamping sistema de carga de carbón-básica para licitación.
+                        </li>
+                        <li><i class="bi bi-check"></i> PLC silos.</li>
+                        <li><i class="bi bi-check"></i> Tableros traductores.</li>
                     </ul>
                 </div>
                 <div class="proyectos-item">
@@ -178,16 +219,15 @@
                 <div class="proyectos-item">
                     <h3>Trabajos Eléctricos efectuados para la Empresa SERVIACERO</h3>
                     <ul class="proyectos-item__list">
-                        <li><i class="bi bi-check"></i> FUNCIONAL Y TOPOGRAFICO GRUA 302.</li>
-                        <li><i class="bi bi-check"></i> REVAMPING GRUA 303.</li>
-                        <li><i class="bi bi-check"></i> RACK COMUNICACIONES SERVIACERO III.</li>
-                        <li><i class="bi bi-check"></i> CABLEADO Y CONEXIONADO DE RACK TIPICOS.</li>
-                        <li><i class="bi bi-check"></i> RACK DE COMUNICACIONES SERVIACERO III.</li>
-                        <li><i class="bi bi-check"></i> RRACK COMUNICACIONES LINEA LIGGETT.</li>
-                        <li><i class="bi bi-check"></i> FUNCIONAL Y TOPOGRAFICO GRUA 302.</li>
-                        <li><i class="bi bi-check"></i> REVAMPING GRUA 303.</li>
-                        <li><i class="bi bi-check"></i> RACK COMUNICACIONES SERVIACERO III.</li>
-                        <li><i class="bi bi-check"></i> CABLEADO Y CONEXIONADO DE RACK TIPICOS.</li>
+                        <li><i class="bi bi-check"></i> • Funcional y topográfico grúa 302.</li>
+                        <li><i class="bi bi-check"></i> Revamping grúa 303.</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones Serviacero III.</li>
+                        <li><i class="bi bi-check"></i> Cableado y conexionado de rack típicos</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones línea Liggett.</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones línea Liggett.</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones línea Liggett.</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones línea Liggett.</li>
+                        <li><i class="bi bi-check"></i> Rack comunicaciones línea Liggett.</li>
                     </ul>
                 </div>
             </article>
@@ -197,16 +237,16 @@
                 <div>
                     <h3>Trabajos Eléctricos efectuados para la Empresa LAMINFER</h3>
                     <ul class="proyectos-item__list">
-                        <li><i class="bi bi-check"></i>BASICA RACK COMUNICACIONES LAMINFER.</li>
-                        <li><i class="bi bi-check"></i>REDES LAMINFER-CANALIZACIONES.</li>
-                        <li><i class="bi bi-check"></i>RED PDP N2B.</li>
-                        <li><i class="bi bi-check"></i>RED PDP TIPICO CONSTRUCTIVO.</li>
-                        <li><i class="bi bi-check"></i>RED PDP ISLA#2.</li>
-                        <li><i class="bi bi-check"></i>RED PDP ISLA #1.</li>
-                        <li><i class="bi bi-check"></i>ARRANQUE TORRE ENFRIAMIENTO.</li>
-                        <li><i class="bi bi-check"></i>CAO REDES LINEA LIGGET.</li>
-                        <li><i class="bi bi-check"></i>INSTALACIÓN DE MEDIDORES DE ENERGÍA - SERVIACERO.</li>
-                        <li><i class="bi bi-check"></i>MEDIDORES DE ENERGIA.</li>
+                        <li><i class="bi bi-check"></i>Básica rack comunicaciones Laminfer.</li>
+                        <li><i class="bi bi-check"></i>Redes Laminfer-canalizaciones.</li>
+                        <li><i class="bi bi-check"></i>Red PDP N2B.</li>
+                        <li><i class="bi bi-check"></i>Red PDP típico constructivo.</li>
+                        <li><i class="bi bi-check"></i>Red PDP Isla #2.</li>
+                        <li><i class="bi bi-check"></i>Red PDP Isla #1.</li>
+                        <li><i class="bi bi-check"></i>Arranque torre enfriamiento.</li>
+                        <li><i class="bi bi-check"></i>CAO Redes línea Ligget</li>
+                        <li><i class="bi bi-check"></i>Instalación de medidores de energía - Serviacero.</li>
+                        <li><i class="bi bi-check"></i>Medidores de energía.</li>
                     </ul>
                 </div>
                 <div class="proyectos-item-img">
@@ -269,14 +309,17 @@
                             alt="Imagen del logo de PEEIRR."></a>
                 </div>
 
-                 <div class="footer-redes">
-                    <a class="footer-redes__link" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in footer-redes__icon footer-redes__icon--linkedin"></i></a>
-                    <a class="footer-redes__link" href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter footer-redes__icon footer-redes__icon--twitter"></i></a>
-                    <a class="footer-redes__link" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f footer-redes__icon footer-redes__icon--facebook"></i></a>
+                <div class="footer-redes">
+                    <a class="footer-redes__link" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in footer-redes__icon footer-redes__icon--linkedin"></i></a>
+                    <a class="footer-redes__link" href="https://www.twitter.com/" target="_blank"><i
+                            class="fa-brands fa-twitter footer-redes__icon footer-redes__icon--twitter"></i></a>
+                    <a class="footer-redes__link" href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook-f footer-redes__icon footer-redes__icon--facebook"></i></a>
                 </div>
             </section>
 
-             <section class="footer__section">
+            <section class="footer__section">
                 <h4 class="footer__subtitle">Contacto</h4>
                 <ul class="footer__list">
                     <li><a class="footer__link"
@@ -286,7 +329,8 @@
                     <li><a class="footer__link"
                             href="https://api.whatsapp.com/send/?phone=5493364888888&text&app_absent=0"
                             target="_blank"><i class="bi bi-telephone footer__icons"></i>+54 9 336-4430893</a></li>
-                    <li><a class="footer__link" href="mailto:administracion@peeirr.com.ar" target="_blank"><i class="bi bi-envelope footer__icons"></i>administracion@<br>peeirr.com.ar</a>
+                    <li><a class="footer__link" href="mailto:administracion@peeirr.com.ar" target="_blank"><i
+                                class="bi bi-envelope footer__icons"></i>administracion@<br>peeirr.com.ar</a>
                     </li>
                 </ul>
             </section>
@@ -321,8 +365,10 @@
         </section>
     </footer>
 
-     <!--  Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
 </body>
 
