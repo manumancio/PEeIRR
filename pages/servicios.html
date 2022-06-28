@@ -93,30 +93,24 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav mx-auto align-items-left">
-                            <li class="nav-item px-3 nav-item--offcanvas">
-                                <a class="nav-link active" aria-current="page" href="../index.html"><i
-                                        class="bi bi-house pt-3 px-3"></i>Home</a>
+                        <ul class="navbar-nav mx-auto align-items-center">
+                            <li class="nav-item nav-item--offcanvas">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                             </li>
-                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
-                                <a class="nav-link" href="./servicios.html"><i
-                                        class="bi bi-lightbulb px-3"></i>Servicios</a>
+                            <li class="nav-item pt-4">
+                                <a class="nav-link" href="./servicios.html">Servicios</a>
                             </li>
-                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
-                                <a class="nav-link" href="./nosotros.html"><i
-                                        class="bi bi-people px-3"></i></i>Nosotros</a>
+                            <li class="nav-item pt-4">
+                                <a class="nav-link" href="./nosotros.html"></i>Nosotros</a>
                             </li>
-                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
-                                <a class="nav-link" href="./proyectos.html"><i
-                                        class="bi bi-lightning px-3"></i>Proyectos</a>
+                            <li class="nav-item pt-4">
+                                <a class="nav-link" href="./proyectos.html">Proyectos</a>
                             </li>
-                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
-                                <a class="nav-link" href="./contacto.html"><i
-                                        class="bi bi-envelope px-3"></i>Contactos</a>
+                            <li class="nav-item pt-4">
+                                <a class="nav-link" href="./contacto.html">Contactos</a>
                             </li>
-                            <li class="nav-item px-3 pt-5 nav-item--offcanvas">
-                                <a class="nav-link" href="./sumate.html"><i class="bi bi-briefcase px-3"></i>Trabajá con
-                                    Nosotros</a>
+                            <li class="nav-item pt-4">
+                                <a class="nav-link" href="./sumate.html">Trabajá con Nosotros</a>
                             </li>
                         </ul>
                     </div>
@@ -149,7 +143,7 @@
         <!--  nuestros servicios -->
         <section>
             <h3>Nuestra oferta:</h3>
-            <div class="section-servicios-container" id="nuestros-servicios">
+            <div id="servicio1" class="section-servicios-container" id="nuestros-servicios">
                 <div class="section-servicios-item">
                     <h4>Ingeniería eléctrica de Detalle y Ejecutiva</h4>
                     <p>Siempre con la garantía de que nuestros diseños e ingeniería, cumplen con las condiciones
@@ -164,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="section-servicios-container section-servicios-container--serv2">
+            <div id="servicio2" class="section-servicios-container section-servicios-container--serv2">
                 <div class="section-servicios-item"> <img class="section-servicios-item__img"
                         src="../images/serviciosHtml2.webp" alt="Imagen de un ingeniero con planos eléctricos"></div>
                 <div class="section-servicios-item">
@@ -177,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="section-servicios-container">
+            <div id="servicio3" class="section-servicios-container">
                 <div class="section-servicios-item">
                     <h4>Elaboración, ejecución, puesta en marcha de Equipos y Líneas de Producción</h4>
                     <p>La digitalización se ha afianzado, especialmente en máquinas pesadas e ingeniería mecánica
@@ -191,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="section-servicios-container">
+            <div id="servicio4" class="section-servicios-container">
                 <div class="section-servicios-item"> <img class="section-servicios-item__img"
                         src="../images/servicios.webp" alt="Imagen de un lápiz sobre planos eléctricos.">
                 </div>
@@ -205,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="section-servicios-container section-servicios-container--serv5">
+            <div id="servicio5" class="section-servicios-container section-servicios-container--serv5">
 
                 <div class="section-servicios-item">
                     <h4>Asesoramiento técnico en el Área eléctrica y de Instrumentación</h4>
@@ -219,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="section-servicios-container">
+            <div id="servicio6" class="section-servicios-container">
                 <div class="section-servicios-item"> <img class="section-servicios-item__img"
                         src="../images/serviciosHtml3.jpg" alt="Imagen de un hombre enseñando con una computadora">
                 </div>
@@ -236,19 +230,16 @@
         </section>
 
         <!-- acordeon bootstrap //FAQS -->
-        <section class="mb-5">
+        <section class="mb-5 section-acordeon">
             <h2>Preguntas frecuentes sobre Nuestros Servicios</h2>
 
-
-
-
-
             <div class="accordion accordion-flush" id="accordionFlushExample">
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button collapsed p-2 " type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false"
-                            aria-controls="flush-collapseOne"><i class="fa-regular fa-square-plus px-2"></i>
+                            aria-controls="flush-collapseOne">
                             ¿Ofrecen servicios energéticos a empresas e industrias unicamente?
                         </button>
                     </h2>
@@ -266,7 +257,7 @@
                     <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                            aria-controls="flush-collapseTwo"><i class="fa-regular fa-square-plus px-2"></i>
+                            aria-controls="flush-collapseTwo">
                             ¿Cuentan con un grupo de proveedores cerrados?
                         </button>
                     </h2>
@@ -286,7 +277,7 @@
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree"><i class="fa-regular fa-square-plus px-2"></i>
+                                aria-controls="flush-collapseThree">
                                 ¿Cómo puedo contactarme con ustedes para desarollar la ingeniería eléctrica del
                                 proyecto?
                             </button>

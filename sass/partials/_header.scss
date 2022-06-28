@@ -71,17 +71,17 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 }
 
 .primera-barra__icon {
-   font-size: 30px;
-   color: $white;
+    font-size: 30px;
+    color: $white;
     margin-right: 1.1rem;
     transition: all 0.3 ease-in-out;
-  
+
     @include tablet {
         margin-left: 5px;
-    }    
+    }
 
     &:hover {
-       color: $blue
+        color: $blue
     }
 }
 
@@ -150,11 +150,9 @@ $bgImages: servicios nosotros proyectos contacto sumate;
     }
 }
 
-
-
 .bi-x-circle,
 .bi-three-dots-vertical {
-    font-size:30px;
+    font-size: 30px;
     color: $dark-blue;
 }
 
@@ -163,7 +161,7 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 }
 
 .nav-item--offcanvas {
-    border-bottom: 1px solid rgb(216, 220, 224); 
+    border-bottom: 1px solid rgb(216, 220, 224);
 
     &:last-child {
         border-bottom: none;
@@ -178,7 +176,6 @@ $bgImages: servicios nosotros proyectos contacto sumate;
 
     @include compu {
         height: 75vh;
-        padding-right: 25%;
     }
 
     @include tablet {
@@ -188,10 +185,47 @@ $bgImages: servicios nosotros proyectos contacto sumate;
     &__title {
         padding: 10px;
         text-align: center;
-        @include font(1.4rem, Poppins, $dark-blue);
+        @include font(1.6rem, Poppins, $dark-blue);
         font-weight: map-get($fontWeight, weight5);
         line-height: 1.6;
         text-shadow: $boxShadowImg;
+
+        @include compu {
+            font-size: 1.5rem;
+        }
+
+        @include movil {
+            font-size: 1.4rem;
+        }
+
+        @include movil-xs {
+            font-size: 1.3rem;
+        }
+
+        span {            
+            font-weight: map-get($fontWeight, weight9);
+            @include font(3rem, Poppins, rgb(28, 28, 28));
+
+            @include compu {
+                font-size: 2.8rem;
+            }
+
+            @include movil {
+                font-size: 2.4rem;
+            }
+
+             @include movil-xs {
+                 font-size: 2rem;
+             }
+        }
+    }
+
+    &__subtitle {
+        padding: 10px;
+        @include font(1.4rem, Raleway, $black);
+        font-weight: map-get($fontWeight, weight5);
+        text-align: center;
+        background-color: rgba(248, 246, 246, 0.3);
 
         @include compu {
             font-size: 1.3rem;
@@ -201,31 +235,9 @@ $bgImages: servicios nosotros proyectos contacto sumate;
             font-size: 1.2rem;
         }
 
-        span {
-            font-weight: map-get($fontWeight, weight9);
-            @include font(3rem, Poppins, rgb(28, 28, 28));
-
-            @include compu {
-                font-size: 2.5rem;
-            }
-
-            @include movil-xs {
-                font-size: 2rem;
-            }
+        @include movil-xs {
+            font-size: 1.1rem;
         }
-    }
-
-    &__subtitle {
-        padding: 10px;
-        @include font(1.3rem, Raleway, $black);
-        font-weight: map-get($fontWeight, weight5);
-        text-align: center;
-        background-color: rgba(248, 246, 246, 0.199);
-
-        @include compu {
-            font-size: 1.2rem;
-        }
-
     }
 
     &__button {

@@ -64,12 +64,6 @@ h3 {
   @media screen and (max-width: 1024px) {
     h3 {
       font-size: 1.8rem; } }
-  @media screen and (max-width: 768px) {
-    h3 {
-      font-size: 1.6rem; } }
-  @media screen and (max-width: 576px) {
-    h3 {
-      font-size: 1.4rem; } }
 
 h4 {
   padding: 1%;
@@ -78,13 +72,7 @@ h4 {
   color: black; }
   @media screen and (max-width: 1024px) {
     h4 {
-      font-size: 1.5rem; } }
-  @media screen and (max-width: 768px) {
-    h4 {
-      font-size: 1.4rem; } }
-  @media screen and (max-width: 576px) {
-    h4 {
-      font-size: 1.3rem; } }
+      font-size: 1.55rem; } }
 
 h5 {
   padding: 1%;
@@ -134,7 +122,7 @@ p {
 
 .section__paragraph {
   text-align: center;
-  width: 95%;
+  width: 100%;
   margin: 0 auto 4%; }
 
 .icono-burguer:focus {
@@ -298,15 +286,14 @@ p {
   height: 90vh; }
   @media screen and (max-width: 1024px) {
     .hero {
-      height: 75vh;
-      padding-right: 25%; } }
+      height: 75vh; } }
   @media screen and (max-width: 768px) {
     .hero {
       padding: 5%; } }
   .hero__title {
     padding: 10px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: Poppins;
     color: #112e4f;
     font-weight: 500;
@@ -314,10 +301,13 @@ p {
     text-shadow: 2px 2px 2px #aca895; }
     @media screen and (max-width: 1024px) {
       .hero__title {
-        font-size: 1.3rem; } }
+        font-size: 1.5rem; } }
     @media screen and (max-width: 576px) {
       .hero__title {
-        font-size: 1.2rem; } }
+        font-size: 1.4rem; } }
+    @media screen and (max-width: 350px) {
+      .hero__title {
+        font-size: 1.3rem; } }
     .hero__title span {
       font-weight: 900;
       font-size: 3rem;
@@ -325,21 +315,30 @@ p {
       color: #1c1c1c; }
       @media screen and (max-width: 1024px) {
         .hero__title span {
-          font-size: 2.5rem; } }
+          font-size: 2.8rem; } }
+      @media screen and (max-width: 576px) {
+        .hero__title span {
+          font-size: 2.4rem; } }
       @media screen and (max-width: 350px) {
         .hero__title span {
           font-size: 2rem; } }
   .hero__subtitle {
     padding: 10px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: Raleway;
     color: black;
     font-weight: 500;
     text-align: center;
-    background-color: rgba(248, 246, 246, 0.199); }
+    background-color: rgba(248, 246, 246, 0.3); }
     @media screen and (max-width: 1024px) {
       .hero__subtitle {
+        font-size: 1.3rem; } }
+    @media screen and (max-width: 576px) {
+      .hero__subtitle {
         font-size: 1.2rem; } }
+    @media screen and (max-width: 350px) {
+      .hero__subtitle {
+        font-size: 1.1rem; } }
   .hero__button {
     display: inline-block;
     padding: 0.9% 1.3%;
@@ -706,14 +705,14 @@ button:hover .button-text {
       margin: 0; } }
 
 /* acordeon bootstrap //FAQS */
+.accordion-collapse {
+  background-color: #f8f6f6; }
+
 .accordion-button,
 .accordion {
   font-family: Raleway;
   font-size: 1.2rem;
   color: black; }
-  .accordion-button .accordion-button:hover,
-  .accordion .accordion-button:hover {
-    background-color: #dce3ef; }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
 .proyectos-container {
@@ -838,7 +837,7 @@ li::marker {
       .section-proyectos-grid .section-proyectos__item .section-proyectos__title {
         position: absolute;
         width: 100%;
-        padding: 30% 0 6%;
+        padding: 20% 0 6%;
         bottom: 0;
         text-align: center;
         background: linear-gradient(rgba(255, 255, 255, 0), black);
@@ -1379,6 +1378,9 @@ li::marker {
   .section-encontranos-div {
     width: 40vw;
     font-family: Raleway; }
+    .section-encontranos-div ul {
+      margin: 5px;
+      padding: 0; }
     @media screen and (max-width: 1024px) {
       .section-encontranos-div {
         width: 100%; } }
@@ -1388,15 +1390,12 @@ li::marker {
         .section-encontranos-div__title {
           font-size: 1.25rem; } }
     .section-encontranos-div__item {
+      padding: 10px 0;
       font-size: 1.3rem;
-      padding: 10px; }
+      list-style: none; }
       @media screen and (max-width: 768px) {
         .section-encontranos-div__item {
           font-size: 1.2rem; } }
-      .section-encontranos-div__item span {
-        color: #112e4f;
-        font-weight: 500;
-        font-family: Poppins; }
     .section-encontranos-div__iframe {
       width: 100%;
       margin: 3%;
