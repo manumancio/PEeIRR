@@ -508,10 +508,8 @@ li::marker {
                 left: auto;
                 right: auto;
                 font-size: 20px;
-                padding:0 5px;
-                margin: 5px 10px;
-                color: rgba(248, 246, 246, 0.438);
-                background-color: rgba(17, 46, 79, 0.637);
+                padding:0 5px;            
+                color: rgba(248, 246, 246, 0.753);
                 border-radius: 50%;                
             }
 
@@ -1108,6 +1106,7 @@ li::marker {
 
     &__container {
         @include flex(flex, wrap, row, flex-start);
+        padding: 10px;
     }
 
     &-div {
