@@ -70,10 +70,6 @@ h4 {
 h5 {
     padding-top: 3%;
     @include font(1.5rem, Poppins, black);
-
-    @include compu {
-        font-size: 1.3rem;
-    }
 }
 
 p {

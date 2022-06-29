@@ -1,7 +1,5 @@
 /* --------------------INDEX.HTML---------------------- */
 
-// bucle - each
-
 $bgImages: servicios nosotros proyectos contacto sumate;
 
 @each $bgImageHeader in $bgImages {

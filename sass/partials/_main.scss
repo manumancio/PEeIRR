@@ -373,7 +373,7 @@ button:hover .button-text {
 .accordion {
     font-family: Raleway;
     font-size: 1.2rem;
-    color: $black;      
+    color: $black;
 }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
@@ -502,6 +502,19 @@ li::marker {
         .section-proyectos__item {
             position: relative;
 
+            .section-proyectos__icon {
+                position: absolute;
+                bottom: 0;
+                left: auto;
+                right: auto;
+                font-size: 20px;
+                padding:0 5px;
+                margin: 5px 10px;
+                color: rgba(248, 246, 246, 0.438);
+                background-color: rgba(17, 46, 79, 0.637);
+                border-radius: 50%;                
+            }
+
             .section-proyectos__img {
                 @include images(100%, 100%);
                 box-shadow: $boxShadowImg;
@@ -524,8 +537,8 @@ li::marker {
 
                 @include movil {
                     font-size: 1rem;
-                }               
-            }          
+                }
+            }
         }
 
         .section-proyectos__item--1 {
@@ -681,7 +694,7 @@ li::marker {
 /* ---------------------------SUMATE.HTML----------------------------- */
 
 .sumate-principal {
-    @include flex(flex, nowrap, column, space-around);   
+    @include flex(flex, nowrap, column, space-around);
 
     &__title {
         padding: 1%;
@@ -1120,13 +1133,13 @@ li::marker {
 
         &__item {
             padding: 10px 0;
-            font-size: 1.3rem;            
+            font-size: 1.3rem;
             list-style: none;
 
             @include tablet {
                 font-size: 1.2rem;
             }
-          
+
         }
 
         &__iframe {

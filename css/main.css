@@ -66,9 +66,6 @@ h5 {
   font-size: 1.5rem;
   font-family: Poppins;
   color: black; }
-  @media screen and (max-width: 1024px) {
-    h5 {
-      font-size: 1.3rem; } }
 
 p {
   padding: 2%;
@@ -816,6 +813,17 @@ li::marker {
         gap: 0.5%; } }
     .section-proyectos-grid .section-proyectos__item {
       position: relative; }
+      .section-proyectos-grid .section-proyectos__item .section-proyectos__icon {
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        right: auto;
+        font-size: 20px;
+        padding: 0 5px;
+        margin: 5px 10px;
+        color: rgba(248, 246, 246, 0.438);
+        background-color: rgba(17, 46, 79, 0.637);
+        border-radius: 50%; }
       .section-proyectos-grid .section-proyectos__item .section-proyectos__img {
         width: 100%;
         height: 100%;
