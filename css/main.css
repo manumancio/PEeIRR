@@ -694,7 +694,8 @@ button:hover .button-text {
       margin: 0; } }
 
 /* acordeon bootstrap //FAQS */
-.accordion-collapse, .accordion-header {
+.accordion-collapse,
+.accordion-header {
   background-color: #f8f6f6; }
 
 .accordion-header {
@@ -1004,6 +1005,50 @@ li::marker {
   @media screen and (max-width: 576px) {
     .main-div-flex {
       width: 95%; } }
+
+/* seccion encontranos */
+.section-encontranos {
+  margin-bottom: 5%; }
+  .section-encontranos__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px; }
+  .section-encontranos-div {
+    width: 50%;
+    font-family: Raleway; }
+    .section-encontranos-div ul {
+      margin: 5px;
+      padding: 0; }
+    @media screen and (max-width: 1024px) {
+      .section-encontranos-div {
+        width: 100%; } }
+    .section-encontranos-div__title {
+      font-size: 1.4rem; }
+      @media screen and (max-width: 768px) {
+        .section-encontranos-div__title {
+          font-size: 1.25rem; } }
+    .section-encontranos-div__item, .section-encontranos-div__link {
+      padding: 10px 0;
+      font-size: 1.3rem;
+      font-family: Raleway;
+      color: black;
+      list-style: none;
+      text-decoration: none; }
+      @media screen and (max-width: 768px) {
+        .section-encontranos-div__item, .section-encontranos-div__link {
+          font-size: 1.2rem; } }
+    .section-encontranos-div__link:hover {
+      color: inherit;
+      text-decoration: underline; }
+    .section-encontranos-div__iframe {
+      width: 100%;
+      margin: 3%;
+      box-shadow: 1px 1px 8px #dfdfdd; }
+      @media screen and (max-width: 576px) {
+        .section-encontranos-div__iframe {
+          margin: 0%; } }
 
 /* ---------------------------SUMATE.HTML----------------------------- */
 .sumate-principal {
@@ -1368,44 +1413,6 @@ li::marker {
 .section__button--contacto {
   padding: 2% 2.5%;
   margin: 1%; }
-
-/* seccion encontranos */
-.section-encontranos {
-  margin-bottom: 5%; }
-  .section-encontranos__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px; }
-  .section-encontranos-div {
-    width: 50%;
-    font-family: Raleway; }
-    .section-encontranos-div ul {
-      margin: 5px;
-      padding: 0; }
-    @media screen and (max-width: 1024px) {
-      .section-encontranos-div {
-        width: 100%; } }
-    .section-encontranos-div__title {
-      font-size: 1.4rem; }
-      @media screen and (max-width: 768px) {
-        .section-encontranos-div__title {
-          font-size: 1.25rem; } }
-    .section-encontranos-div__item {
-      padding: 10px 0;
-      font-size: 1.3rem;
-      list-style: none; }
-      @media screen and (max-width: 768px) {
-        .section-encontranos-div__item {
-          font-size: 1.2rem; } }
-    .section-encontranos-div__iframe {
-      width: 100%;
-      margin: 3%;
-      box-shadow: 1px 1px 8px #dfdfdd; }
-      @media screen and (max-width: 576px) {
-        .section-encontranos-div__iframe {
-          margin: 0%; } }
 
 .footer {
   padding-top: 3%;
