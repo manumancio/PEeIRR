@@ -51,6 +51,7 @@ h2 {
 
 h3 {
   padding-top: 6%;
+  padding-bottom: 3%;
   text-align: center;
   font-size: 1.75rem;
   font-family: Poppins;
@@ -99,7 +100,7 @@ p {
       display: block; } }
   .section-flex .section-flex__paragraph {
     width: 50%;
-    padding: 0 2% 3%;
+    padding: 0 2% 1%;
     line-height: 1.9;
     font-size: 1.20rem;
     margin: 0 auto; }
@@ -693,14 +694,18 @@ button:hover .button-text {
       margin: 0; } }
 
 /* acordeon bootstrap //FAQS */
-.accordion-collapse {
+.accordion-collapse, .accordion-header {
   background-color: #f8f6f6; }
+
+.accordion-header {
+  border-bottom: 1px solid rgba(223, 223, 221, 0.562); }
 
 .accordion-button,
 .accordion {
   font-family: Raleway;
   font-size: 1.2rem;
-  color: black; }
+  color: black;
+  background-color: #f8f6f6; }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */
 .proyectos-container {

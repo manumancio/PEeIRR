@@ -365,8 +365,11 @@ button:hover .button-text {
 
 /* acordeon bootstrap //FAQS */
 
-.accordion-collapse {
-    background-color: $white;
+.accordion-collapse, .accordion-header {
+    background-color: $white;   
+}
+.accordion-header {
+    border-bottom: 1px solid rgba(223, 223, 221, 0.562);
 }
 
 .accordion-button,
@@ -374,6 +377,7 @@ button:hover .button-text {
     font-family: Raleway;
     font-size: 1.2rem;
     color: $black;
+    background-color: $white;
 }
 
 /* ---------------------------PROYECTOS.HTML----------------------------- */

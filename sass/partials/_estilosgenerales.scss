@@ -59,6 +59,7 @@ h2 {
 
 h3 {
     padding-top: 6%;
+    padding-bottom: 3%;
     text-align: center;
     @include font(1.75rem, Poppins, $blue);
 }
@@ -107,7 +108,7 @@ p {
 
     .section-flex__paragraph {
         width: 50%;
-        padding: 0 2% 3%;
+        padding: 0 2% 1%;
         line-height: 1.9;
         font-size: 1.20rem;
         margin: 0 auto;
